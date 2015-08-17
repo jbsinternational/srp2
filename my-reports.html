@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Safety Reporting Portal 2</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link href="stylesheets/styles.css" media="screen, projection" rel="stylesheet" type="text/css" />
+	<link href="stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />
+	<!--[if IE]>
+		<link href="stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+	<![endif]-->
+  <script src="js/modernizr.js"></script>
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/jquery.colorbox.js"></script>
+  <script src="js/jquery.formatter.js"></script>
+  <script src="js/asmselect.js"></script>
+  <script src="js/jquery.autocomplete.js"></script>
+  <script src="js/ajax-queue.js"></script>
+<script>
+  var xhost       = "http://10.0.22.31";
+  var xport       = "";
+  var xservice    = "/RdmfWeb";
+  var xservlet    = "/Service1.svc";
+  var xfolder     = "/";
+  var xtypeServer = "wcf";
+  var host       = "http://localhost";
+  var port       = ":8080";
+  var service    = "/SRPServlet";
+  var servlet    = "/servlet";
+  var folder     = "/rdmf-html/";
+  var typeServer = "java"; // vs "wcf"
+  var app        = "srp2";
+  var duration   = 500;
+  var sid        = "";
+  var rid        = "";
+  var pid        = "";
+  var fid        = "";
+  var deckid     = "rdmf-deck";
+  var nrPages    = 0;
+  var roles      = null;
+  var notes      = [];
+  var noteWindow = null;
+  var helpWindow = null;
+  var title      = "SRP Browser";
+  var version    = "0.1";
+  var pickfid    = "";
+  var fidrid     = "_";
+  var fidgrd     = "-";
+</script>
+  <script src="js/rdmfdecks.js"></script>
+  <script src="js/rdmfmethods.js"></script>
+  <script src="js/rdmfresponse.js"></script>
+  <script src="js/rdmfvalidate.js"></script>
+  <script src="js/rdmfdata.js"></script>
+  <script src="js/rdmfpulls.js"></script>
+  <script src="js/rdmfgrids.js"></script>
+  <script src="js/rdmfface.js"></script>
+  <script src="js/rdmfsrp2.js"></script>
+  <script src="js/FileSaver.js"></script>
+</head>
+<body>
+
+<div style="display:none;" class="errorpopup jqmID2" id="gwf_RendererErrorPopup">
+  <table cellspacing="0" cellpadding="0">
+    <tbody>
+      <tr class="errorpopupheaderrow">
+        <th colspan="3">
+          <span id="gwf_RendererErrorPopupHeaderText">Error</span>
+        </th>
+      </tr>
+      <tr class="errorpopupmeesagerow">
+        <td class="errorpopupmessagecell" colspan="3">
+          <span id="gwf_RendererErrorPopupMessageText" class="errorpopmessagetext">Error</span>
+        </td>
+      </tr>
+      <tr id="gwf_RendererErrorPopupExtraInfoRow" cellspan="3" style="display:none;" class="errorpopupextrainforow">
+        <td id="gwf_RendererErrorPopupExtraInfoCell" class="errorpopupextrainfocell">
+          <span id="gwf_RendererErrorPopupExtraInfoText" class="errorpopextrainfotext">Error</span>
+        </td>
+      </tr>
+      <tr class="errorpopupbuttonrow">
+        <td id="gwf_RendererErrorPopupOkCell" class="errorpopupokcell">
+          <button onclick="wfErrorPopup_OnOKClick(); return false;" class="button1_small">OK</button>
+        </td>
+        <td id="gwf_RendererErrorPopupMoreInfoCell" class="errorpopupmoreinfocell">
+          <button onclick="wfErrorPopup_OnMoreInfoClick(); return false;" href="#" class="button1_small">Details</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div style="display:none;" class="waitpopup jqmID1" id="busy-image">
+  <img style="border-width:0px;" 
+       src="img/hourglass.png" 
+       alt="Processing..." 
+       id="ctrlWaitingImg"/>
+  <span id="gwf_RendererWaitPopupText">Processing...</span>
+</div>
+
+<div class="wrapper">
+	<header class="banner"><img src="images/banner-front.jpg" alt="Safety Reporting Portal"></header>
+	<div class="navigation">
+		<div class="navigation__welcome">Welcome User</div>
+		<nav class="navigation__items">
+			<ul>
+				<li><a href="#">FAQs</a></li>
+				<li><a href="#">Related Links</a></li>
+				<li><a href="#">Contact Us</a></li>
+				<li><a href="#">Feedback</a></li>
+				<li><a href="#">Help</a></li>
+				<li><a href="#">Logout</a></li>
+			</ul>
+		</nav>
+	</div>
+
+
+
+
+
+	<!-- My Reports Page -->
+
+	<section class="page page__sidenav">
+		<nav class="sidenav">
+			<ul>
+				<li><a href="#" class="active">My Report History</a></li>
+				<li><a href="#">My Account</a></li>
+				<li><a href="#">My Groups</a></li>
+			</ul>
+		</nav>
+		<section class="page__sidenav-main">
+			<h1 class="title__page">My Reports</h1>
+			<div class="section section__grid">
+				<h2 class="title__section">Draft Reports</h2>
+				<table class="table__grid">
+					<caption>Click column header to sort the column</caption>
+					<thead>
+						<tr>
+							<th></th>
+							<th><a href="#">Date Saved (EST)</a></th>
+							<th><a href="#">Report ID</a></th>
+							<th><a href="#">Title</a></th>
+							<th><a href="#">Report Type Description</a></th>
+						</tr>
+					</thead>
+					<tr>
+						<td><input value="" name="" type="radio"></td>
+						<td>08/03/2015 03:10:20 PM</td>
+						<td>37340 (I)</td>
+						<td>Voluntary Reportable Food Report (V2)</td>
+						<td>Voluntary Reportable Food Report (Section 1005 of Public Law 110-85) (V2)</td>
+					</tr>
+					<tr>
+						<td><input value="" name="" type="radio"></td>
+						<td>08/03/2015 03:10:20 PM</td>
+						<td>37340 (I)</td>
+						<td>Voluntary Reportable Food Report (V2)</td>
+						<td>Voluntary Reportable Food Report (Section 1005 of Public Law 110-85) (V2)</td>
+					</tr>
+					<tr>
+						<td><input value="" name="" type="radio"></td>
+						<td>08/03/2015 03:10:20 PM</td>
+						<td>37340 (I)</td>
+						<td>Voluntary Reportable Food Report (V2)</td>
+						<td>Voluntary Reportable Food Report (Section 1005 of Public Law 110-85) (V2)</td>
+					</tr>
+					<tfoot>
+						<td colspan="4">
+							<div class="table__buttons">
+								<button id="PromptSubmitNewReportButton" onclick="submit('event:PromptSubmitNewReportButton,type:button,id:PromptSubmitNewReportButton,rid:53')" type="button" data-title="Start New Report" data-type="button">Start New Report</button>
+								<button id="PromptEditDraftReportButton" onclick="submit('event:EditGrid,type:button,id:PromptEditDraftReportButton,rid:53')" class="announcementText btn" type="button" data-title="Edit" data-type="button" disabled="disabled">Edit</button>
+								<button id="PromptDeleteDraftReportButton" onclick="submit('event:DeleteGrid,type:button,id:PromptDeleteDraftReportButton,rid:53')" class="announcementText btn" type="button" data-title="Delete" data-type="button" disabled="disabled">Delete</button>
+								<button id="PromptViewDraftReportButton" onclick="submit('event:PromptViewDraftReportButton,type:button,id:PromptViewDraftReportButton,rid:53')" class="announcementText btn" style="" type="button" data-title="View" data-type="button" disabled="disabled">View</button>
+								<button id="PromptRefreshDraftReportButton" onclick="submit('event:PromptRefreshDraftReportButton,type:button,id:PromptRefreshDraftReportButton,rid:53')" class="announcementText btn" style="" type="button" data-title="Refresh" data-type="button">Refresh</button>
+								<button id="PromptViewDraftReportTemplateButton" onclick="submit('event:PromptViewDraftReportTemplateButton,type:button,id:PromptViewDraftReportTemplateButton,rid:53')" class="announcementText btn" style="display: none;" type="button" data-title="View Template" data-type="button">View Template</button>
+							</div>
+						</td>
+						<td colspan="1">
+							<div class="pagination">
+			                	<img src="images/icon_first.png" onclick="loadGrid('PromptDraftReportsGrid,53,F')">
+			                	<img src="images/icon_back.png" onclick="loadGrid('PromptDraftReportsGrid,53,P')">
+			                	<span id="pagination__label">Page 1 of 1</span>
+								<img src="images/icon_next.png" onclick="loadGrid('PromptDraftReportsGrid,53,N')">
+			                 	<img src="images/icon_last.png" onclick="loadGrid('PromptDraftReportsGrid,53,L')">
+			               </div>
+			            </td>
+					</tfoot>
+				</table>
+			</div>
+			<div class="section section__grid">
+				<h2 class="title__section">Submitted Reports Available for Follow-Up</h2>
+
+				<!-- Accordion -->
+
+				<div id="SubmittedReports-collapsible" class="tabs enabled" data-type="collapsible" data-ref="SubmittedReports" data-state="closed">
+					<h3 class="accordion tab-heading" id="SubmittedReports-heading"> Search for Submitted Reports</h3>
+				</div>
+
+				<div id="SubmittedReports" class="accordion-content tab-panel">
+					<div class="block__note">NOTE: You can search on one or more of the fields below.</div>
+					<div class="row__form">
+						<div class="col2">
+							<div class="col2__label"><label for="date">Submitted as of <span>(mm/dd/yyyy or mm/yyyy):</span></label></div>
+							<div class="col2__input"><input name="date" type="text" id="date" class="input__date"></div>
+						</div>
+						<div class="col2">
+							<div class="col2__label"><label for="icrs">ICSR Number <span>(please enter the number only):</span></label></div>
+							<div class="col2__input"><input name="icrs" type="text" id="icrs" class="input__sm"></div>
+						</div>
+					</div>
+					<div class="row__form">
+						<div class="col2">
+							<div class="col2__label-small"><label for="title">Title</label></div>
+							<div class="col2__input-large"><input name="title" type="text" id="title" class="input__medium"></div>
+						</div>
+					</div>
+					<div class="row__form">
+						<input type="submit" name="" value="Search" id="search" class="btn__search">
+						<input type="submit" name="" value="Reset" id="reset" class="btn__reset">
+					</div>
+				</div>
+
+				<!-- Empty Table -->
+
+				<table class="table__grid">
+					<caption>Click column header to sort the column</caption>
+					<thead>
+						<tr>
+							<th></th>
+							<th><a href="#">Date Saved (EST)</a></th>
+							<th><a href="#">Report ID</a></th>
+							<th><a href="#">Title</a></th>
+							<th><a href="#">Report Type Description</a></th>
+						</tr>
+					</thead>
+					<tr>
+						<td colspan="5">You have not submitted any reports.</td>
+					</tr>
+					<tfoot>
+						<td colspan="4">
+							<div class="table__buttons">
+								<button id="PromptSubmitNewReportButton" onclick="submit('event:PromptSubmitNewReportButton,type:button,id:PromptSubmitNewReportButton,rid:53')" type="button" data-title="Start New Report" data-type="button">Start New Report</button>
+								<button id="PromptEditDraftReportButton" onclick="submit('event:EditGrid,type:button,id:PromptEditDraftReportButton,rid:53')" class="announcementText btn" type="button" data-title="Edit" data-type="button" disabled="disabled">Edit</button>
+								<button id="PromptDeleteDraftReportButton" onclick="submit('event:DeleteGrid,type:button,id:PromptDeleteDraftReportButton,rid:53')" class="announcementText btn" type="button" data-title="Delete" data-type="button" disabled="disabled">Delete</button>
+								<button id="PromptViewDraftReportButton" onclick="submit('event:PromptViewDraftReportButton,type:button,id:PromptViewDraftReportButton,rid:53')" class="announcementText btn" style="" type="button" data-title="View" data-type="button" disabled="disabled">View</button>
+								<button id="PromptRefreshDraftReportButton" onclick="submit('event:PromptRefreshDraftReportButton,type:button,id:PromptRefreshDraftReportButton,rid:53')" class="announcementText btn" style="" type="button" data-title="Refresh" data-type="button">Refresh</button>
+								<button id="PromptViewDraftReportTemplateButton" onclick="submit('event:PromptViewDraftReportTemplateButton,type:button,id:PromptViewDraftReportTemplateButton,rid:53')" class="announcementText btn" style="display: none;" type="button" data-title="View Template" data-type="button">View Template</button>
+							</div>
+						</td>
+						<td colspan="1">
+							<div class="pagination">
+			                	<img src="images/icon_first.png" onclick="loadGrid('PromptDraftReportsGrid,53,F')">
+			                	<img src="images/icon_back.png" onclick="loadGrid('PromptDraftReportsGrid,53,P')">
+			                	<span id="pagination__label">Page 1 of 1</span>
+								<img src="images/icon_next.png" onclick="loadGrid('PromptDraftReportsGrid,53,N')">
+			                 	<img src="images/icon_last.png" onclick="loadGrid('PromptDraftReportsGrid,53,L')">
+			               </div>
+			            </td>
+					</tfoot>
+				</table>
+
+			</div>
+		</section>
+	</section>
+
+
+
+	<!-- Footer -->
+	<footer class="footer footer-interior">
+	    <div align="center" class="footer-small">
+			<p><a target="_blank" href="http://www.hhs.gov/Privacy.html">PRIVACY POLICY</a> | <a target="_blank" href="http://www.hhs.gov/foia/">FREEDOM OF INFORMATION ACT</a> | <a target="_blank" href="http://www.hhs.gov/Accessibility.html">ACCESSIBILITY</a> | <a target="_blank" href="http://www.hhs.gov/Disclaimer.html">DISCLAIMER</a>
+	        <br/>
+	        <br/>
+	        [Under <a target="_blank" href="http://frwebgate.access.gpo.gov/cgi-bin/usc.cgi?ACTION=RETRIEVE&amp;FILE=$$xa$$busc18.wais&amp;start=1925859&amp;SIZE=10370&amp;TYPE=TEXT">18 U.S.C. 1001</a>, anyone who makes a materially false, fictitious, or fraudulent statement to the U.S. Government is subject to criminal penalties.]</p>
+		</div>
+	</footer>
+</div>
+
+
+
+<script>
+initDeck('main-deck');
+
+$(document).foundation();
+
+ function changeHashOnLoad() {
+    window.location.href += "#";
+    setTimeout(changeHashAgain, 50);
+ }
+
+ function changeHashAgain() {          
+    window.location.href += "1";
+ }
+
+ var storedHash = window.location.hash;
+ window.setInterval(function () {
+    if (window.location.hash != storedHash) {
+       window.location.hash = storedHash;
+    }
+ }, 50);
+
+newSession();
+</script>
+
+
+</body>
+</html>

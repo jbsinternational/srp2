@@ -1,0 +1,205 @@
+
+    <div class="region-content">
+
+    <div id="rdmf-deck" data-index="0" data-class="deck" data-card="0">
+      <div id="main">
+      
+        <!-- Login page ------------------------------------------- -->
+
+        <header>
+          <div class="region-login">
+	         <div class="container_12">
+		        <div class="grid_6">
+                <img src="img/logo-cgtams.jpg" alt="CG-TAMS: Clinical Grants Technical Assistance Management System">
+              </div>
+	         </div>
+          </div>
+        </header>
+
+        <div class="row">
+          <div id="mainPlugin" class="large-12 columns socket">
+-----------          
+          <div id="17-plugin_17" rid="17" class="" data-type="plugin">
+          <div id="g2717_17" class=" " data-type="page">
+          <h1 class="title" data-type="page-head">User Login</h1>
+          <div id="g2718_17" class=" " style="" data-type="promptgroup">
+          <h3 class="title-section" data-type="promptgroup-head">Login</h3>
+          
+          <div class="row" data-type="row">
+          
+          <div class="small-6 columns" data-type="div" style="" id="f2160_17-div">
+          <label id="f2160_17-label">
+          <span style="color:red">* </span>Email</label>
+          <input id="f2160_17" class="" data-id="f2160_17" data-type="string" maxlength="50" title="" type="text">
+          </div>
+          
+          <div class="small-6 columns" style="" data-type="div" id="f2161_17-div">
+          <label id="f2161_17-label">
+          <span style="color:red">* </span>Password</label>
+          <span>
+          <input id="f2161_17" data-id="f2161_17" class="" data-type="password" maxlength="50" title="" type="password">
+          </span>
+          <div id="f2161_17-note" data-type='collapsible'/>
+          </div>
+          
+          </div>
+          </div>
+          <div id="g2795_17" class=" " style="" data-type="promptgroup"><div class="row" data-type="row"><div id="g2986_17" class="small-6 columns " style="" data-type="promptgroup"><button id="f2542_17" onclick="submit('Login')" class="  btn" style="" data-keys="" title="" type="button">Login</button></div><div id="g2987_17" class="small-6 columns " style="" data-type="promptgroup"><button id="f2543_17" onclick="submit('ChangePassword')" class="  btn" style="" data-keys="" title="" type="button">Forgot Username/Password</button></div></div></div></div></div></div>
+        </div>
+
+        <footer class="row">
+          <div class="large-12 columns">
+            <hr>
+            <div class="row">
+              <div class="large-6 columns">
+                <p>© Copyright 2014</p>
+              </div>
+            </div>
+          </div>
+        </footer>
+        </div>
+      
+      <div id="home" hidden="hidden">
+      
+        <!-- User Activities Page --------------------------------- -->
+        
+        <header>
+          <div class="region-login">
+	         <div class="container_12">
+		        <div class="grid_6">
+                <img src="img/logo-cgtams.jpg" alt="CG-TAMS: Clinical Grants Technical Assistance Management System"></div>
+		        <div class="grid_6 zone-login">
+                <p> <span id="activities-username" data-type="html">username, program area</span> | <a href="#" onclick="submit('logout')">Logout</a></p>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <div class="row">
+          <div class="large-6 columns">
+				<h3 class="title">TA Activities</h3>
+          </div>
+          <div class="large-6 columns">
+            <div class="block-info" style="float:right" onclick="doHelp()"><span class="fa fa-info-circle"></span>Guidance</div>
+          </div>
+        </div>
+        
+        <br>
+
+        <!-- Activities Report Content Section -->
+        
+        <div class="row">
+          <div id="homePlugin" class="large-12 columns socket"></div>
+        </div>
+
+        <footer class="row">
+          <div class="large-12 columns">
+            <hr>
+            <div class="row">
+              <div class="large-6 columns">
+                <p>© Copyright 2014</p>
+              </div>
+            </div>
+          </div>
+        </footer>
+        </div>
+      
+      <div id="report" hidden="hidden">
+      
+        <!-- Report page ----------------------------------- -->
+        
+        <header>
+          <div class="region-login">
+            <div class="container_12">
+              <div class="grid_6">
+                <img src="img/logo-cgtams.jpg" alt="CG-TAMS: Clinical Grants Technical Assistance Management System">
+              </div>
+              <div class="grid_6 zone-login">
+                <p> <span id="report-username" data-type="html">username, program area</span> | <a href="#" onclick="submit('logout')">Logout</a></p>
+              </div>
+            </div>
+          </div>
+          <br>
+          <!-- div class="container_12" class=" region-menu">
+            <div class="block-info" style="text-align:right"><span class="fa fa-info-circle"></span>Guidance</div>
+          </div -->
+        </header>
+        
+        <div class="row">
+          <div class="large-6 columns"></div>
+          <div class="large-6 columns">
+            <div class="block-info" style="float:right" onclick="doHelp()"><span class="fa fa-info-circle"></span>Guidance</div>
+          </div>
+        </div>
+        <br>
+
+        <!-- Report Content Section -->
+          <div class="row" style="padding-top:10px">
+            <div class="large-12 columns">
+              <div style="text-align:right">
+                <input id="event-id-and-name"> 
+              </div>
+            </div>
+          </div>
+          
+        <div class="row">
+          <div class="large-3 columns">
+            <div class="menu-home">
+              <a href="#" class="menu-link" "="" onclick="submit('backToHome')">
+                <span class="fa fa-home fa-2x"></span>
+                <span class="menu-home-link"> Home</span>
+              </a>
+            </div>
+            <br>
+            <div id="div-master-link">
+              <ul>
+                <li><a onclick="submit('showMaster')"><span id="menu-master-link" data-type="html"> Global TA Information</span></a></li>
+              </ul>
+            </div>
+            <div id="div-event-links">
+              <ul>
+                <li><a onclick="navHideShow('ul2')">Event Information</a>
+                  <ul id="ul2">
+                    <li><a onclick="submit('{&quot;rule&quot;:&quot;showEvent&quot;,&quot;page&quot;:&quot;0&quot;}')">General</a></li>
+                    <li><a onclick="submit('{&quot;rule&quot;:&quot;showEvent&quot;,&quot;page&quot;:&quot;1&quot;}')">Type of TA</a></li>
+                    <li><a onclick="submit('{&quot;rule&quot;:&quot;showEvent&quot;,&quot;page&quot;:&quot;2&quot;}')">Mode of Delivery</a></li>
+                    <li><a onclick="submit('{&quot;rule&quot;:&quot;showEvent&quot;,&quot;page&quot;:&quot;3&quot;}')">Products</a></li>
+                    <li><a onclick="submit('{&quot;rule&quot;:&quot;showEvent&quot;,&quot;page&quot;:&quot;4&quot;}')">Target Audience</a></li>
+                    <li><a onclick="submit('{&quot;rule&quot;:&quot;showEvent&quot;,&quot;page&quot;:&quot;5&quot;}')">Consultants</a></li>
+                    <li><a onclick="submit('{&quot;rule&quot;:&quot;showEvent&quot;,&quot;page&quot;:&quot;6&quot;}')">TA Participants</a></li>
+                    <li><a onclick="submit('{&quot;rule&quot;:&quot;showEvent&quot;,&quot;page&quot;:&quot;7&quot;}')">Followup Actions</a></li>
+                  </ul>
+                </li>
+              </ul>
+              <div id="div-event-links-note" data-type='collapsible'></div>
+            </div>
+          </div>
+          <div class="large-9 columns">
+            <div id="report-deck" data-class="deck">
+              <div id="masterPlugin" class="socket"></div>
+              <div id="eventPlugin" class="socket"></div>
+            </div>
+            <div class="row">
+              <div class="large-8 columns">
+                <button type="button" id="dsi-save" data-keys="save" class="btn" onclick="submit('SaveTAEvent')">Save</button>
+              </div>
+              <div id="dsi-navs" class="large-4 columns">
+                <button type="button" id="19-plugin_19-prev" data_keys="page" style="float:left" class="btn" onclick="gotoPreviousPage('19-plugin_19,report-deck')">Back</button>
+                <button type="button" id="19-plugin_19-next" data_keys="page" style="float:right" class="btn" onclick="gotoNextPage('19-plugin_19,report-deck')">Next</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="row">
+          <div class="large-12 columns">
+            <hr>
+            <div class="row">
+              <div class="large-6 columns">
+                <p>© Copyright 2014</p>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </div>

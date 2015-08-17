@@ -1,0 +1,49 @@
+.footer {
+	background: white;
+	margin: 0 auto;
+	padding-top: 20px;
+	width: 1000px;
+}
+
+.footer-wrapper {
+	margin:0 auto;
+	width: 700px;
+}
+
+.footer-logos {
+	float: left;
+	text-align: center;
+}
+
+.footer-logos-hhs {
+	width: 130px;
+}
+
+.footer-logos-usa {
+	padding-top: 20px;
+	width: 203px;
+}
+
+.footer-logos-fda {
+	padding-top: 40px;
+	width: 233px;
+}
+
+.footer-logos-nih {
+	width: 132px;
+}
+
+.footer-interior {
+	padding-top: 0;
+}
+
+.footer-small {
+	padding-bottom: 20px;
+}
+
+.footer-interior .footer-small {
+	background: url('../images/back-leftsidebar.png');
+	background-repeat: repeat-y;
+	overflow: auto;
+	padding: 0 20px 20px 200px;
+}

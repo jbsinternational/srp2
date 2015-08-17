@@ -1,0 +1,53 @@
+.waitpopup {
+    display: none;
+    position: fixed;
+    z-index:3003;
+    top: 17%;
+    left: 50%;
+    margin-left: -152px;
+    width: 304px;
+    height: 155px;
+    text-align:center;
+    background: url(../images/WaitBackground.gif);
+    background-color: transparent;
+    color: #333;
+    border: none;
+}
+
+.waitpopup img
+{
+    margin: auto;
+    margin-top: 30px;
+}
+
+.waitpopup span
+{
+    color: #216b93;
+    font-size: 110%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    display: block;
+    margin: auto;
+    padding-top: 10px;
+    padding-left: 5px;
+}
+
+.jqmOverlay 
+{
+	/* z-index:100002;*/
+    opacity: .8;
+    background-color: #222222;
+}
+
+* iframe.jqm 
+{
+    position:absolute;top:0;left:0;z-index:-1;
+    width: expression(this.parentNode.offsetWidth+'px');
+    height: expression(this.parentNode.offsetHeight+'px');
+}
+
+* html .jqmWindow 
+{
+    position: absolute;
+    top: expression((document.documentElement.scrollTop || document.body.scrollTop) + Math.round(17 * (document.documentElement.offsetHeight || document.body.clientHeight) / 100) + 'px');
+}

@@ -1,0 +1,129 @@
+/*doc
+---
+title: Grids
+name: grids2
+category: grids
+---
+```html_example
+<div class="section section__grid">
+
+	<h2 class="title__section">Draft Reports</h2>
+	
+	<table class="table__grid">
+		<caption>Click column header to sort the column</caption>
+		<thead>
+			<tr>
+				<th></th>
+				<th><a href="#">Date Saved (EST)</a></th>
+				<th><a href="#">Report ID</a></th>
+				<th><a href="#">Title</a></th>
+				<th><a href="#">Report Type Description</a></th>
+			</tr>
+		</thead>
+		<tr>
+			<td><input value="" name="" type="radio"></td>
+			<td>08/03/2015 03:10:20 PM</td>
+			<td>37340 (I)</td>
+			<td>Voluntary Reportable Food Report (V2)</td>
+			<td>Voluntary Reportable Food Report (Section 1005 of Public Law 110-85) (V2)</td>
+		</tr>
+		<tr>
+			<td><input value="" name="" type="radio"></td>
+			<td>08/03/2015 03:10:20 PM</td>
+			<td>37340 (I)</td>
+			<td>Voluntary Reportable Food Report (V2)</td>
+			<td>Voluntary Reportable Food Report (Section 1005 of Public Law 110-85) (V2)</td>
+		</tr>
+		<tfoot>
+			<td colspan="4">
+				<div class="table__buttons">
+					<button id="PromptSubmitNewReportButton" onclick="submit('event:PromptSubmitNewReportButton,type:button,id:PromptSubmitNewReportButton,rid:53')" type="button" data-title="Start New Report" data-type="button">Start New Report</button>
+					<button id="PromptEditDraftReportButton" onclick="submit('event:EditGrid,type:button,id:PromptEditDraftReportButton,rid:53')" class="announcementText btn" type="button" data-title="Edit" data-type="button" disabled="disabled">Edit</button>
+					<button id="PromptDeleteDraftReportButton" onclick="submit('event:DeleteGrid,type:button,id:PromptDeleteDraftReportButton,rid:53')" class="announcementText btn" type="button" data-title="Delete" data-type="button" disabled="disabled">Delete</button>
+					<button id="PromptViewDraftReportButton" onclick="submit('event:PromptViewDraftReportButton,type:button,id:PromptViewDraftReportButton,rid:53')" class="announcementText btn" style="" type="button" data-title="View" data-type="button" disabled="disabled">View</button>
+					<button id="PromptRefreshDraftReportButton" onclick="submit('event:PromptRefreshDraftReportButton,type:button,id:PromptRefreshDraftReportButton,rid:53')" class="announcementText btn" style="" type="button" data-title="Refresh" data-type="button">Refresh</button>
+					<button id="PromptViewDraftReportTemplateButton" onclick="submit('event:PromptViewDraftReportTemplateButton,type:button,id:PromptViewDraftReportTemplateButton,rid:53')" class="announcementText btn" style="display: none;" type="button" data-title="View Template" data-type="button">View Template</button>
+				</div>
+			</td>
+			<td colspan="1">
+				<div class="pagination">
+                	<img src="images/icon_first.png" onclick="loadGrid('PromptDraftReportsGrid,53,F')">
+                	<img src="images/icon_back.png" onclick="loadGrid('PromptDraftReportsGrid,53,P')">
+                	<span id="pagination__label">Page 1 of 1</span>
+					<img src="images/icon_next.png" onclick="loadGrid('PromptDraftReportsGrid,53,N')">
+                 	<img src="images/icon_last.png" onclick="loadGrid('PromptDraftReportsGrid,53,L')">
+               </div>
+            </td>
+		</tfoot>
+	</table>
+</div>
+```
+
+*/
+
+table {
+	border: 1px solid grey;
+    border-collapse: separate;
+    display: table;
+    width: 100%;
+}
+
+table input[type="radio"] {
+	margin: 0;
+}
+
+th {
+	background: #E1DEC9;
+	color: #152359;
+	font-weight: bold;
+	text-align: left;
+}
+
+th, td {
+	padding: 5px;
+}
+
+th a {
+	color: #152359;
+	text-decoration: none;
+}
+
+caption {
+	color: #152359;
+	font-size: 1em;
+	font-weight: bold;
+	text-align: right;
+	margin-bottom: 5px;
+}
+
+.table__grid td {
+	border-top: 1px solid grey;
+}
+
+.table__grid th:nth-child(1) {
+	width: 25px;
+}
+
+.table__grid th:nth-child(2) {
+	width: 155px;
+}
+
+.table__grid th:nth-child(3) {
+	width: 90px;
+}
+
+.table__grid th:nth-child(4) {
+	width: 200px;
+}
+
+tfoot {
+	background: #E1DEC9;
+}
+
+tfoot span {
+	color: #216b93;
+}
+
+.pagination {
+	text-align: right;
+}

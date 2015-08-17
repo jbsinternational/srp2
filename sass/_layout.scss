@@ -1,0 +1,97 @@
+.page {
+	background: white;
+	float: left;
+	width: 100%;
+}
+
+.page__landing {
+	padding: 10px;
+}
+
+.page__sidenav {
+	background: url('../images/back-leftsidebar.png');
+	background-repeat: repeat-y;
+}
+
+.page__sidenav-main {
+	float: left;
+	padding: 10px 20px;
+	width: 800px;
+}
+
+.row {
+	float: left;
+	width: 100%;
+}
+
+.form-row {
+	float: left;
+	margin: 10px 0;
+	width: 100%;
+}
+
+.section {
+	float: left;
+	margin-bottom: 40px;
+	width: 100%;
+}
+
+.small-1 {
+    width: 8.33333%;
+}
+
+.small-3 {
+    width: 25%;
+}
+
+.small-4 {
+    width: 33.33333%;
+}
+
+.columns {
+    position: relative;
+    padding-left: 0.9375em;
+    padding-right: 0.9375em;
+    float: left;
+}
+
+.col1 {
+	float: left;
+	margin-bottom: 5px;
+	width: 100%;
+}
+
+.col2 {
+	padding-right: 10px;
+	width: 50%;
+}
+
+.col33 {
+	float: left;
+	margin-right: 10px;
+	max-width: 33%;
+}
+
+.col40 {
+	width: 40%;
+}
+
+.col60 {
+	width: 60%;
+}
+
+.form-row__controls {
+	background: #A7CDEC;
+	float: left;
+	padding: 10px 5px;
+}
+
+.form-row__col {
+	float: left;
+	text-align: left;
+}
+
+.align-right {
+	text-align: right;
+}
+

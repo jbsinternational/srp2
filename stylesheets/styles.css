@@ -1,0 +1,2120 @@
+/* line 1, ../sass/styles.scss */
+html {
+  box-sizing: border-box;
+}
+
+/* line 5, ../sass/styles.scss */
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* line 9, ../sass/styles.scss */
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+/* line 17, ../sass/styles.scss */
+.clearfix {
+  display: inline-block;
+}
+
+/* start commented backslash hack \*/
+/* line 19, ../sass/styles.scss */
+* html .clearfix {
+  height: 1%;
+}
+
+/* line 20, ../sass/styles.scss */
+.clearfix {
+  display: block;
+}
+
+/* line 22, ../sass/styles.scss */
+body {
+  background: #C0C0C0;
+  font-family: Verdana, Arial, sans-serif;
+}
+
+/*doc
+---
+title: SRP 2.0 Styleguide
+name: welcome
+category: index
+---
+
+Welcome!
+
+*/
+/* normalize-scss 3.0.2+normalize.3.0.2 | MIT/GPLv2 License | bit.ly/normalize-scss */
+/**
+ * Establish a vertical rhythm unit using $base-font-size, $base-line-height,
+ * and $rhythm-unit variables. Also, correct text resizing oddly in IE 6/7 when
+ * body `font-size` is set using `em` units.
+ */
+/* line 106, ../../../../.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/typography/_vertical_rhythm.scss */
+html {
+  font-size: 75%;
+  line-height: 1.41667em;
+}
+
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+/* line 76, ../sass/_normalize.scss */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+/* line 88, ../sass/_normalize.scss */
+body {
+  margin: 0;
+}
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+/* line 102, ../sass/_normalize.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+/* line 123, ../sass/_normalize.scss */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  *display: inline;
+  *zoom: 1;
+  vertical-align: baseline;
+  /* 2 */
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+/* line 142, ../sass/_normalize.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ */
+/* line 152, ../sass/_normalize.scss */
+[hidden] {
+  display: none;
+}
+
+/**
+ * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+ */
+/* line 161, ../sass/_normalize.scss */
+template {
+  display: none;
+}
+
+/* Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+/* line 173, ../sass/_normalize.scss */
+a {
+  background-color: transparent;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+/* line 182, ../sass/_normalize.scss */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+/* line 194, ../sass/_normalize.scss */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+/* line 202, ../sass/_normalize.scss */
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Set 1 unit of vertical rhythm on the top and bottom margin.
+ */
+/* line 212, ../sass/_normalize.scss */
+blockquote {
+  margin: 1.41667em 40px;
+}
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+/* line 221, ../sass/_normalize.scss */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+/* line 230, ../sass/_normalize.scss */
+h1 {
+  /* Set the font-size and line-height while keeping a proper vertical rhythm. */
+  font-size: 2em;
+  line-height: 1.41667em;
+  /* Set 1 unit of vertical rhythm on the top and bottom margins. */
+  margin-top: 0.70833em;
+  margin-bottom: 0.70833em;
+}
+
+/* line 245, ../sass/_normalize.scss */
+h2 {
+  font-size: 1.5em;
+  line-height: 1.88889em;
+  margin-top: 0.94444em;
+  margin-bottom: 0.94444em;
+}
+
+/* line 251, ../sass/_normalize.scss */
+h3 {
+  font-size: 1.17em;
+  line-height: 2.42165em;
+  margin-top: 1.21083em;
+  margin-bottom: 1.21083em;
+}
+
+/* line 257, ../sass/_normalize.scss */
+h4 {
+  font-size: 1em;
+  line-height: 1.41667em;
+  margin-top: 1.41667em;
+  margin-bottom: 1.41667em;
+}
+
+/* line 263, ../sass/_normalize.scss */
+h5 {
+  font-size: 0.83em;
+  line-height: 1.70683em;
+  margin-top: 1.70683em;
+  margin-bottom: 1.70683em;
+}
+
+/* line 269, ../sass/_normalize.scss */
+h6 {
+  font-size: 0.67em;
+  line-height: 2.11443em;
+  margin-top: 2.11443em;
+  margin-bottom: 2.11443em;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+/* line 281, ../sass/_normalize.scss */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Set 1 unit of vertical rhythm on the top and bottom margin.
+ */
+/* line 292, ../sass/_normalize.scss */
+p,
+pre {
+  margin: 1.41667em 0;
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+/* line 302, ../sass/_normalize.scss */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+/* line 310, ../sass/_normalize.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 318, ../sass/_normalize.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 322, ../sass/_normalize.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* Lists
+   ========================================================================== */
+/**
+ * Address margins set differently in IE 6/7.
+ */
+/* line 334, ../sass/_normalize.scss */
+dl,
+menu,
+ol,
+ul {
+  margin: 1.41667em 0;
+}
+
+/* line 355, ../sass/_normalize.scss */
+dd {
+  margin: 0 0 0 40px;
+}
+
+/**
+ * Address paddings set differently in IE 6/7.
+ */
+/* line 363, ../sass/_normalize.scss */
+menu,
+ol,
+ul {
+  padding: 0 0 0 40px;
+}
+
+/**
+ * Correct list images handled incorrectly in IE 7.
+ */
+/* line 375, ../sass/_normalize.scss */
+nav ul,
+nav ol {
+  list-style: none;
+  list-style-image: none;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+/* line 390, ../sass/_normalize.scss */
+img {
+  border: 0;
+  /* Improve image quality when scaled in IE 7. */
+  -ms-interpolation-mode: bicubic;
+}
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+/* line 403, ../sass/_normalize.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+/* line 415, ../sass/_normalize.scss */
+figure {
+  margin: 1.41667em 40px;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+/* line 424, ../sass/_normalize.scss */
+hr {
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Contain overflow in all browsers.
+ */
+/* line 433, ../sass/_normalize.scss */
+pre {
+  overflow: auto;
+}
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+/* line 441, ../sass/_normalize.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * Correct margin displayed oddly in IE 6/7.
+ */
+/* line 465, ../sass/_normalize.scss */
+form {
+  margin: 0;
+}
+
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ * 4. Address `font-family` inconsistency between `textarea` and other form in IE 7
+ * 5. Improve appearance and consistency with IE 6/7.
+ */
+/* line 479, ../sass/_normalize.scss */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+  *font-family: sans-serif;
+  /* 4 */
+  *vertical-align: middle;
+  /* 5 */
+}
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+/* line 497, ../sass/_normalize.scss */
+button {
+  overflow: visible;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+/* line 508, ../sass/_normalize.scss */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ * 4. Remove inner spacing in IE 7 without affecting normal text inputs.
+ *    Known issue: inner spacing remains in IE 6.
+ */
+/* line 523, ../sass/_normalize.scss */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+  *overflow: visible;
+  /* 4 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+/* line 538, ../sass/_normalize.scss */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+/* line 547, ../sass/_normalize.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+/* line 558, ../sass/_normalize.scss */
+input {
+  line-height: normal;
+}
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ * 3. Remove excess padding in IE 7.
+ *    Known issue: excess padding remains in IE 6.
+ */
+/* line 573, ../sass/_normalize.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+  *height: 13px;
+  /* 3 */
+  *width: 13px;
+  /* 3 */
+}
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+/* line 590, ../sass/_normalize.scss */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
+ *    (include `-moz` to future-proof).
+ */
+/* line 601, ../sass/_normalize.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  /* 2 */
+  /**
+   * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+   * Safari (but not Chrome) clips the cancel button when the search input has
+   * padding (and `textfield` appearance).
+   */
+}
+/* line 611, ../sass/_normalize.scss */
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+/* line 621, ../sass/_normalize.scss */
+fieldset {
+  margin: 0 2px;
+  /* Apply borders and padding that keep the vertical rhythm. */
+  border-color: #c0c0c0;
+  border-top-width: 0.08333em;
+  border-top-style: solid;
+  padding-top: 0.4125em;
+  border-bottom-width: 0.08333em;
+  border-bottom-style: solid;
+  padding-bottom: 0.8375em;
+  border-left-width: 0.08333em;
+  border-left-style: solid;
+  padding-left: 0.80208em;
+  border-right-width: 0.08333em;
+  border-right-style: solid;
+  padding-right: 0.80208em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ * 3. Correct alignment displayed oddly in IE 6/7.
+ */
+/* line 637, ../sass/_normalize.scss */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+  *margin-left: -7px;
+  /* 3 */
+}
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+/* line 651, ../sass/_normalize.scss */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+/* line 660, ../sass/_normalize.scss */
+optgroup {
+  font-weight: bold;
+}
+
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+/* line 671, ../sass/_normalize.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 676, ../sass/_normalize.scss */
+td,
+th {
+  padding: 0;
+}
+
+/* line 1, ../sass/_header.scss */
+.banner {
+  height: 119px;
+}
+
+/* line 5, ../sass/_header.scss */
+.navigation {
+  background: #A8D1EF;
+}
+
+/* line 9, ../sass/_header.scss */
+.banner,
+.navigation {
+  float: left;
+  width: 100%;
+}
+
+/* line 15, ../sass/_header.scss */
+.navigation__welcome {
+  float: left;
+  width: 25%;
+  font-style: italic;
+  margin-left: 10px;
+  margin-top: 5px;
+  text-align: left;
+}
+
+/* line 24, ../sass/_header.scss */
+.navigation__items {
+  float: right;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+/* line 32, ../sass/_header.scss */
+.navigation a:link,
+.navigation a:visited {
+  padding-right: 20px;
+  color: #152359;
+  text-decoration: none;
+  font-weight: bold;
+  background-color: #A8D1EF;
+}
+
+/* line 42, ../sass/_header.scss */
+.navigation a:active,
+.navigation a:hover {
+  text-decoration: underline;
+}
+
+/* line 48, ../sass/_header.scss */
+.navigation li {
+  margin: 0;
+  padding: 0;
+  float: left;
+  list-style: none;
+  font-weight: bold;
+  color: #152359;
+  background-color: #A8D1EF;
+  display: block;
+}
+
+/* line 59, ../sass/_header.scss */
+.navigation ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-weight: bold;
+  color: #152359;
+  background-color: #A8D1EF;
+}
+
+/* line 33, ../sass/styles.scss */
+.wrapper {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+}
+/* line 12, ../../../../.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/susy-2.2.5/sass/susy/output/support/_clearfix.scss */
+.wrapper:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+/* line 1, ../sass/_layout.scss */
+.page {
+  background: white;
+  float: left;
+  width: 100%;
+}
+
+/* line 7, ../sass/_layout.scss */
+.page__landing {
+  padding: 10px;
+}
+
+/* line 11, ../sass/_layout.scss */
+.page__sidenav {
+  background: url("../images/back-leftsidebar.png");
+  background-repeat: repeat-y;
+}
+
+/* line 16, ../sass/_layout.scss */
+.page__sidenav-main {
+  float: left;
+  padding: 10px 20px;
+  width: 800px;
+}
+
+/* line 22, ../sass/_layout.scss */
+.row {
+  float: left;
+  width: 100%;
+}
+
+/* line 27, ../sass/_layout.scss */
+.form-row {
+  float: left;
+  margin: 10px 0;
+  width: 100%;
+}
+
+/* line 33, ../sass/_layout.scss */
+.section {
+  float: left;
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+/* line 39, ../sass/_layout.scss */
+.small-1 {
+  width: 8.33333%;
+}
+
+/* line 43, ../sass/_layout.scss */
+.small-3 {
+  width: 25%;
+}
+
+/* line 47, ../sass/_layout.scss */
+.small-4 {
+  width: 33.33333%;
+}
+
+/* line 51, ../sass/_layout.scss */
+.columns {
+  position: relative;
+  padding-left: 0.9375em;
+  padding-right: 0.9375em;
+  float: left;
+}
+
+/* line 58, ../sass/_layout.scss */
+.col1 {
+  float: left;
+  margin-bottom: 5px;
+  width: 100%;
+}
+
+/* line 64, ../sass/_layout.scss */
+.col2 {
+  padding-right: 10px;
+  width: 50%;
+}
+
+/* line 69, ../sass/_layout.scss */
+.col33 {
+  float: left;
+  margin-right: 10px;
+  max-width: 33%;
+}
+
+/* line 75, ../sass/_layout.scss */
+.col40 {
+  width: 40%;
+}
+
+/* line 79, ../sass/_layout.scss */
+.col60 {
+  width: 60%;
+}
+
+/* line 83, ../sass/_layout.scss */
+.form-row__controls {
+  background: #A7CDEC;
+  float: left;
+  padding: 10px 5px;
+}
+
+/* line 89, ../sass/_layout.scss */
+.form-row__col {
+  float: left;
+  text-align: left;
+}
+
+/* line 94, ../sass/_layout.scss */
+.align-right {
+  text-align: right;
+}
+
+/* line 1, ../sass/_footer.scss */
+.footer {
+  background: white;
+  margin: 0 auto;
+  padding-top: 20px;
+  width: 1000px;
+}
+
+/* line 8, ../sass/_footer.scss */
+.footer-wrapper {
+  margin: 0 auto;
+  width: 700px;
+}
+
+/* line 13, ../sass/_footer.scss */
+.footer-logos {
+  float: left;
+  text-align: center;
+}
+
+/* line 18, ../sass/_footer.scss */
+.footer-logos-hhs {
+  width: 130px;
+}
+
+/* line 22, ../sass/_footer.scss */
+.footer-logos-usa {
+  padding-top: 20px;
+  width: 203px;
+}
+
+/* line 27, ../sass/_footer.scss */
+.footer-logos-fda {
+  padding-top: 40px;
+  width: 233px;
+}
+
+/* line 32, ../sass/_footer.scss */
+.footer-logos-nih {
+  width: 132px;
+}
+
+/* line 36, ../sass/_footer.scss */
+.footer-interior {
+  padding-top: 0;
+}
+
+/* line 40, ../sass/_footer.scss */
+.footer-small {
+  padding-bottom: 20px;
+}
+
+/* line 44, ../sass/_footer.scss */
+.footer-interior .footer-small {
+  background: url("../images/back-leftsidebar.png");
+  background-repeat: repeat-y;
+  overflow: auto;
+  padding: 0 20px 20px 200px;
+}
+
+/*doc
+---
+title: Page Title
+name: title01
+category: Text
+---
+```html_example
+<h1 class='title__page'>My Reports</h1>
+```
+*/
+/*doc
+---
+title: Promptgroup Title
+name: title02
+category: Text
+---
+
+```html_example
+<div class="form-row">
+	<h2 class="title__section">Promptgroup Title</h2>
+	<h2 class="title__promptgroup">Promptgroup Title</h2>
+</div>
+```
+*/
+/*doc
+---
+title: Required Field Comment
+name: title03
+category: Text
+---
+
+```html_example
+<p class="required-field"><span>*</span>=Required Field</p>
+```
+*/
+/*doc
+---
+title: Required Label
+name: title04
+category: Text
+---
+
+```html_example
+<div class="form-row">
+	<div class="col1">
+		<label for="title" class="required">Title</label>
+	</div>
+</div>
+```
+
+*/
+/*doc
+---
+title: Regular Text
+name: title05
+category: Text
+---
+
+```html_example
+<p>You have chosen to submit a <strong>Pet Food Safety Report</strong> to the FDA. Please be advised that under 18 U.S.C. 1001, anyone who makes a materially false, fictitious, or fraudulent statement to the U.S. Government is subject to criminal penalties.</p>
+```
+
+*/
+/*doc
+---
+title: Block Comment
+name: title06
+category: Text
+---
+
+```html_example
+<div class="form-row">
+	<h2 class="title__section">Block Comment</h2>
+	<div class="block__comment">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut deserunt voluptas veritatis dicta dolore laudantium repellat ipsa doloribus iusto qui nemo ab amet corrupti illum ea, architecto commodi pariatur. Reiciendis.</div>
+</div>
+```
+
+
+*/
+/* line 86, ../sass/_text.scss */
+a:hover {
+  text-decoration: none;
+}
+
+/* line 90, ../sass/_text.scss */
+.required:before {
+  color: red;
+  content: '*';
+}
+
+/* line 95, ../sass/_text.scss */
+.title__home {
+  color: #152359;
+  font-size: 1.6em;
+  margin: 0 0 20px 0;
+  padding: 0;
+}
+
+/* line 102, ../sass/_text.scss */
+.title__page {
+  color: #9c3627;
+  font-size: 1.6em;
+  margin: 0 0 20px 0;
+  padding: 0;
+}
+
+/* line 109, ../sass/_text.scss */
+.title__section {
+  color: #152359;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 0 0 20px 0;
+}
+
+/* line 116, ../sass/_text.scss */
+.title__login {
+  background: #152359;
+  color: white;
+  font-size: 1.4em;
+  margin-bottom: 0.8em;
+  padding: 0.5em;
+  text-align: center;
+}
+
+/* line 125, ../sass/_text.scss */
+.title__promptgroup {
+  background: #E1DECA;
+  color: #152359;
+  font-size: 1.1em;
+  padding: 5px;
+}
+
+/* line 132, ../sass/_text.scss */
+.block__comment {
+  background: #F7F7F7;
+  border: 1px solid grey;
+  display: block;
+  margin-bottom: 15px;
+  padding: 10px;
+}
+
+/* line 140, ../sass/_text.scss */
+.block__note {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* line 146, ../sass/_text.scss */
+.required-field {
+  color: #152359;
+  font-weight: bold;
+}
+
+/* line 151, ../sass/_text.scss */
+.required-field span {
+  color: red;
+}
+
+/* line 155, ../sass/_text.scss */
+label {
+  color: #152359;
+  font-weight: bold;
+}
+
+/* line 160, ../sass/_text.scss */
+label span {
+  font-weight: normal;
+}
+
+/* line 1, ../sass/_waitpopup.scss */
+.waitpopup {
+  display: none;
+  position: fixed;
+  z-index: 3003;
+  top: 17%;
+  left: 50%;
+  margin-left: -152px;
+  width: 304px;
+  height: 155px;
+  text-align: center;
+  background: url(../images/WaitBackground.gif);
+  background-color: transparent;
+  color: #333;
+  border: none;
+}
+
+/* line 17, ../sass/_waitpopup.scss */
+.waitpopup img {
+  margin: auto;
+  margin-top: 30px;
+}
+
+/* line 23, ../sass/_waitpopup.scss */
+.waitpopup span {
+  color: #216b93;
+  font-size: 110%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  display: block;
+  margin: auto;
+  padding-top: 10px;
+  padding-left: 5px;
+}
+
+/* line 35, ../sass/_waitpopup.scss */
+.jqmOverlay {
+  /* z-index:100002;*/
+  opacity: .8;
+  background-color: #222222;
+}
+
+/* line 42, ../sass/_waitpopup.scss */
+* iframe.jqm {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: expression(this.parentNode.offsetWidth+'px');
+  height: expression(this.parentNode.offsetHeight+'px');
+}
+
+/* line 49, ../sass/_waitpopup.scss */
+* html .jqmWindow {
+  position: absolute;
+  top: expression((document.documentElement.scrollTop || document.body.scrollTop) + Math.round(17 * (document.documentElement.offsetHeight || document.body.clientHeight) / 100) + 'px');
+}
+
+/*doc
+---
+title: Regular Label & Text Input
+name: form01
+category: Form Elements
+---
+
+```html_example
+<div class="form-row">
+	<h2 class="title__section">Regular Label & Text Input</h2>
+	<div class="col2">
+		<label for="title" class="required">Title</label>
+	</div>
+	<div class="col2">
+		<input name="title" type="text" id="title" class="input__100">
+	</div>
+</div>
+```
+
+*/
+/*doc
+---
+title: Long Label Example
+name: form02
+category: Form Elements
+---
+
+```html_example
+<div class="form-row">
+	<div class="col2">
+		<label for="fname">First Name <span>(here is some explanatory text that is really, really, really long):</span></label>
+	</div>
+	<div class="col2">
+		<input name="fname" type="text" id="fname" class="input__100">
+	</div>
+</div>
+```
+
+*/
+/*doc
+---
+title: Two Text Fields Side By Side
+name: form03
+category: Form Elements
+---
+
+```html_example
+<div class="row__form">
+	<div class="col2">
+		<div class="col2__label"><label for="date">Submitted as of <span>(mm/dd/yyyy or mm/yyyy):</span></label></div>
+		<div class="col2__input"><input name="date" type="text" id="date" class="input__date"></div>
+	</div>
+	<div class="col2">
+		<div class="col2__label"><label for="icrs">ICSR Number <span>(please enter the number only):</span></label></div>
+		<div class="col2__input"><input name="icrs" type="text" id="icrs" class="input__sm"></div>
+	</div>
+</div>
+```
+
+*/
+/*doc
+---
+title: Regular Select List
+name: form04
+category: Form Elements
+---
+
+```html_example
+<div class="form-row">
+	<div class="col2">
+		<label for="fname">State</label>
+	</div>
+	<div class="col2">
+		<select name="state" id="state" class="select__95">
+			<option value="">Please select</option>
+			<option value="items">Items</option>
+		</select>
+	</div>
+</div>
+```
+
+*/
+/*doc
+---
+title: Text Input & Select List Side By Side
+name: form05
+category: Form Elements
+---
+
+```html_example
+<div class="form-row">
+	<div class="col2">
+		<label for="blah">2 prompts on same line, one single label</label>
+	</div>
+	<div class="col2">
+		<div class="col2">
+			<input name="fname" type="text" id="blah" class="input__100">
+		</div>
+		<div class="col2">
+			<select name="state" id="blah2" class="select__95">
+				<option value="">Please select</option>
+				<option value="items">Items</option>
+			</select>
+		</div>
+	</div>
+</div>
+```
+
+*/
+/*doc
+---
+title: Date Field
+name: form06
+category: Form Elements
+---
+
+```html_example
+<div class="form-row">
+	<div class="col2">
+		<label for="datetime" class="required">Date</label>
+	</div>
+	<div class="col2">
+		<input name="datetime" type="text" id="datetime" class="datetime"><span class="icon__calendar"></span>
+	</div>
+</div>
+```
+
+*/
+/*doc
+---
+title: Tooltip
+name: form07
+category: Form Elements
+---
+
+[See this link for working version](http://www2.jbsinternational.com/dc/demo/srp2/report.html)
+
+```html_example
+<div class="form-row">
+	<div class="col2">
+		<label for="org">Organization Type: <a href="#" class="tooltip"><img src="images/icon_info.gif" alt=""><span>Here is some title text. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim ipsum, sed repellat unde eaque maiores? Aut tenetur eligendi quia accusamus quos velit commodi nemo enim vel doloremque, illum laudantium libero.</span></a></label>
+	</div>
+	<div class="col2">
+		<input name="org" type="text" id="org" class="input__100">
+	</div>
+</div>
+```
+
+*/
+/*doc
+---
+title: Full-width Textarea
+name: form08
+category: Form Elements
+---
+
+```html_example
+<div class="form-row">
+	<div class="col1">
+		<label for="blah" class="required">If known, what corrective actions has the responsible party taken to prevent future occurrences of this reportable food?</label>
+	</div>
+	<div class="col1">
+		<textarea name="blahblah" rows="2" cols="20" id="blah" class="textarea__100" title="If known, what corrective actions has the responsible party taken to prevent future occurrences of this reportable food?" spellcheck="true"></textarea><span class="icon__spellcheck"><a href="#"><img src="images/icon_spellcheck.png" alt="Spellcheck"></a></span><span class="icon__info"><a href="#" class="tooltip"><img src="images/icon_info.gif" alt=""><span>Here is some title text. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim ipsum, sed repellat unde eaque maiores? Aut tenetur eligendi quia accusamus quos velit commodi nemo enim vel doloremque, illum laudantium libero.</span></a></span>
+	</div>
+</div>
+```
+
+*/
+/*doc
+---
+title: Regular Radio Buttons
+name: form09
+category: Form Elements
+---
+
+```html_example
+<div class="form-row">
+	<div class="col20">
+		<label for="fname" class="required">Rational Questionnaire</label>
+	</div>
+	<div class="col80">
+		<div class="col1">
+			<input id="blah1" type="radio" name="blahgroup" value="7">
+			<label for="blah1" class="label__radio"><strong>Item 1 Reportable Food Registry Report(mandatory):</strong> A <strong>food facility</strong> or <strong>responsible party</strong> that manufactures, processes, packs, or holds foods who is submitting a <strong>reportable food</strong> report.</label>
+		</div>
+		<div class="col1">
+			<input id="blah2" type="radio" name="blahgroup" value="7">
+			<label for="blah2" class="label__radio"><strong>Item 2 Reportable Food Registry Report(mandatory):</strong> A <strong>food facility</strong> or <strong>responsible party</strong> that manufactures, processes, packs, or holds foods who is submitting a <strong>reportable food</strong> report.</label>
+		</div>
+		<div class="col1">
+			<input id="blah3" type="radio" name="blahgroup" value="7">
+			<label for="blah3" class="label__radio"><strong>Item 3 Reportable Food Registry Report(mandatory):</strong> A <strong>food facility</strong> or <strong>responsible party</strong> that manufactures, processes, packs, or holds foods who is submitting a <strong>reportable food</strong> report.</label>
+		</div>
+	</div>
+</div>
+```
+
+*/
+/*doc
+---
+title: Horizontal Radio Example 1
+name: form10
+category: Form Elements
+---
+
+```html_example
+<div class="form-row">
+	<div class="col2">
+		<label for="fname" class="required">Horizontal Radio Example 1</label>
+	</div>
+	<div class="col2">
+		<div class="col1">
+			<input id="blah1" type="radio" name="blahgroup" value="7">
+			<label for="blah1" class="label__radio">Yes</label>
+		</div>
+		<div class="col1">
+			<input id="blah2" type="radio" name="blahgroup" value="7">
+			<label for="blah2" class="label__radio">No</label>
+		</div>
+	</div>
+</div>
+```
+
+*/
+/*doc
+---
+title: Horizontal Radio Example 2
+name: form11
+category: Form Elements
+---
+
+```html_example
+<div class="form-row">
+	<div class="col2">
+		<label for="blahgroup" class="required">Horizontal Radio Example 2</label>
+	</div>
+	<div class="col2">
+		<div class="col33">
+			<input id="blah1" type="radio" name="blahgroup" value="7">
+			<label for="blah1" class="label__radio">Adverse Event (a symptom, reaction or disease associated with the product</label>
+		</div>
+		<div class="col33">
+			<input id="blah2" type="radio" name="blahgroup" value="7">
+			<label for="blah2" class="label__radio">Product Problem (an observed or detected product issue or defect that has the potential to cause harm</label>
+		</div>
+		<div class="col33">
+			<input id="blah3" type="radio" name="blahgroup" value="7">
+			<label for="blah3" class="label__radio">Both</label>
+		</div>
+	</div>
+</div>
+```
+
+*/
+/*doc
+---
+title: Checkbox Example 1
+name: form12
+category: Form Elements
+---
+
+```html_example
+<div class="form-row">
+	<div class="col2">
+		<label for="fname" class="required">Checkbox Example 1</label>
+	</div>
+	<div class="col2">
+		<div class="col1">
+			<input id="blah1" type="checkbox" name="blahgroup" value="7">
+			<label for="blah1" class="label__radio">Item 1</label>
+		</div>
+		<div class="col1">
+			<input id="blah2" type="checkbox" name="blahgroup" value="6">
+			<label for="blah2" class="label__radio">Item 2</label>
+		</div>
+	</div>
+</div>
+```
+
+*/
+/*doc
+---
+title: Checkbox Example 2
+name: form13
+category: Form Elements
+---
+
+```html_example
+<div class="form-row">
+	<div class="col2">
+		<label for="fname" class="required">Checkbox Example 2</label>
+	</div>
+	<div class="col2">
+		<div class="col2">
+			<div class="col1">
+				<input id="blah1" type="checkbox" name="blahgroup" value="7">
+				<label for="blah1" class="label__radio">Item 1</label>
+			</div>
+			<div class="col1">
+				<input id="blah2" type="checkbox" name="blahgroup" value="6">
+				<label for="blah2" class="label__radio">Item 2</label>
+			</div>
+			<div class="col1">
+				<input id="blah3" type="checkbox" name="blahgroup" value="7">
+				<label for="blah3" class="label__radio">Item 3</label>
+			</div>
+			<div class="col1">
+				<input id="blah4" type="checkbox" name="blahgroup" value="6">
+				<label for="blah4" class="label__radio">Item 4</label>
+			</div>
+		</div>
+		<div class="col2">
+			<div class="col1">
+				<input id="blah5" type="checkbox" name="blahgroup" value="7">
+				<label for="blah5" class="label__radio">Item 5</label>
+			</div>
+			<div class="col1">
+				<input id="blah6" type="checkbox" name="blahgroup" value="6">
+				<label for="blah6" class="label__radio">Item 6</label>
+			</div>
+			<div class="col1">
+				<input id="blah7" type="checkbox" name="blahgroup" value="7">
+				<label for="blah7" class="label__radio">Item 7</label>
+			</div>
+			<div class="col1">
+				<input id="blah8" type="checkbox" name="blahgroup" value="6">
+				<label for="blah8" class="label__radio">Item 8</label>
+			</div>
+		</div>
+	</div>
+</div>
+```
+*/
+/*doc
+---
+title: Smaller Fields (For use in Modal/Lightbox)
+name: form14
+category: Form Elements
+---
+
+```html_example
+<div class="form-row">
+	<h2 class="title__section">Smaller Fields (For use in Modal/Lightbox)</h2>
+	<div class="col2">
+		<label for="fname">First Name</label>
+	</div>
+	<div class="col2">
+		<input name="fname" type="text" id="fname" class="input__80">
+	</div>
+</div>
+
+<div class="form-row">
+	<div class="col2">
+		<label for="fname" class="required">First Name</label>
+	</div>
+	<div class="col2">
+		<select name="state" id="state" class="select__80">
+			<option value="">Please select</option>
+			<option value="items">Items</option>
+		</select>
+	</div>
+</div>
+```
+
+*/
+/*doc
+---
+title: Button Bar with Blue Background
+name: form15
+category: Form Elements
+---
+
+```html_example
+<div class="form-row">
+	<h2 class="title__section">Button Bar</h2>
+	<div class="row form-row__controls">
+		<div class="col2">
+			<input type="submit" name="" value="Save Draft" id="save" class="btn__search">
+			<input type="submit" name="" value="Exit" id="exit" class="btn__search">
+			<input type="submit" name="" value="Submit Report" id="submit" class="btn__search">
+		</div>
+		<div class="col2 align-right">
+			<input type="submit" name="" value="< Back" id="back" class="btn__search">
+			<input type="submit" name="" value="Next >" id="next" class="btn__search">
+		</div>
+	</div>
+</div>
+```
+
+*/
+/* line 406, ../sass/_form-elements.scss */
+.row__form {
+  float: left;
+  margin: 15px 0;
+  width: 100%;
+}
+
+/* line 412, ../sass/_form-elements.scss */
+.col2 {
+  float: left;
+  width: 50%;
+}
+
+/* line 417, ../sass/_form-elements.scss */
+.col2__label {
+  float: left;
+  width: 50%;
+}
+
+/* line 422, ../sass/_form-elements.scss */
+.col2__label-small {
+  float: left;
+  width: 25%;
+}
+
+/* line 427, ../sass/_form-elements.scss */
+.col2__input {
+  float: left;
+}
+
+/* line 431, ../sass/_form-elements.scss */
+.col2__input-large {
+  float: left;
+  width: 75%;
+}
+
+/* line 436, ../sass/_form-elements.scss */
+.col20 {
+  float: left;
+  width: 20%;
+}
+
+/* line 441, ../sass/_form-elements.scss */
+.col80 {
+  float: left;
+  width: 80%;
+}
+
+/* line 446, ../sass/_form-elements.scss */
+.input__100 {
+  width: 100%;
+}
+
+/* line 450, ../sass/_form-elements.scss */
+.textarea__100 {
+  height: 100px;
+  width: 100%;
+}
+
+/* line 455, ../sass/_form-elements.scss */
+.input__medium,
+.input__90 {
+  width: 90%;
+}
+
+/* line 460, ../sass/_form-elements.scss */
+.input__80,
+.select__80 {
+  width: 80%;
+}
+
+/* line 465, ../sass/_form-elements.scss */
+.select__95 {
+  width: 95%;
+}
+
+/* line 469, ../sass/_form-elements.scss */
+.icon__calendar {
+  content: url("../images/icon_calendar.gif");
+  margin-left: 5px;
+}
+
+/* line 474, ../sass/_form-elements.scss */
+.icon__spellcheck {
+  display: inline-block;
+}
+
+/* line 478, ../sass/_form-elements.scss */
+.icon__info {
+  display: inline-block;
+  margin-left: 5px;
+}
+
+/* line 483, ../sass/_form-elements.scss */
+.infobox {
+  position: relative;
+}
+
+/* line 487, ../sass/_form-elements.scss */
+a[title]:hover:after {
+  background: #e0f1ff;
+  border: 1px solid #0050b1;
+  content: attr(title);
+  padding: 5px;
+  color: #0050b1;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 400px;
+  font-weight: normal;
+  z-index: 20px;
+}
+
+/* line 501, ../sass/_form-elements.scss */
+.tooltip {
+  color: #000000;
+  outline: none;
+  cursor: help;
+  text-decoration: none;
+  position: relative;
+}
+
+/* line 509, ../sass/_form-elements.scss */
+.tooltip span {
+  margin-left: -999em;
+  position: absolute;
+}
+
+/* line 514, ../sass/_form-elements.scss */
+.tooltip:hover span {
+  background: #e0f1ff;
+  border: 1px solid #0050b1;
+  color: #0050b1;
+  border-radius: 3px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+  padding: 0.8em 1em;
+  position: absolute;
+  left: 1em;
+  top: 1.5em;
+  z-index: 99;
+  margin-left: 0;
+  width: 300px;
+}
+
+/* line 529, ../sass/_form-elements.scss */
+.label__radio {
+  font-weight: normal;
+}
+
+/* line 533, ../sass/_form-elements.scss */
+.btn__search,
+.btn__reset {
+  margin-right: 5px;
+}
+
+/*doc
+---
+title: Grids
+name: grids2
+category: grids
+---
+```html_example
+<div class="section section__grid">
+
+	<h2 class="title__section">Draft Reports</h2>
+	
+	<table class="table__grid">
+		<caption>Click column header to sort the column</caption>
+		<thead>
+			<tr>
+				<th></th>
+				<th><a href="#">Date Saved (EST)</a></th>
+				<th><a href="#">Report ID</a></th>
+				<th><a href="#">Title</a></th>
+				<th><a href="#">Report Type Description</a></th>
+			</tr>
+		</thead>
+		<tr>
+			<td><input value="" name="" type="radio"></td>
+			<td>08/03/2015 03:10:20 PM</td>
+			<td>37340 (I)</td>
+			<td>Voluntary Reportable Food Report (V2)</td>
+			<td>Voluntary Reportable Food Report (Section 1005 of Public Law 110-85) (V2)</td>
+		</tr>
+		<tr>
+			<td><input value="" name="" type="radio"></td>
+			<td>08/03/2015 03:10:20 PM</td>
+			<td>37340 (I)</td>
+			<td>Voluntary Reportable Food Report (V2)</td>
+			<td>Voluntary Reportable Food Report (Section 1005 of Public Law 110-85) (V2)</td>
+		</tr>
+		<tfoot>
+			<td colspan="4">
+				<div class="table__buttons">
+					<button id="PromptSubmitNewReportButton" onclick="submit('event:PromptSubmitNewReportButton,type:button,id:PromptSubmitNewReportButton,rid:53')" type="button" data-title="Start New Report" data-type="button">Start New Report</button>
+					<button id="PromptEditDraftReportButton" onclick="submit('event:EditGrid,type:button,id:PromptEditDraftReportButton,rid:53')" class="announcementText btn" type="button" data-title="Edit" data-type="button" disabled="disabled">Edit</button>
+					<button id="PromptDeleteDraftReportButton" onclick="submit('event:DeleteGrid,type:button,id:PromptDeleteDraftReportButton,rid:53')" class="announcementText btn" type="button" data-title="Delete" data-type="button" disabled="disabled">Delete</button>
+					<button id="PromptViewDraftReportButton" onclick="submit('event:PromptViewDraftReportButton,type:button,id:PromptViewDraftReportButton,rid:53')" class="announcementText btn" style="" type="button" data-title="View" data-type="button" disabled="disabled">View</button>
+					<button id="PromptRefreshDraftReportButton" onclick="submit('event:PromptRefreshDraftReportButton,type:button,id:PromptRefreshDraftReportButton,rid:53')" class="announcementText btn" style="" type="button" data-title="Refresh" data-type="button">Refresh</button>
+					<button id="PromptViewDraftReportTemplateButton" onclick="submit('event:PromptViewDraftReportTemplateButton,type:button,id:PromptViewDraftReportTemplateButton,rid:53')" class="announcementText btn" style="display: none;" type="button" data-title="View Template" data-type="button">View Template</button>
+				</div>
+			</td>
+			<td colspan="1">
+				<div class="pagination">
+                	<img src="images/icon_first.png" onclick="loadGrid('PromptDraftReportsGrid,53,F')">
+                	<img src="images/icon_back.png" onclick="loadGrid('PromptDraftReportsGrid,53,P')">
+                	<span id="pagination__label">Page 1 of 1</span>
+					<img src="images/icon_next.png" onclick="loadGrid('PromptDraftReportsGrid,53,N')">
+                 	<img src="images/icon_last.png" onclick="loadGrid('PromptDraftReportsGrid,53,L')">
+               </div>
+            </td>
+		</tfoot>
+	</table>
+</div>
+```
+
+*/
+/* line 64, ../sass/_tables.scss */
+table {
+  border: 1px solid grey;
+  border-collapse: separate;
+  display: table;
+  width: 100%;
+}
+
+/* line 71, ../sass/_tables.scss */
+table input[type="radio"] {
+  margin: 0;
+}
+
+/* line 75, ../sass/_tables.scss */
+th {
+  background: #E1DEC9;
+  color: #152359;
+  font-weight: bold;
+  text-align: left;
+}
+
+/* line 82, ../sass/_tables.scss */
+th, td {
+  padding: 5px;
+}
+
+/* line 86, ../sass/_tables.scss */
+th a {
+  color: #152359;
+  text-decoration: none;
+}
+
+/* line 91, ../sass/_tables.scss */
+caption {
+  color: #152359;
+  font-size: 1em;
+  font-weight: bold;
+  text-align: right;
+  margin-bottom: 5px;
+}
+
+/* line 99, ../sass/_tables.scss */
+.table__grid td {
+  border-top: 1px solid grey;
+}
+
+/* line 103, ../sass/_tables.scss */
+.table__grid th:nth-child(1) {
+  width: 25px;
+}
+
+/* line 107, ../sass/_tables.scss */
+.table__grid th:nth-child(2) {
+  width: 155px;
+}
+
+/* line 111, ../sass/_tables.scss */
+.table__grid th:nth-child(3) {
+  width: 90px;
+}
+
+/* line 115, ../sass/_tables.scss */
+.table__grid th:nth-child(4) {
+  width: 200px;
+}
+
+/* line 119, ../sass/_tables.scss */
+tfoot {
+  background: #E1DEC9;
+}
+
+/* line 123, ../sass/_tables.scss */
+tfoot span {
+  color: #216b93;
+}
+
+/* line 127, ../sass/_tables.scss */
+.pagination {
+  text-align: right;
+}
+
+/*doc
+---
+title: Sidenav
+name: sidenav01
+category: Sidenav
+---
+
+This example shows all of the states necessary for the report subnav, including active and inactive, as well as report statuses like complete, partial, and incomplete.
+
+```html_example
+<section class="page page__sidenav">
+	<div class="sidenav">
+		<nav class="sidenav-report">
+			<ul>
+				<li><a href="#" class="active"><span class="sidenav-report-icon"><img src="images/icon_complete.png" alt="Complete"></span><span class="sidenav-report-item">Introduction</span></a></li>
+				<li><a href="#"><span class="sidenav-report-icon"><img src="images/icon_partial.png" alt="Partial"></span><span class="sidenav-report-item">Contact Information</span></a></li>
+				<li><a href="#"><span class="sidenav-report-icon"><img src="images/icon_incomplete.png" alt="Incomplete"></span><span class="sidenav-report-item">Problem Summary</span></a></li>
+				<li><a href="#"><span class="sidenav-report-icon"><img src="images/icon_incomplete.png" alt="Incomplete"></span><span class="sidenav-report-item">Products</span></a></li>
+				<li><a href="#"><span class="sidenav-report-icon"><img src="images/icon_incomplete.png" alt="Incomplete"></span><span class="sidenav-report-item">Veterinarian Visits</span></a></li>
+				<li><a href="#"><span class="sidenav-report-icon"><img src="images/icon_incomplete.png" alt="Incomplete"></span><span class="sidenav-report-item">Attachments</span></a></li>
+				<li><a href="#"><span class="sidenav-report-icon"><img src="images/icon_incomplete.png" alt="Incomplete"></span><span class="sidenav-report-item">Report Submission Confirmation</span></a></li>
+			</ul>
+		</nav>
+	</div>
+</section>
+```
+*/
+/*doc
+---
+title: Report Info Table
+name: sidenav02
+category: Sidenav
+---
+
+```html_example
+<section class="page page__sidenav">
+	<div class="sidenav">
+		<table class="report__info" valign="top">
+			<tr>
+				<th>Name:</th>
+				<td>Voluntary Reportable Food Report (Section 1005 of Public Law 110-85) (V2)</td>
+			</tr>
+			<tr>
+				<th>ID:</th>
+				<td>FPSR33 (I)</td>
+			</tr>
+			<tr>
+				<th>Created:</th>
+				<td>08/13/2015</td>
+			</tr>
+		</table>
+	</div>
+</section>
+```
+*/
+/*doc
+---
+title: Report Info Table 2
+name: sidenav03
+category: Sidenav
+---
+
+```html_example
+<section class="page page__sidenav">
+	<div class="sidenav">
+		<p><a href="#">My Report History</a></p>
+		<table class="report__info">
+			<tbody>
+				<tr>
+					<th>OMB Approval Number:</th>
+					<td>0910-0645</td>
+				</tr>
+				<tr>
+					<th>OMB Expiration Date:</th>
+					<td>09/30/2012</td>
+				</tr>
+			</tbody>
+			<tfoot>
+				<tr>
+					<td colspan="2"><a href="#">OMB Burden Statement</a></td>
+				</tr>
+			</tfoot>
+		</table>
+	</div>
+</section>
+```
+*/
+/* line 91, ../sass/_sidenav.scss */
+.sidenav,
+.sidenav-report {
+  float: left;
+  width: 200px;
+}
+
+/* line 97, ../sass/_sidenav.scss */
+.sidenav ul,
+.sidenav-report ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 103, ../sass/_sidenav.scss */
+.sidenav li,
+.sidenav-report li {
+  margin: 0;
+}
+
+/* line 108, ../sass/_sidenav.scss */
+.sidenav a,
+.sidenav-report a {
+  display: block;
+  font-size: 1.1em;
+  padding: 5px;
+  min-height: 18px;
+  border-bottom: 2px solid white;
+  text-decoration: none;
+  overflow: auto;
+}
+
+/* line 119, ../sass/_sidenav.scss */
+.sidenav a {
+  font-weight: bold;
+  padding: 10px;
+}
+
+/* line 124, ../sass/_sidenav.scss */
+.sidenav a.active {
+  background-color: #9C3627;
+  color: white;
+}
+
+/* line 129, ../sass/_sidenav.scss */
+.active {
+  background-color: #9C3627;
+  color: white;
+}
+
+/* line 134, ../sass/_sidenav.scss */
+.sidenav li a,
+.sidenav-report li a {
+  color: #152359;
+}
+
+/* line 139, ../sass/_sidenav.scss */
+.sidenav li a.active,
+.sidenav-report li a.active,
+.active a {
+  color: white;
+}
+
+/* line 145, ../sass/_sidenav.scss */
+.sidenav p a {
+  border-bottom: none;
+  color: #152359;
+}
+
+/* line 150, ../sass/_sidenav.scss */
+.sidenav-report-icon {
+  float: left;
+  text-align: center;
+  width: 5%;
+}
+
+/* line 156, ../sass/_sidenav.scss */
+.sidenav-report-item {
+  float: right;
+  width: 90%;
+}
+
+/* line 161, ../sass/_sidenav.scss */
+.report__info {
+  border: none;
+  padding: 5px;
+}
+
+/* line 166, ../sass/_sidenav.scss */
+.report__info td,
+.report__info th {
+  vertical-align: top;
+}
+
+/* line 171, ../sass/_sidenav.scss */
+.report__info a {
+  border-bottom: none;
+  font-size: 1em;
+  font-weight: normal;
+  padding: 0;
+}
+
+/* line 1, ../sass/_accordion.scss */
+.tabs {
+  background: #F6F6F6;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border: 1px solid #ddd;
+  margin-bottom: 0;
+}
+
+/* line 9, ../sass/_accordion.scss */
+.tab-heading {
+  cursor: pointer;
+  font-size: 1.1em;
+  margin: 0;
+}
+
+/* line 15, ../sass/_accordion.scss */
+.tab-panel {
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  margin-bottom: 50px;
+  overflow: auto;
+  padding: 20px;
+}
+
+/* line 24, ../sass/_accordion.scss */
+.tabs.enabled .tab-heading:focus,
+.tabs.enabled .tab-list li:focus {
+  outline: 1px solid #ccc;
+}
+
+/* line 26, ../sass/_accordion.scss */
+.tabs.enabled .active-tab-heading:focus {
+  outline: none !important;
+}
+
+/* line 28, ../sass/_accordion.scss */
+.tabs.enabled .tab-heading {
+  padding: 0 0.5em 0.2em 10px;
+  position: relative;
+}
+
+/* line 33, ../sass/_accordion.scss */
+.tabs.enabled .tab-heading:before {
+  color: #ACACAC;
+  content: "\f055";
+  font-family: FontAwesome;
+  font-size: 1.8em;
+  position: relative;
+  top: 3px;
+}
+
+/* line 42, ../sass/_accordion.scss */
+.tabs.enabled .tab-heading.active-tab-heading:before {
+  content: "\f056";
+}
+
+/* line 1, ../sass/_home.scss */
+.home-panel {
+  /*background-image: url('../images/front-backpanel.jpg');*/
+  background-repeat: no-repeat;
+  margin: 0 1em;
+  padding: 10px 16px 80px 0;
+}
+
+/* line 8, ../sass/_home.scss */
+.home-panel-top {
+  background-image: url("../images/front-top.png");
+  background-repeat: no-repeat;
+  height: 13px;
+  width: 100%;
+}
+
+/* line 15, ../sass/_home.scss */
+.home-panel-content {
+  background-image: url("../images/front-back.png");
+  background-repeat: repeat-y;
+  width: 100%;
+  overflow: auto;
+}
+
+/* line 22, ../sass/_home.scss */
+.home-panel-bottom {
+  background-image: url("../images/front-bottom.png");
+  background-repeat: no-repeat;
+  height: 106px;
+  width: 100%;
+}
+
+/* line 29, ../sass/_home.scss */
+.home-panel-left {
+  margin-bottom: 0;
+  padding: 0 20px;
+}
+
+/* line 34, ../sass/_home.scss */
+.home-panel-right {
+  margin-bottom: 0;
+  padding: 0 20px;
+}

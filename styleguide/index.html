@@ -1,0 +1,475 @@
+
+<!DOCTYPE html>
+<html ng-app="cortana">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>index</title>
+
+    <!-- Styleguide CSS -->
+    <link rel="stylesheet" href="./theme-build/css/vendors.css">
+    <link rel="stylesheet" href="./theme-build/css/cortana.css">
+
+    <!-- Source CSS -->
+    
+      
+        <link rel="stylesheet" href="../stylesheets/styles.css">
+      
+    
+
+    <!--[if lt IE 9]>
+      <script src="theme-build/polyfill/html5shiv.js"></script>
+      <script src="theme-build/polyfill/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+  <body class="cortana-body"  ng-controller="MainController">
+
+    <div class="sb-slidebar sb-left cortana-sidenav sb-style-push">
+
+      
+      
+        
+        
+          
+        
+      
+        
+        
+          
+        
+      
+        
+        
+          
+        
+      
+        
+        
+          
+        
+      
+        
+        
+          
+        
+      
+
+      <nav class="cortana-nav">
+        <ul>
+          
+            <li><a class="active" href="index.html">Home</a></li>
+          
+        </ul>
+        
+          <h3>Form Elements</h3>
+          <ul>
+          
+            
+              
+              
+                <li><a href="form_elements.html">Form Elements</a></li>
+              
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+          </ul>
+        
+          <h3>grids</h3>
+          <ul>
+          
+            
+          
+            
+              
+              
+                <li><a href="grids.html">grids</a></li>
+              
+            
+          
+            
+          
+            
+          
+            
+          
+          </ul>
+        
+          <h3>Sidenav</h3>
+          <ul>
+          
+            
+          
+            
+          
+            
+              
+              
+                <li><a href="sidenav.html">Sidenav</a></li>
+              
+            
+          
+            
+          
+            
+          
+          </ul>
+        
+          <h3>Text</h3>
+          <ul>
+          
+            
+          
+            
+          
+            
+          
+            
+              
+              
+                <li><a href="text.html">Text</a></li>
+              
+            
+          
+            
+          
+          </ul>
+        
+          <h3>index</h3>
+          <ul>
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              
+              
+                <li><a class="active" href="index.html">index</a></li>
+              
+            
+          
+          </ul>
+        
+      </nav>
+    </div>
+
+    <header class="cortana-header sb-slide">
+      
+        <h1>index</h1>
+      
+      <div id="open-left" class="cortana-menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="cortana-search-wrapper" ng-controller="TypeaheadCtrl">
+        <input id="cortana-search" type="text" class="form-control cortana-search" ng-model="customSelected" placeholder="Search" typeahead="data as data.title for data in searchData | filter:{title:$viewValue}" typeahead-template-url="customTemplate.html" class="form-control" typeahead-on-select="onSelect($item, $model, $label)">
+      </div>
+    </header>
+
+    <div id="sb-site">
+
+      <div class="cortana-container">
+
+        <nav id="cortana-inside-nav" class="cortana-inside-nav" bs-affix>
+          <ul bs-scrollspy-list data-offset="-30">
+            
+              
+                <li><a href="#welcome">SRP 2.0 Styleguide</a></li>
+              
+            
+          </ul>
+        </nav>
+
+        <div class="cortana-content-wrapper clearfix">
+          <div class="cortana-content">
+
+
+
+<h1 id="welcome" class="styleguide">SRP 2.0 Styleguide</h1>
+
+<p>Welcome!</p>
+
+        </div>
+      </div>
+    </div>
+
+    <footer class="cortana-footer">
+      Build with love using Trulia's <a href="https://github.com/trulia/hologram">Hologram</a> and <a href="https://github.com/Yago/Cortana">Cortana</a> !
+    </footer>  
+  </div>
+
+  <script src="theme-build/js/vendors.min.js"></script>
+  <script type="text/javascript">
+    var jQuery_no_conflict = $.noConflict(true);
+  </script>
+  <script src="theme-build/js/main.js"></script>
+  <script type="text/javascript">
+
+    angular.module("cortana").controller("TypeaheadCtrl", function($scope) {
+      $scope.selected = undefined;
+      $scope.searchData = 
+      [
+        
+          
+            
+              
+              
+              {
+              "title": "Regular Label &amp; Text Input",
+              "breadcrumb": "Form Elements > Regular Label &amp; Text Input",
+              "path": "form_elements.html#form01"
+              },
+            
+              
+              
+              {
+              "title": "Long Label Example",
+              "breadcrumb": "Form Elements > Long Label Example",
+              "path": "form_elements.html#form02"
+              },
+            
+              
+              
+              {
+              "title": "Two Text Fields Side By Side",
+              "breadcrumb": "Form Elements > Two Text Fields Side By Side",
+              "path": "form_elements.html#form03"
+              },
+            
+              
+              
+              {
+              "title": "Regular Select List",
+              "breadcrumb": "Form Elements > Regular Select List",
+              "path": "form_elements.html#form04"
+              },
+            
+              
+              
+              {
+              "title": "Text Input &amp; Select List Side By Side",
+              "breadcrumb": "Form Elements > Text Input &amp; Select List Side By Side",
+              "path": "form_elements.html#form05"
+              },
+            
+              
+              
+              {
+              "title": "Date Field",
+              "breadcrumb": "Form Elements > Date Field",
+              "path": "form_elements.html#form06"
+              },
+            
+              
+              
+              {
+              "title": "Tooltip",
+              "breadcrumb": "Form Elements > Tooltip",
+              "path": "form_elements.html#form07"
+              },
+            
+              
+              
+              {
+              "title": "Full-width Textarea",
+              "breadcrumb": "Form Elements > Full-width Textarea",
+              "path": "form_elements.html#form08"
+              },
+            
+              
+              
+              {
+              "title": "Regular Radio Buttons",
+              "breadcrumb": "Form Elements > Regular Radio Buttons",
+              "path": "form_elements.html#form09"
+              },
+            
+              
+              
+              {
+              "title": "Horizontal Radio Example 1",
+              "breadcrumb": "Form Elements > Horizontal Radio Example 1",
+              "path": "form_elements.html#form10"
+              },
+            
+              
+              
+              {
+              "title": "Horizontal Radio Example 2",
+              "breadcrumb": "Form Elements > Horizontal Radio Example 2",
+              "path": "form_elements.html#form11"
+              },
+            
+              
+              
+              {
+              "title": "Checkbox Example 1",
+              "breadcrumb": "Form Elements > Checkbox Example 1",
+              "path": "form_elements.html#form12"
+              },
+            
+              
+              
+              {
+              "title": "Checkbox Example 2",
+              "breadcrumb": "Form Elements > Checkbox Example 2",
+              "path": "form_elements.html#form13"
+              },
+            
+              
+              
+              {
+              "title": "Smaller Fields (For use in Modal/Lightbox)",
+              "breadcrumb": "Form Elements > Smaller Fields (For use in Modal/Lightbox)",
+              "path": "form_elements.html#form14"
+              },
+            
+              
+              
+              {
+              "title": "Button Bar with Blue Background",
+              "breadcrumb": "Form Elements > Button Bar with Blue Background",
+              "path": "form_elements.html#form15"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Grids",
+              "breadcrumb": "grids > Grids",
+              "path": "grids.html#grids2"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Sidenav",
+              "breadcrumb": "Sidenav > Sidenav",
+              "path": "sidenav.html#sidenav01"
+              },
+            
+              
+              
+              {
+              "title": "Report Info Table",
+              "breadcrumb": "Sidenav > Report Info Table",
+              "path": "sidenav.html#sidenav02"
+              },
+            
+              
+              
+              {
+              "title": "Report Info Table 2",
+              "breadcrumb": "Sidenav > Report Info Table 2",
+              "path": "sidenav.html#sidenav03"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Page Title",
+              "breadcrumb": "Text > Page Title",
+              "path": "text.html#title01"
+              },
+            
+              
+              
+              {
+              "title": "Promptgroup Title",
+              "breadcrumb": "Text > Promptgroup Title",
+              "path": "text.html#title02"
+              },
+            
+              
+              
+              {
+              "title": "Required Field Comment",
+              "breadcrumb": "Text > Required Field Comment",
+              "path": "text.html#title03"
+              },
+            
+              
+              
+              {
+              "title": "Required Label",
+              "breadcrumb": "Text > Required Label",
+              "path": "text.html#title04"
+              },
+            
+              
+              
+              {
+              "title": "Regular Text",
+              "breadcrumb": "Text > Regular Text",
+              "path": "text.html#title05"
+              },
+            
+              
+              
+              {
+              "title": "Block Comment",
+              "breadcrumb": "Text > Block Comment",
+              "path": "text.html#title06"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "SRP 2.0 Styleguide",
+              "breadcrumb": "index > SRP 2.0 Styleguide",
+              "path": "index.html#welcome"
+              },
+            
+          
+        
+      {}];
+      $scope.onSelect = function ($item, $model, $label) {
+        window.location.replace($item.path);
+      };
+    });
+
+  </script>
+  <script type="text/ng-template" id="customTemplate.html">
+    <a href="{{match.model.path}}">
+      <p class="cortana-search-title">{{match.model.title}}</p>
+      <p class="cortana-search-path">{{match.model.breadcrumb}}</p>
+    </a>
+  </script>
+  
+    
+      <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    
+  
+  <!-- Source Components -->
+  
+</body>
+</html>

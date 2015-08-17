@@ -1,0 +1,177 @@
+/*doc
+---
+title: Sidenav
+name: sidenav01
+category: Sidenav
+---
+
+This example shows all of the states necessary for the report subnav, including active and inactive, as well as report statuses like complete, partial, and incomplete.
+
+```html_example
+<section class="page page__sidenav">
+	<div class="sidenav">
+		<nav class="sidenav-report">
+			<ul>
+				<li><a href="#" class="active"><span class="sidenav-report-icon"><img src="images/icon_complete.png" alt="Complete"></span><span class="sidenav-report-item">Introduction</span></a></li>
+				<li><a href="#"><span class="sidenav-report-icon"><img src="images/icon_partial.png" alt="Partial"></span><span class="sidenav-report-item">Contact Information</span></a></li>
+				<li><a href="#"><span class="sidenav-report-icon"><img src="images/icon_incomplete.png" alt="Incomplete"></span><span class="sidenav-report-item">Problem Summary</span></a></li>
+				<li><a href="#"><span class="sidenav-report-icon"><img src="images/icon_incomplete.png" alt="Incomplete"></span><span class="sidenav-report-item">Products</span></a></li>
+				<li><a href="#"><span class="sidenav-report-icon"><img src="images/icon_incomplete.png" alt="Incomplete"></span><span class="sidenav-report-item">Veterinarian Visits</span></a></li>
+				<li><a href="#"><span class="sidenav-report-icon"><img src="images/icon_incomplete.png" alt="Incomplete"></span><span class="sidenav-report-item">Attachments</span></a></li>
+				<li><a href="#"><span class="sidenav-report-icon"><img src="images/icon_incomplete.png" alt="Incomplete"></span><span class="sidenav-report-item">Report Submission Confirmation</span></a></li>
+			</ul>
+		</nav>
+	</div>
+</section>
+```
+*/
+
+/*doc
+---
+title: Report Info Table
+name: sidenav02
+category: Sidenav
+---
+
+```html_example
+<section class="page page__sidenav">
+	<div class="sidenav">
+		<table class="report__info" valign="top">
+			<tr>
+				<th>Name:</th>
+				<td>Voluntary Reportable Food Report (Section 1005 of Public Law 110-85) (V2)</td>
+			</tr>
+			<tr>
+				<th>ID:</th>
+				<td>FPSR33 (I)</td>
+			</tr>
+			<tr>
+				<th>Created:</th>
+				<td>08/13/2015</td>
+			</tr>
+		</table>
+	</div>
+</section>
+```
+*/
+
+/*doc
+---
+title: Report Info Table 2
+name: sidenav03
+category: Sidenav
+---
+
+```html_example
+<section class="page page__sidenav">
+	<div class="sidenav">
+		<p><a href="#">My Report History</a></p>
+		<table class="report__info">
+			<tbody>
+				<tr>
+					<th>OMB Approval Number:</th>
+					<td>0910-0645</td>
+				</tr>
+				<tr>
+					<th>OMB Expiration Date:</th>
+					<td>09/30/2012</td>
+				</tr>
+			</tbody>
+			<tfoot>
+				<tr>
+					<td colspan="2"><a href="#">OMB Burden Statement</a></td>
+				</tr>
+			</tfoot>
+		</table>
+	</div>
+</section>
+```
+*/
+
+.sidenav,
+.sidenav-report {
+	float: left;
+	width: 200px;
+}
+
+.sidenav ul,
+.sidenav-report ul {
+	margin: 0;
+	padding: 0;
+}
+
+.sidenav li,
+.sidenav-report li {
+	margin: 0;
+}
+
+.sidenav a,
+.sidenav-report a {
+	display: block;
+	font-size: 1.1em;
+	padding: 5px;
+	min-height: 18px;
+	border-bottom: 2px solid white;
+	text-decoration: none;
+	overflow: auto;
+}
+
+.sidenav a {
+	font-weight: bold;
+	padding: 10px;
+}
+
+.sidenav a.active {
+	background-color: #9C3627;
+	color: white;
+}
+
+.active {
+	background-color: #9C3627;
+	color: white;
+}
+
+.sidenav li a,
+.sidenav-report li a {
+	color: #152359;
+}
+
+.sidenav li a.active,
+.sidenav-report li a.active,
+.active a {
+	color: white;
+}
+
+.sidenav p a {
+	border-bottom: none;
+	color: #152359;
+}
+
+.sidenav-report-icon {
+	float: left;
+	text-align: center;
+	width: 5%;
+}
+
+.sidenav-report-item {
+	float: right;
+	width: 90%;
+}
+
+.report__info {
+	border: none;
+	padding: 5px;
+}
+
+.report__info td,
+.report__info th {
+vertical-align:top;
+}
+
+.report__info a {
+	border-bottom: none;
+	font-size: 1em;
+	font-weight: normal;
+	padding: 0;
+
+}

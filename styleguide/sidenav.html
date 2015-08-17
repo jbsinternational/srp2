@@ -1,0 +1,597 @@
+
+<!DOCTYPE html>
+<html ng-app="cortana">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Sidenav</title>
+
+    <!-- Styleguide CSS -->
+    <link rel="stylesheet" href="./theme-build/css/vendors.css">
+    <link rel="stylesheet" href="./theme-build/css/cortana.css">
+
+    <!-- Source CSS -->
+    
+      
+        <link rel="stylesheet" href="../stylesheets/styles.css">
+      
+    
+
+    <!--[if lt IE 9]>
+      <script src="theme-build/polyfill/html5shiv.js"></script>
+      <script src="theme-build/polyfill/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+  <body class="cortana-body"  ng-controller="MainController">
+
+    <div class="sb-slidebar sb-left cortana-sidenav sb-style-push">
+
+      
+      
+        
+        
+          
+        
+      
+        
+        
+          
+        
+      
+        
+        
+          
+        
+      
+        
+        
+          
+        
+      
+        
+        
+          
+        
+      
+
+      <nav class="cortana-nav">
+        <ul>
+          
+            <li><a href="index.html">Home</a></li>
+          
+        </ul>
+        
+          <h3>Form Elements</h3>
+          <ul>
+          
+            
+              
+              
+                <li><a href="form_elements.html">Form Elements</a></li>
+              
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+          </ul>
+        
+          <h3>grids</h3>
+          <ul>
+          
+            
+          
+            
+              
+              
+                <li><a href="grids.html">grids</a></li>
+              
+            
+          
+            
+          
+            
+          
+            
+          
+          </ul>
+        
+          <h3>Sidenav</h3>
+          <ul>
+          
+            
+          
+            
+          
+            
+              
+              
+                <li><a class="active" href="sidenav.html">Sidenav</a></li>
+              
+            
+          
+            
+          
+            
+          
+          </ul>
+        
+          <h3>Text</h3>
+          <ul>
+          
+            
+          
+            
+          
+            
+          
+            
+              
+              
+                <li><a href="text.html">Text</a></li>
+              
+            
+          
+            
+          
+          </ul>
+        
+          <h3>index</h3>
+          <ul>
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              
+              
+                <li><a href="index.html">index</a></li>
+              
+            
+          
+          </ul>
+        
+      </nav>
+    </div>
+
+    <header class="cortana-header sb-slide">
+      
+        <h1>Sidenav</h1>
+      
+      <div id="open-left" class="cortana-menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="cortana-search-wrapper" ng-controller="TypeaheadCtrl">
+        <input id="cortana-search" type="text" class="form-control cortana-search" ng-model="customSelected" placeholder="Search" typeahead="data as data.title for data in searchData | filter:{title:$viewValue}" typeahead-template-url="customTemplate.html" class="form-control" typeahead-on-select="onSelect($item, $model, $label)">
+      </div>
+    </header>
+
+    <div id="sb-site">
+
+      <div class="cortana-container">
+
+        <nav id="cortana-inside-nav" class="cortana-inside-nav" bs-affix>
+          <ul bs-scrollspy-list data-offset="-30">
+            
+              
+                <li><a href="#sidenav01">Sidenav</a></li>
+              
+            
+              
+                <li><a href="#sidenav02">Report Info Table</a></li>
+              
+            
+              
+                <li><a href="#sidenav03">Report Info Table 2</a></li>
+              
+            
+          </ul>
+        </nav>
+
+        <div class="cortana-content-wrapper clearfix">
+          <div class="cortana-content">
+
+
+
+<h1 id="sidenav01" class="styleguide">Sidenav</h1>
+
+<p>This example shows all of the states necessary for the report subnav, including active and inactive, as well as report statuses like complete, partial, and incomplete.</p>
+</div><div class="codeExample"><div class="exampleOutput"><section class="page page__sidenav">
+    <div class="sidenav">
+        <nav class="sidenav-report">
+            <ul>
+                <li><a href="#" class="active"><span class="sidenav-report-icon"><img src="images/icon_complete.png" alt="Complete"></span><span class="sidenav-report-item">Introduction</span></a></li>
+                <li><a href="#"><span class="sidenav-report-icon"><img src="images/icon_partial.png" alt="Partial"></span><span class="sidenav-report-item">Contact Information</span></a></li>
+                <li><a href="#"><span class="sidenav-report-icon"><img src="images/icon_incomplete.png" alt="Incomplete"></span><span class="sidenav-report-item">Problem Summary</span></a></li>
+                <li><a href="#"><span class="sidenav-report-icon"><img src="images/icon_incomplete.png" alt="Incomplete"></span><span class="sidenav-report-item">Products</span></a></li>
+                <li><a href="#"><span class="sidenav-report-icon"><img src="images/icon_incomplete.png" alt="Incomplete"></span><span class="sidenav-report-item">Veterinarian Visits</span></a></li>
+                <li><a href="#"><span class="sidenav-report-icon"><img src="images/icon_incomplete.png" alt="Incomplete"></span><span class="sidenav-report-item">Attachments</span></a></li>
+                <li><a href="#"><span class="sidenav-report-icon"><img src="images/icon_incomplete.png" alt="Incomplete"></span><span class="sidenav-report-item">Report Submission Confirmation</span></a></li>
+            </ul>
+        </nav>
+    </div>
+</section>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;section</span> <span class="na">class=</span><span class="s">"page page__sidenav"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"sidenav"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"sidenav-report"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;ul&gt;</span>
+                <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"active"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sidenav-report-icon"</span><span class="nt">&gt;&lt;img</span> <span class="na">src=</span><span class="s">"images/icon_complete.png"</span> <span class="na">alt=</span><span class="s">"Complete"</span><span class="nt">&gt;&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sidenav-report-item"</span><span class="nt">&gt;</span>Introduction<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
+                <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sidenav-report-icon"</span><span class="nt">&gt;&lt;img</span> <span class="na">src=</span><span class="s">"images/icon_partial.png"</span> <span class="na">alt=</span><span class="s">"Partial"</span><span class="nt">&gt;&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sidenav-report-item"</span><span class="nt">&gt;</span>Contact Information<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
+                <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sidenav-report-icon"</span><span class="nt">&gt;&lt;img</span> <span class="na">src=</span><span class="s">"images/icon_incomplete.png"</span> <span class="na">alt=</span><span class="s">"Incomplete"</span><span class="nt">&gt;&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sidenav-report-item"</span><span class="nt">&gt;</span>Problem Summary<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
+                <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sidenav-report-icon"</span><span class="nt">&gt;&lt;img</span> <span class="na">src=</span><span class="s">"images/icon_incomplete.png"</span> <span class="na">alt=</span><span class="s">"Incomplete"</span><span class="nt">&gt;&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sidenav-report-item"</span><span class="nt">&gt;</span>Products<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
+                <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sidenav-report-icon"</span><span class="nt">&gt;&lt;img</span> <span class="na">src=</span><span class="s">"images/icon_incomplete.png"</span> <span class="na">alt=</span><span class="s">"Incomplete"</span><span class="nt">&gt;&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sidenav-report-item"</span><span class="nt">&gt;</span>Veterinarian Visits<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
+                <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sidenav-report-icon"</span><span class="nt">&gt;&lt;img</span> <span class="na">src=</span><span class="s">"images/icon_incomplete.png"</span> <span class="na">alt=</span><span class="s">"Incomplete"</span><span class="nt">&gt;&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sidenav-report-item"</span><span class="nt">&gt;</span>Attachments<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
+                <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sidenav-report-icon"</span><span class="nt">&gt;&lt;img</span> <span class="na">src=</span><span class="s">"images/icon_incomplete.png"</span> <span class="na">alt=</span><span class="s">"Incomplete"</span><span class="nt">&gt;&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sidenav-report-item"</span><span class="nt">&gt;</span>Report Submission Confirmation<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
+            <span class="nt">&lt;/ul&gt;</span>
+        <span class="nt">&lt;/nav&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/section&gt;</span>
+</pre></div></div></div><div class="cortana-content">
+<h1 id="sidenav02" class="styleguide">Report Info Table</h1>
+</div><div class="codeExample"><div class="exampleOutput"><section class="page page__sidenav">
+    <div class="sidenav">
+        <table class="report__info" valign="top">
+            <tr>
+                <th>Name:</th>
+                <td>Voluntary Reportable Food Report (Section 1005 of Public Law 110-85) (V2)</td>
+            </tr>
+            <tr>
+                <th>ID:</th>
+                <td>FPSR33 (I)</td>
+            </tr>
+            <tr>
+                <th>Created:</th>
+                <td>08/13/2015</td>
+            </tr>
+        </table>
+    </div>
+</section>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;section</span> <span class="na">class=</span><span class="s">"page page__sidenav"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"sidenav"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"report__info"</span> <span class="na">valign=</span><span class="s">"top"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;tr&gt;</span>
+                <span class="nt">&lt;th&gt;</span>Name:<span class="nt">&lt;/th&gt;</span>
+                <span class="nt">&lt;td&gt;</span>Voluntary Reportable Food Report (Section 1005 of Public Law 110-85) (V2)<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;/tr&gt;</span>
+            <span class="nt">&lt;tr&gt;</span>
+                <span class="nt">&lt;th&gt;</span>ID:<span class="nt">&lt;/th&gt;</span>
+                <span class="nt">&lt;td&gt;</span>FPSR33 (I)<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;/tr&gt;</span>
+            <span class="nt">&lt;tr&gt;</span>
+                <span class="nt">&lt;th&gt;</span>Created:<span class="nt">&lt;/th&gt;</span>
+                <span class="nt">&lt;td&gt;</span>08/13/2015<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;/tr&gt;</span>
+        <span class="nt">&lt;/table&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/section&gt;</span>
+</pre></div></div></div><div class="cortana-content">
+<h1 id="sidenav03" class="styleguide">Report Info Table 2</h1>
+</div><div class="codeExample"><div class="exampleOutput"><section class="page page__sidenav">
+    <div class="sidenav">
+        <p><a href="#">My Report History</a></p>
+        <table class="report__info">
+            <tbody>
+                <tr>
+                    <th>OMB Approval Number:</th>
+                    <td>0910-0645</td>
+                </tr>
+                <tr>
+                    <th>OMB Expiration Date:</th>
+                    <td>09/30/2012</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="2"><a href="#">OMB Burden Statement</a></td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</section>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;section</span> <span class="na">class=</span><span class="s">"page page__sidenav"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"sidenav"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;p&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>My Report History<span class="nt">&lt;/a&gt;&lt;/p&gt;</span>
+        <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"report__info"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;tbody&gt;</span>
+                <span class="nt">&lt;tr&gt;</span>
+                    <span class="nt">&lt;th&gt;</span>OMB Approval Number:<span class="nt">&lt;/th&gt;</span>
+                    <span class="nt">&lt;td&gt;</span>0910-0645<span class="nt">&lt;/td&gt;</span>
+                <span class="nt">&lt;/tr&gt;</span>
+                <span class="nt">&lt;tr&gt;</span>
+                    <span class="nt">&lt;th&gt;</span>OMB Expiration Date:<span class="nt">&lt;/th&gt;</span>
+                    <span class="nt">&lt;td&gt;</span>09/30/2012<span class="nt">&lt;/td&gt;</span>
+                <span class="nt">&lt;/tr&gt;</span>
+            <span class="nt">&lt;/tbody&gt;</span>
+            <span class="nt">&lt;tfoot&gt;</span>
+                <span class="nt">&lt;tr&gt;</span>
+                    <span class="nt">&lt;td</span> <span class="na">colspan=</span><span class="s">"2"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>OMB Burden Statement<span class="nt">&lt;/a&gt;&lt;/td&gt;</span>
+                <span class="nt">&lt;/tr&gt;</span>
+            <span class="nt">&lt;/tfoot&gt;</span>
+        <span class="nt">&lt;/table&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/section&gt;</span>
+</pre></div></div></div><div class="cortana-content">
+        </div>
+      </div>
+    </div>
+
+    <footer class="cortana-footer">
+      Build with love using Trulia's <a href="https://github.com/trulia/hologram">Hologram</a> and <a href="https://github.com/Yago/Cortana">Cortana</a> !
+    </footer>  
+  </div>
+
+  <script src="theme-build/js/vendors.min.js"></script>
+  <script type="text/javascript">
+    var jQuery_no_conflict = $.noConflict(true);
+  </script>
+  <script src="theme-build/js/main.js"></script>
+  <script type="text/javascript">
+
+    angular.module("cortana").controller("TypeaheadCtrl", function($scope) {
+      $scope.selected = undefined;
+      $scope.searchData = 
+      [
+        
+          
+            
+              
+              
+              {
+              "title": "Regular Label &amp; Text Input",
+              "breadcrumb": "Form Elements > Regular Label &amp; Text Input",
+              "path": "form_elements.html#form01"
+              },
+            
+              
+              
+              {
+              "title": "Long Label Example",
+              "breadcrumb": "Form Elements > Long Label Example",
+              "path": "form_elements.html#form02"
+              },
+            
+              
+              
+              {
+              "title": "Two Text Fields Side By Side",
+              "breadcrumb": "Form Elements > Two Text Fields Side By Side",
+              "path": "form_elements.html#form03"
+              },
+            
+              
+              
+              {
+              "title": "Regular Select List",
+              "breadcrumb": "Form Elements > Regular Select List",
+              "path": "form_elements.html#form04"
+              },
+            
+              
+              
+              {
+              "title": "Text Input &amp; Select List Side By Side",
+              "breadcrumb": "Form Elements > Text Input &amp; Select List Side By Side",
+              "path": "form_elements.html#form05"
+              },
+            
+              
+              
+              {
+              "title": "Date Field",
+              "breadcrumb": "Form Elements > Date Field",
+              "path": "form_elements.html#form06"
+              },
+            
+              
+              
+              {
+              "title": "Tooltip",
+              "breadcrumb": "Form Elements > Tooltip",
+              "path": "form_elements.html#form07"
+              },
+            
+              
+              
+              {
+              "title": "Full-width Textarea",
+              "breadcrumb": "Form Elements > Full-width Textarea",
+              "path": "form_elements.html#form08"
+              },
+            
+              
+              
+              {
+              "title": "Regular Radio Buttons",
+              "breadcrumb": "Form Elements > Regular Radio Buttons",
+              "path": "form_elements.html#form09"
+              },
+            
+              
+              
+              {
+              "title": "Horizontal Radio Example 1",
+              "breadcrumb": "Form Elements > Horizontal Radio Example 1",
+              "path": "form_elements.html#form10"
+              },
+            
+              
+              
+              {
+              "title": "Horizontal Radio Example 2",
+              "breadcrumb": "Form Elements > Horizontal Radio Example 2",
+              "path": "form_elements.html#form11"
+              },
+            
+              
+              
+              {
+              "title": "Checkbox Example 1",
+              "breadcrumb": "Form Elements > Checkbox Example 1",
+              "path": "form_elements.html#form12"
+              },
+            
+              
+              
+              {
+              "title": "Checkbox Example 2",
+              "breadcrumb": "Form Elements > Checkbox Example 2",
+              "path": "form_elements.html#form13"
+              },
+            
+              
+              
+              {
+              "title": "Smaller Fields (For use in Modal/Lightbox)",
+              "breadcrumb": "Form Elements > Smaller Fields (For use in Modal/Lightbox)",
+              "path": "form_elements.html#form14"
+              },
+            
+              
+              
+              {
+              "title": "Button Bar with Blue Background",
+              "breadcrumb": "Form Elements > Button Bar with Blue Background",
+              "path": "form_elements.html#form15"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Grids",
+              "breadcrumb": "grids > Grids",
+              "path": "grids.html#grids2"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Sidenav",
+              "breadcrumb": "Sidenav > Sidenav",
+              "path": "sidenav.html#sidenav01"
+              },
+            
+              
+              
+              {
+              "title": "Report Info Table",
+              "breadcrumb": "Sidenav > Report Info Table",
+              "path": "sidenav.html#sidenav02"
+              },
+            
+              
+              
+              {
+              "title": "Report Info Table 2",
+              "breadcrumb": "Sidenav > Report Info Table 2",
+              "path": "sidenav.html#sidenav03"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Page Title",
+              "breadcrumb": "Text > Page Title",
+              "path": "text.html#title01"
+              },
+            
+              
+              
+              {
+              "title": "Promptgroup Title",
+              "breadcrumb": "Text > Promptgroup Title",
+              "path": "text.html#title02"
+              },
+            
+              
+              
+              {
+              "title": "Required Field Comment",
+              "breadcrumb": "Text > Required Field Comment",
+              "path": "text.html#title03"
+              },
+            
+              
+              
+              {
+              "title": "Required Label",
+              "breadcrumb": "Text > Required Label",
+              "path": "text.html#title04"
+              },
+            
+              
+              
+              {
+              "title": "Regular Text",
+              "breadcrumb": "Text > Regular Text",
+              "path": "text.html#title05"
+              },
+            
+              
+              
+              {
+              "title": "Block Comment",
+              "breadcrumb": "Text > Block Comment",
+              "path": "text.html#title06"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "SRP 2.0 Styleguide",
+              "breadcrumb": "index > SRP 2.0 Styleguide",
+              "path": "index.html#welcome"
+              },
+            
+          
+        
+      {}];
+      $scope.onSelect = function ($item, $model, $label) {
+        window.location.replace($item.path);
+      };
+    });
+
+  </script>
+  <script type="text/ng-template" id="customTemplate.html">
+    <a href="{{match.model.path}}">
+      <p class="cortana-search-title">{{match.model.title}}</p>
+      <p class="cortana-search-path">{{match.model.breadcrumb}}</p>
+    </a>
+  </script>
+  
+    
+      <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    
+  
+  <!-- Source Components -->
+  
+</body>
+</html>

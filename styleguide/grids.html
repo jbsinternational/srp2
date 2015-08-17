@@ -1,0 +1,577 @@
+
+<!DOCTYPE html>
+<html ng-app="cortana">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>grids</title>
+
+    <!-- Styleguide CSS -->
+    <link rel="stylesheet" href="./theme-build/css/vendors.css">
+    <link rel="stylesheet" href="./theme-build/css/cortana.css">
+
+    <!-- Source CSS -->
+    
+      
+        <link rel="stylesheet" href="../stylesheets/styles.css">
+      
+    
+
+    <!--[if lt IE 9]>
+      <script src="theme-build/polyfill/html5shiv.js"></script>
+      <script src="theme-build/polyfill/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+  <body class="cortana-body"  ng-controller="MainController">
+
+    <div class="sb-slidebar sb-left cortana-sidenav sb-style-push">
+
+      
+      
+        
+        
+          
+        
+      
+        
+        
+          
+        
+      
+        
+        
+          
+        
+      
+        
+        
+          
+        
+      
+        
+        
+          
+        
+      
+
+      <nav class="cortana-nav">
+        <ul>
+          
+            <li><a href="index.html">Home</a></li>
+          
+        </ul>
+        
+          <h3>Form Elements</h3>
+          <ul>
+          
+            
+              
+              
+                <li><a href="form_elements.html">Form Elements</a></li>
+              
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+          </ul>
+        
+          <h3>grids</h3>
+          <ul>
+          
+            
+          
+            
+              
+              
+                <li><a class="active" href="grids.html">grids</a></li>
+              
+            
+          
+            
+          
+            
+          
+            
+          
+          </ul>
+        
+          <h3>Sidenav</h3>
+          <ul>
+          
+            
+          
+            
+          
+            
+              
+              
+                <li><a href="sidenav.html">Sidenav</a></li>
+              
+            
+          
+            
+          
+            
+          
+          </ul>
+        
+          <h3>Text</h3>
+          <ul>
+          
+            
+          
+            
+          
+            
+          
+            
+              
+              
+                <li><a href="text.html">Text</a></li>
+              
+            
+          
+            
+          
+          </ul>
+        
+          <h3>index</h3>
+          <ul>
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              
+              
+                <li><a href="index.html">index</a></li>
+              
+            
+          
+          </ul>
+        
+      </nav>
+    </div>
+
+    <header class="cortana-header sb-slide">
+      
+        <h1>grids</h1>
+      
+      <div id="open-left" class="cortana-menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="cortana-search-wrapper" ng-controller="TypeaheadCtrl">
+        <input id="cortana-search" type="text" class="form-control cortana-search" ng-model="customSelected" placeholder="Search" typeahead="data as data.title for data in searchData | filter:{title:$viewValue}" typeahead-template-url="customTemplate.html" class="form-control" typeahead-on-select="onSelect($item, $model, $label)">
+      </div>
+    </header>
+
+    <div id="sb-site">
+
+      <div class="cortana-container">
+
+        <nav id="cortana-inside-nav" class="cortana-inside-nav" bs-affix>
+          <ul bs-scrollspy-list data-offset="-30">
+            
+              
+                <li><a href="#grids2">Grids</a></li>
+              
+            
+          </ul>
+        </nav>
+
+        <div class="cortana-content-wrapper clearfix">
+          <div class="cortana-content">
+
+
+
+<h1 id="grids2" class="styleguide">Grids</h1>
+</div><div class="codeExample"><div class="exampleOutput"><div class="section section__grid">
+
+    <h2 class="title__section">Draft Reports</h2>
+
+    <table class="table__grid">
+        <caption>Click column header to sort the column</caption>
+        <thead>
+            <tr>
+                <th></th>
+                <th><a href="#">Date Saved (EST)</a></th>
+                <th><a href="#">Report ID</a></th>
+                <th><a href="#">Title</a></th>
+                <th><a href="#">Report Type Description</a></th>
+            </tr>
+        </thead>
+        <tr>
+            <td><input value="" name="" type="radio"></td>
+            <td>08/03/2015 03:10:20 PM</td>
+            <td>37340 (I)</td>
+            <td>Voluntary Reportable Food Report (V2)</td>
+            <td>Voluntary Reportable Food Report (Section 1005 of Public Law 110-85) (V2)</td>
+        </tr>
+        <tr>
+            <td><input value="" name="" type="radio"></td>
+            <td>08/03/2015 03:10:20 PM</td>
+            <td>37340 (I)</td>
+            <td>Voluntary Reportable Food Report (V2)</td>
+            <td>Voluntary Reportable Food Report (Section 1005 of Public Law 110-85) (V2)</td>
+        </tr>
+        <tfoot>
+            <td colspan="4">
+                <div class="table__buttons">
+                    <button id="PromptSubmitNewReportButton" onclick="submit('event:PromptSubmitNewReportButton,type:button,id:PromptSubmitNewReportButton,rid:53')" type="button" data-title="Start New Report" data-type="button">Start New Report</button>
+                    <button id="PromptEditDraftReportButton" onclick="submit('event:EditGrid,type:button,id:PromptEditDraftReportButton,rid:53')" class="announcementText btn" type="button" data-title="Edit" data-type="button" disabled="disabled">Edit</button>
+                    <button id="PromptDeleteDraftReportButton" onclick="submit('event:DeleteGrid,type:button,id:PromptDeleteDraftReportButton,rid:53')" class="announcementText btn" type="button" data-title="Delete" data-type="button" disabled="disabled">Delete</button>
+                    <button id="PromptViewDraftReportButton" onclick="submit('event:PromptViewDraftReportButton,type:button,id:PromptViewDraftReportButton,rid:53')" class="announcementText btn" style="" type="button" data-title="View" data-type="button" disabled="disabled">View</button>
+                    <button id="PromptRefreshDraftReportButton" onclick="submit('event:PromptRefreshDraftReportButton,type:button,id:PromptRefreshDraftReportButton,rid:53')" class="announcementText btn" style="" type="button" data-title="Refresh" data-type="button">Refresh</button>
+                    <button id="PromptViewDraftReportTemplateButton" onclick="submit('event:PromptViewDraftReportTemplateButton,type:button,id:PromptViewDraftReportTemplateButton,rid:53')" class="announcementText btn" style="display: none;" type="button" data-title="View Template" data-type="button">View Template</button>
+                </div>
+            </td>
+            <td colspan="1">
+                <div class="pagination">
+                    <img src="images/icon_first.png" onclick="loadGrid('PromptDraftReportsGrid,53,F')">
+                    <img src="images/icon_back.png" onclick="loadGrid('PromptDraftReportsGrid,53,P')">
+                    <span id="pagination__label">Page 1 of 1</span>
+                    <img src="images/icon_next.png" onclick="loadGrid('PromptDraftReportsGrid,53,N')">
+                    <img src="images/icon_last.png" onclick="loadGrid('PromptDraftReportsGrid,53,L')">
+               </div>
+            </td>
+        </tfoot>
+    </table>
+</div>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"section section__grid"</span><span class="nt">&gt;</span>
+
+    <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"title__section"</span><span class="nt">&gt;</span>Draft Reports<span class="nt">&lt;/h2&gt;</span>
+
+    <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table__grid"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;caption&gt;</span>Click column header to sort the column<span class="nt">&lt;/caption&gt;</span>
+        <span class="nt">&lt;thead&gt;</span>
+            <span class="nt">&lt;tr&gt;</span>
+                <span class="nt">&lt;th&gt;&lt;/th&gt;</span>
+                <span class="nt">&lt;th&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Date Saved (EST)<span class="nt">&lt;/a&gt;&lt;/th&gt;</span>
+                <span class="nt">&lt;th&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Report ID<span class="nt">&lt;/a&gt;&lt;/th&gt;</span>
+                <span class="nt">&lt;th&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Title<span class="nt">&lt;/a&gt;&lt;/th&gt;</span>
+                <span class="nt">&lt;th&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Report Type Description<span class="nt">&lt;/a&gt;&lt;/th&gt;</span>
+            <span class="nt">&lt;/tr&gt;</span>
+        <span class="nt">&lt;/thead&gt;</span>
+        <span class="nt">&lt;tr&gt;</span>
+            <span class="nt">&lt;td&gt;&lt;input</span> <span class="na">value=</span><span class="s">""</span> <span class="na">name=</span><span class="s">""</span> <span class="na">type=</span><span class="s">"radio"</span><span class="nt">&gt;&lt;/td&gt;</span>
+            <span class="nt">&lt;td&gt;</span>08/03/2015 03:10:20 PM<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;td&gt;</span>37340 (I)<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;td&gt;</span>Voluntary Reportable Food Report (V2)<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;td&gt;</span>Voluntary Reportable Food Report (Section 1005 of Public Law 110-85) (V2)<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;/tr&gt;</span>
+        <span class="nt">&lt;tr&gt;</span>
+            <span class="nt">&lt;td&gt;&lt;input</span> <span class="na">value=</span><span class="s">""</span> <span class="na">name=</span><span class="s">""</span> <span class="na">type=</span><span class="s">"radio"</span><span class="nt">&gt;&lt;/td&gt;</span>
+            <span class="nt">&lt;td&gt;</span>08/03/2015 03:10:20 PM<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;td&gt;</span>37340 (I)<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;td&gt;</span>Voluntary Reportable Food Report (V2)<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;td&gt;</span>Voluntary Reportable Food Report (Section 1005 of Public Law 110-85) (V2)<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;/tr&gt;</span>
+        <span class="nt">&lt;tfoot&gt;</span>
+            <span class="nt">&lt;td</span> <span class="na">colspan=</span><span class="s">"4"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"table__buttons"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;button</span> <span class="na">id=</span><span class="s">"PromptSubmitNewReportButton"</span> <span class="na">onclick=</span><span class="s">"submit('event:PromptSubmitNewReportButton,type:button,id:PromptSubmitNewReportButton,rid:53')"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">data-title=</span><span class="s">"Start New Report"</span> <span class="na">data-type=</span><span class="s">"button"</span><span class="nt">&gt;</span>Start New Report<span class="nt">&lt;/button&gt;</span>
+                    <span class="nt">&lt;button</span> <span class="na">id=</span><span class="s">"PromptEditDraftReportButton"</span> <span class="na">onclick=</span><span class="s">"submit('event:EditGrid,type:button,id:PromptEditDraftReportButton,rid:53')"</span> <span class="na">class=</span><span class="s">"announcementText btn"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">data-title=</span><span class="s">"Edit"</span> <span class="na">data-type=</span><span class="s">"button"</span> <span class="na">disabled=</span><span class="s">"disabled"</span><span class="nt">&gt;</span>Edit<span class="nt">&lt;/button&gt;</span>
+                    <span class="nt">&lt;button</span> <span class="na">id=</span><span class="s">"PromptDeleteDraftReportButton"</span> <span class="na">onclick=</span><span class="s">"submit('event:DeleteGrid,type:button,id:PromptDeleteDraftReportButton,rid:53')"</span> <span class="na">class=</span><span class="s">"announcementText btn"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">data-title=</span><span class="s">"Delete"</span> <span class="na">data-type=</span><span class="s">"button"</span> <span class="na">disabled=</span><span class="s">"disabled"</span><span class="nt">&gt;</span>Delete<span class="nt">&lt;/button&gt;</span>
+                    <span class="nt">&lt;button</span> <span class="na">id=</span><span class="s">"PromptViewDraftReportButton"</span> <span class="na">onclick=</span><span class="s">"submit('event:PromptViewDraftReportButton,type:button,id:PromptViewDraftReportButton,rid:53')"</span> <span class="na">class=</span><span class="s">"announcementText btn"</span> <span class="na">style=</span><span class="s">""</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">data-title=</span><span class="s">"View"</span> <span class="na">data-type=</span><span class="s">"button"</span> <span class="na">disabled=</span><span class="s">"disabled"</span><span class="nt">&gt;</span>View<span class="nt">&lt;/button&gt;</span>
+                    <span class="nt">&lt;button</span> <span class="na">id=</span><span class="s">"PromptRefreshDraftReportButton"</span> <span class="na">onclick=</span><span class="s">"submit('event:PromptRefreshDraftReportButton,type:button,id:PromptRefreshDraftReportButton,rid:53')"</span> <span class="na">class=</span><span class="s">"announcementText btn"</span> <span class="na">style=</span><span class="s">""</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">data-title=</span><span class="s">"Refresh"</span> <span class="na">data-type=</span><span class="s">"button"</span><span class="nt">&gt;</span>Refresh<span class="nt">&lt;/button&gt;</span>
+                    <span class="nt">&lt;button</span> <span class="na">id=</span><span class="s">"PromptViewDraftReportTemplateButton"</span> <span class="na">onclick=</span><span class="s">"submit('event:PromptViewDraftReportTemplateButton,type:button,id:PromptViewDraftReportTemplateButton,rid:53')"</span> <span class="na">class=</span><span class="s">"announcementText btn"</span> <span class="na">style=</span><span class="s">"display: none;"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">data-title=</span><span class="s">"View Template"</span> <span class="na">data-type=</span><span class="s">"button"</span><span class="nt">&gt;</span>View Template<span class="nt">&lt;/button&gt;</span>
+                <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;td</span> <span class="na">colspan=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"pagination"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"images/icon_first.png"</span> <span class="na">onclick=</span><span class="s">"loadGrid('PromptDraftReportsGrid,53,F')"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"images/icon_back.png"</span> <span class="na">onclick=</span><span class="s">"loadGrid('PromptDraftReportsGrid,53,P')"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;span</span> <span class="na">id=</span><span class="s">"pagination__label"</span><span class="nt">&gt;</span>Page 1 of 1<span class="nt">&lt;/span&gt;</span>
+                    <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"images/icon_next.png"</span> <span class="na">onclick=</span><span class="s">"loadGrid('PromptDraftReportsGrid,53,N')"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"images/icon_last.png"</span> <span class="na">onclick=</span><span class="s">"loadGrid('PromptDraftReportsGrid,53,L')"</span><span class="nt">&gt;</span>
+               <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;/tfoot&gt;</span>
+    <span class="nt">&lt;/table&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div></div></div><div class="cortana-content">
+        </div>
+      </div>
+    </div>
+
+    <footer class="cortana-footer">
+      Build with love using Trulia's <a href="https://github.com/trulia/hologram">Hologram</a> and <a href="https://github.com/Yago/Cortana">Cortana</a> !
+    </footer>  
+  </div>
+
+  <script src="theme-build/js/vendors.min.js"></script>
+  <script type="text/javascript">
+    var jQuery_no_conflict = $.noConflict(true);
+  </script>
+  <script src="theme-build/js/main.js"></script>
+  <script type="text/javascript">
+
+    angular.module("cortana").controller("TypeaheadCtrl", function($scope) {
+      $scope.selected = undefined;
+      $scope.searchData = 
+      [
+        
+          
+            
+              
+              
+              {
+              "title": "Regular Label &amp; Text Input",
+              "breadcrumb": "Form Elements > Regular Label &amp; Text Input",
+              "path": "form_elements.html#form01"
+              },
+            
+              
+              
+              {
+              "title": "Long Label Example",
+              "breadcrumb": "Form Elements > Long Label Example",
+              "path": "form_elements.html#form02"
+              },
+            
+              
+              
+              {
+              "title": "Two Text Fields Side By Side",
+              "breadcrumb": "Form Elements > Two Text Fields Side By Side",
+              "path": "form_elements.html#form03"
+              },
+            
+              
+              
+              {
+              "title": "Regular Select List",
+              "breadcrumb": "Form Elements > Regular Select List",
+              "path": "form_elements.html#form04"
+              },
+            
+              
+              
+              {
+              "title": "Text Input &amp; Select List Side By Side",
+              "breadcrumb": "Form Elements > Text Input &amp; Select List Side By Side",
+              "path": "form_elements.html#form05"
+              },
+            
+              
+              
+              {
+              "title": "Date Field",
+              "breadcrumb": "Form Elements > Date Field",
+              "path": "form_elements.html#form06"
+              },
+            
+              
+              
+              {
+              "title": "Tooltip",
+              "breadcrumb": "Form Elements > Tooltip",
+              "path": "form_elements.html#form07"
+              },
+            
+              
+              
+              {
+              "title": "Full-width Textarea",
+              "breadcrumb": "Form Elements > Full-width Textarea",
+              "path": "form_elements.html#form08"
+              },
+            
+              
+              
+              {
+              "title": "Regular Radio Buttons",
+              "breadcrumb": "Form Elements > Regular Radio Buttons",
+              "path": "form_elements.html#form09"
+              },
+            
+              
+              
+              {
+              "title": "Horizontal Radio Example 1",
+              "breadcrumb": "Form Elements > Horizontal Radio Example 1",
+              "path": "form_elements.html#form10"
+              },
+            
+              
+              
+              {
+              "title": "Horizontal Radio Example 2",
+              "breadcrumb": "Form Elements > Horizontal Radio Example 2",
+              "path": "form_elements.html#form11"
+              },
+            
+              
+              
+              {
+              "title": "Checkbox Example 1",
+              "breadcrumb": "Form Elements > Checkbox Example 1",
+              "path": "form_elements.html#form12"
+              },
+            
+              
+              
+              {
+              "title": "Checkbox Example 2",
+              "breadcrumb": "Form Elements > Checkbox Example 2",
+              "path": "form_elements.html#form13"
+              },
+            
+              
+              
+              {
+              "title": "Smaller Fields (For use in Modal/Lightbox)",
+              "breadcrumb": "Form Elements > Smaller Fields (For use in Modal/Lightbox)",
+              "path": "form_elements.html#form14"
+              },
+            
+              
+              
+              {
+              "title": "Button Bar with Blue Background",
+              "breadcrumb": "Form Elements > Button Bar with Blue Background",
+              "path": "form_elements.html#form15"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Grids",
+              "breadcrumb": "grids > Grids",
+              "path": "grids.html#grids2"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Sidenav",
+              "breadcrumb": "Sidenav > Sidenav",
+              "path": "sidenav.html#sidenav01"
+              },
+            
+              
+              
+              {
+              "title": "Report Info Table",
+              "breadcrumb": "Sidenav > Report Info Table",
+              "path": "sidenav.html#sidenav02"
+              },
+            
+              
+              
+              {
+              "title": "Report Info Table 2",
+              "breadcrumb": "Sidenav > Report Info Table 2",
+              "path": "sidenav.html#sidenav03"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Page Title",
+              "breadcrumb": "Text > Page Title",
+              "path": "text.html#title01"
+              },
+            
+              
+              
+              {
+              "title": "Promptgroup Title",
+              "breadcrumb": "Text > Promptgroup Title",
+              "path": "text.html#title02"
+              },
+            
+              
+              
+              {
+              "title": "Required Field Comment",
+              "breadcrumb": "Text > Required Field Comment",
+              "path": "text.html#title03"
+              },
+            
+              
+              
+              {
+              "title": "Required Label",
+              "breadcrumb": "Text > Required Label",
+              "path": "text.html#title04"
+              },
+            
+              
+              
+              {
+              "title": "Regular Text",
+              "breadcrumb": "Text > Regular Text",
+              "path": "text.html#title05"
+              },
+            
+              
+              
+              {
+              "title": "Block Comment",
+              "breadcrumb": "Text > Block Comment",
+              "path": "text.html#title06"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "SRP 2.0 Styleguide",
+              "breadcrumb": "index > SRP 2.0 Styleguide",
+              "path": "index.html#welcome"
+              },
+            
+          
+        
+      {}];
+      $scope.onSelect = function ($item, $model, $label) {
+        window.location.replace($item.path);
+      };
+    });
+
+  </script>
+  <script type="text/ng-template" id="customTemplate.html">
+    <a href="{{match.model.path}}">
+      <p class="cortana-search-title">{{match.model.title}}</p>
+      <p class="cortana-search-path">{{match.model.breadcrumb}}</p>
+    </a>
+  </script>
+  
+    
+      <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    
+  
+  <!-- Source Components -->
+  
+</body>
+</html>

@@ -1,6 +1,10 @@
-#SRP 2.0 Page Templates and Style Guide
 
-Note that the project uses Sass and Hologram.
+
+About SASS and Compass
+----------------------
+
+This directory includes Sass versions of SRP's CSS files. All files use the SCSS
+syntax.
 
 Sass is a language that is just normal CSS plus some extra features, like
 variables, nested rules, math, mixins, etc. If your stylesheets are written in
@@ -53,3 +57,4 @@ to delete all the generated CSS files.
   deleting the "#" from the beginnning:
     #environment = :production
 - Regenerate all the CSS files by running: compass compile
+

@@ -1,0 +1,162 @@
+/*doc
+---
+title: Page Title
+name: title01
+category: Text
+---
+```html_example
+<h1 class='title__page'>My Reports</h1>
+```
+*/
+
+/*doc
+---
+title: Promptgroup Title
+name: title02
+category: Text
+---
+
+```html_example
+<div class="form-row">
+	<h2 class="title__section">Promptgroup Title</h2>
+	<h2 class="title__promptgroup">Promptgroup Title</h2>
+</div>
+```
+*/
+
+/*doc
+---
+title: Required Field Comment
+name: title03
+category: Text
+---
+
+```html_example
+<p class="required-field"><span>*</span>=Required Field</p>
+```
+*/
+
+/*doc
+---
+title: Required Label
+name: title04
+category: Text
+---
+
+```html_example
+<div class="form-row">
+	<div class="col1">
+		<label for="title" class="required">Title</label>
+	</div>
+</div>
+```
+
+*/
+
+/*doc
+---
+title: Regular Text
+name: title05
+category: Text
+---
+
+```html_example
+<p>You have chosen to submit a <strong>Pet Food Safety Report</strong> to the FDA. Please be advised that under 18 U.S.C. 1001, anyone who makes a materially false, fictitious, or fraudulent statement to the U.S. Government is subject to criminal penalties.</p>
+```
+
+*/
+
+/*doc
+---
+title: Block Comment
+name: title06
+category: Text
+---
+
+```html_example
+<div class="form-row">
+	<h2 class="title__section">Block Comment</h2>
+	<div class="block__comment">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut deserunt voluptas veritatis dicta dolore laudantium repellat ipsa doloribus iusto qui nemo ab amet corrupti illum ea, architecto commodi pariatur. Reiciendis.</div>
+</div>
+```
+
+
+*/
+
+a:hover {
+	text-decoration: none;
+}
+
+.required:before {
+	color: red;
+	content: '*';
+}
+
+.title__home {
+	color: #152359;
+	font-size: 1.6em;
+	margin: 0 0 20px 0;
+	padding: 0;
+}
+
+.title__page {
+	color: #9c3627;
+	font-size: 1.6em;
+	margin: 0 0 20px 0;
+	padding: 0;
+}
+
+.title__section {
+	color: #152359;
+	font-size: 1.5em;
+    font-weight: bold;
+    margin: 0 0 20px 0;
+}
+
+.title__login {
+    background: #152359;
+    color: white;
+    font-size: 1.4em;
+    margin-bottom: 0.8em;
+    padding: 0.5em;
+    text-align: center;
+}
+
+.title__promptgroup {
+	background: #E1DECA;
+	color: #152359;
+	font-size: 1.1em;
+	padding: 5px;
+}
+
+.block__comment {
+	background: #F7F7F7;
+	border: 1px solid grey;
+	display: block;
+	margin-bottom: 15px;
+	padding: 10px;
+}
+
+.block__note {
+	display: block;
+	font-weight: bold;
+	margin-bottom: 15px;
+}
+
+.required-field {
+	color: #152359;
+    font-weight: bold;
+}
+
+.required-field span {
+	color: red;
+}
+
+label {
+	color: #152359;
+	font-weight: bold;
+}
+
+label span {
+	font-weight: normal;
+}
