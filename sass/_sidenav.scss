@@ -126,9 +126,20 @@ category: Sidenav
 	color: white;
 }
 
+.sidenav p {
+	border-bottom: 2px solid white;
+	float: left;
+	margin: 0;
+	width: 100%;
+}
+
 .active {
 	background-color: #9C3627;
 	color: white;
+}
+
+.sidenav-report ul {
+	border-top: 2px solid white;
 }
 
 .sidenav li a,

@@ -19,6 +19,10 @@
 	width: 800px;
 }
 
+.form-controls {
+	float: right;
+}
+
 .row {
 	float: left;
 	width: 100%;
@@ -66,10 +70,23 @@
 	width: 50%;
 }
 
-.col33 {
+.col33,
+.col3 {
 	float: left;
 	margin-right: 10px;
 	max-width: 33%;
+}
+
+.col4 {
+	float: left;
+	margin-right: 10px;
+	max-width: 24%;
+}
+
+.col5 {
+	float: left;
+	margin-right: 10px;
+	max-width: 19%;
 }
 
 .col40 {
@@ -82,7 +99,6 @@
 
 .form-row__controls {
 	background: #A7CDEC;
-	float: left;
 	padding: 10px 5px;
 }
 
@@ -93,5 +109,15 @@
 
 .align-right {
 	text-align: right;
+}
+
+.indent-sm {
+	margin-left: 10%;
+	width: 90%;
+}
+
+.indent-lg {
+	margin-left: 25%;
+	width: 75%;
 }
 

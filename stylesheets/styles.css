@@ -56,7 +56,7 @@ Welcome!
  * and $rhythm-unit variables. Also, correct text resizing oddly in IE 6/7 when
  * body `font-size` is set using `em` units.
  */
-/* line 106, ../../../../.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/typography/_vertical_rhythm.scss */
+/* line 106, ../../../.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/typography/_vertical_rhythm.scss */
 html {
   font-size: 75%;
   line-height: 1.41667em;
@@ -648,6 +648,288 @@ th {
   padding: 0;
 }
 
+/* line 1, ../sass/_waitpopup.scss */
+.waitpopup {
+  display: none;
+  position: fixed;
+  z-index: 3003;
+  top: 17%;
+  left: 50%;
+  margin-left: -152px;
+  width: 304px;
+  height: 155px;
+  text-align: center;
+  background: url(../images/WaitBackground.gif);
+  background-color: transparent;
+  color: #333;
+  border: none;
+}
+
+/* line 17, ../sass/_waitpopup.scss */
+.waitpopup img {
+  margin: auto;
+  margin-top: 30px;
+}
+
+/* line 23, ../sass/_waitpopup.scss */
+.waitpopup span {
+  color: #216b93;
+  font-size: 110%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  display: block;
+  margin: auto;
+  padding-top: 10px;
+  padding-left: 5px;
+}
+
+/* line 35, ../sass/_waitpopup.scss */
+.jqmOverlay {
+  /* z-index:100002;*/
+  opacity: .8;
+  background-color: #222222;
+}
+
+/* line 42, ../sass/_waitpopup.scss */
+* iframe.jqm {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: expression(this.parentNode.offsetWidth+'px');
+  height: expression(this.parentNode.offsetHeight+'px');
+}
+
+/* line 49, ../sass/_waitpopup.scss */
+* html .jqmWindow {
+  position: absolute;
+  top: expression((document.documentElement.scrollTop || document.body.scrollTop) + Math.round(17 * (document.documentElement.offsetHeight || document.body.clientHeight) / 100) + 'px');
+}
+
+/* line 1, ../sass/_lightbox.scss */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -2;
+  background-color: #000;
+}
+
+/* line 11, ../sass/_lightbox.scss */
+.modal-backdrop.in {
+  filter: alpha(opacity=50);
+  opacity: .5;
+}
+
+/* line 16, ../sass/_lightbox.scss */
+.waitpopup {
+  position: fixed;
+  z-index: 1;
+}
+
+/* line 21, ../sass/_lightbox.scss */
+.waitpopup-inside {
+  position: fixed;
+  z-index: -1;
+  top: 17%;
+  left: 50%;
+  margin-left: -152px;
+  width: 304px;
+  height: 155px;
+  text-align: center;
+  background: url(../images/WaitBackground.gif);
+  background-color: transparent;
+  color: #333;
+  border: none;
+}
+
+/* line 36, ../sass/_lightbox.scss */
+.waitpopup-inside img {
+  margin: auto;
+  margin-top: 30px;
+}
+
+/* line 42, ../sass/_lightbox.scss */
+.waitpopup-inside span {
+  color: #216b93;
+  font-size: 110%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  display: block;
+  margin: auto;
+  padding-top: 10px;
+  padding-left: 5px;
+}
+
+/*
+    Colorbox Core Style:
+    The following CSS is consistent between example themes and should not be altered.
+*/
+/* line 6, ../sass/_colorbox.scss */
+#colorbox, #cboxOverlay, #cboxWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+/* line 15, ../sass/_colorbox.scss */
+#cboxWrapper {
+  max-width: none;
+}
+
+/* line 19, ../sass/_colorbox.scss */
+#cboxOverlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 25, ../sass/_colorbox.scss */
+#cboxMiddleLeft, #cboxBottomLeft {
+  clear: left;
+}
+
+/* line 29, ../sass/_colorbox.scss */
+#cboxContent {
+  position: relative;
+}
+
+/* line 33, ../sass/_colorbox.scss */
+#cboxLoadedContent {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* line 38, ../sass/_colorbox.scss */
+#cboxTitle {
+  margin: 0;
+}
+
+/* line 42, ../sass/_colorbox.scss */
+#cboxLoadingOverlay, #cboxLoadingGraphic {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 50, ../sass/_colorbox.scss */
+#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow {
+  cursor: pointer;
+}
+
+/* line 54, ../sass/_colorbox.scss */
+.cboxPhoto {
+  float: left;
+  margin: auto;
+  border: 0;
+  display: block;
+  max-width: none;
+  -ms-interpolation-mode: bicubic;
+}
+
+/* line 63, ../sass/_colorbox.scss */
+.cboxIframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 72, ../sass/_colorbox.scss */
+#colorbox, #cboxContent, #cboxLoadedContent {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+/* 
+    User Style:
+    Change the following styles to modify the appearance of Colorbox.  They are
+    ordered & tabbed in a way that represents the nesting of the generated HTML.
+*/
+/* line 84, ../sass/_colorbox.scss */
+#cboxOverlay {
+  background: url(../images/overlay.png) repeat 0 0;
+  opacity: 0.9;
+  filter: alpha(opacity=90);
+}
+
+/* line 90, ../sass/_colorbox.scss */
+#colorbox {
+  outline: 0;
+}
+
+/* line 94, ../sass/_colorbox.scss */
+#cboxContent {
+  background: #fff;
+  overflow: hidden;
+}
+
+/* line 99, ../sass/_colorbox.scss */
+.cboxIframe {
+  background: #fff;
+}
+
+/* line 103, ../sass/_colorbox.scss */
+#cboxError {
+  padding: 50px;
+  border: 1px solid #ccc;
+}
+
+/* line 108, ../sass/_colorbox.scss */
+#cboxTitle {
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  color: #949494;
+}
+
+/* line 117, ../sass/_colorbox.scss */
+#cboxCurrent {
+  position: absolute;
+  bottom: 4px;
+  left: 58px;
+  color: #949494;
+}
+
+/*
+  The following fixes a problem where IE7 and IE8 replace a PNG's alpha transparency with a black fill
+  when an alpha filter (opacity change) is set on the element or ancestor element.  This style is not applied to or needed in IE9.
+  See: http://jacklmoore.com/notes/ie-transparency-problems/
+*/
+/* line 130, ../sass/_colorbox.scss */
+.cboxIE #cboxTopLeft,
+.cboxIE #cboxTopCenter,
+.cboxIE #cboxTopRight,
+.cboxIE #cboxBottomLeft,
+.cboxIE #cboxBottomCenter,
+.cboxIE #cboxBottomRight,
+.cboxIE #cboxMiddleLeft,
+.cboxIE #cboxMiddleRight {
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF);
+}
+
+/* line 141, ../sass/_colorbox.scss */
+#cboxContent {
+  border: 3px solid #808080;
+}
+
+/* line 145, ../sass/_colorbox.scss */
+#cboxLoadedContent {
+  margin: 0 auto;
+  padding: 10px;
+}
+
 /* line 1, ../sass/_header.scss */
 .banner {
   height: 119px;
@@ -729,7 +1011,7 @@ th {
   margin-right: auto;
   margin-top: 10px;
 }
-/* line 12, ../../../../.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/susy-2.2.5/sass/susy/output/support/_clearfix.scss */
+/* line 12, ../../../.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/susy-2.2.5/sass/susy/output/support/_clearfix.scss */
 .wrapper:after {
   content: " ";
   display: block;
@@ -762,41 +1044,46 @@ th {
 }
 
 /* line 22, ../sass/_layout.scss */
+.form-controls {
+  float: right;
+}
+
+/* line 26, ../sass/_layout.scss */
 .row {
   float: left;
   width: 100%;
 }
 
-/* line 27, ../sass/_layout.scss */
+/* line 31, ../sass/_layout.scss */
 .form-row {
   float: left;
   margin: 10px 0;
   width: 100%;
 }
 
-/* line 33, ../sass/_layout.scss */
+/* line 37, ../sass/_layout.scss */
 .section {
   float: left;
   margin-bottom: 40px;
   width: 100%;
 }
 
-/* line 39, ../sass/_layout.scss */
+/* line 43, ../sass/_layout.scss */
 .small-1 {
   width: 8.33333%;
 }
 
-/* line 43, ../sass/_layout.scss */
+/* line 47, ../sass/_layout.scss */
 .small-3 {
   width: 25%;
 }
 
-/* line 47, ../sass/_layout.scss */
+/* line 51, ../sass/_layout.scss */
 .small-4 {
   width: 33.33333%;
 }
 
-/* line 51, ../sass/_layout.scss */
+/* line 55, ../sass/_layout.scss */
 .columns {
   position: relative;
   padding-left: 0.9375em;
@@ -804,52 +1091,78 @@ th {
   float: left;
 }
 
-/* line 58, ../sass/_layout.scss */
+/* line 62, ../sass/_layout.scss */
 .col1 {
   float: left;
   margin-bottom: 5px;
   width: 100%;
 }
 
-/* line 64, ../sass/_layout.scss */
+/* line 68, ../sass/_layout.scss */
 .col2 {
   padding-right: 10px;
   width: 50%;
 }
 
-/* line 69, ../sass/_layout.scss */
-.col33 {
+/* line 73, ../sass/_layout.scss */
+.col33,
+.col3 {
   float: left;
   margin-right: 10px;
   max-width: 33%;
 }
 
-/* line 75, ../sass/_layout.scss */
+/* line 80, ../sass/_layout.scss */
+.col4 {
+  float: left;
+  margin-right: 10px;
+  max-width: 24%;
+}
+
+/* line 86, ../sass/_layout.scss */
+.col5 {
+  float: left;
+  margin-right: 10px;
+  max-width: 19%;
+}
+
+/* line 92, ../sass/_layout.scss */
 .col40 {
   width: 40%;
 }
 
-/* line 79, ../sass/_layout.scss */
+/* line 96, ../sass/_layout.scss */
 .col60 {
   width: 60%;
 }
 
-/* line 83, ../sass/_layout.scss */
+/* line 100, ../sass/_layout.scss */
 .form-row__controls {
   background: #A7CDEC;
-  float: left;
   padding: 10px 5px;
 }
 
-/* line 89, ../sass/_layout.scss */
+/* line 105, ../sass/_layout.scss */
 .form-row__col {
   float: left;
   text-align: left;
 }
 
-/* line 94, ../sass/_layout.scss */
+/* line 110, ../sass/_layout.scss */
 .align-right {
   text-align: right;
+}
+
+/* line 114, ../sass/_layout.scss */
+.indent-sm {
+  margin-left: 10%;
+  width: 90%;
+}
+
+/* line 119, ../sass/_layout.scss */
+.indent-lg {
+  margin-left: 25%;
+  width: 75%;
 }
 
 /* line 1, ../sass/_footer.scss */
@@ -977,8 +1290,29 @@ category: Text
 */
 /*doc
 ---
-title: Block Comment
+title: Error Text
 name: title06
+category: Text
+---
+
+```html_example
+<div class="form-row">
+	<div class="col2">
+		<label for="fname">First Name</label>
+	</div>
+	<div class="col2">
+		<input name="fname" type="text" id="fname" class="input__100">
+		<p class="error">This is some error text. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, facilis, optio illum alias similique iure error iste quos blanditiis earum. Commodi ab et quis, maxime ratione. Omnis illo, placeat temporibus.</p>
+	</div>
+</div>
+```
+
+
+*/
+/*doc
+---
+title: Block Comment
+name: title07
 category: Text
 ---
 
@@ -991,18 +1325,42 @@ category: Text
 
 
 */
-/* line 86, ../sass/_text.scss */
+/* line 108, ../sass/_text.scss */
 a:hover {
   text-decoration: none;
 }
 
-/* line 90, ../sass/_text.scss */
+/* line 112, ../sass/_text.scss */
+a[disabled] {
+  pointer-events: none;
+  color: gray;
+}
+
+/* line 117, ../sass/_text.scss */
+.required {
+  color: #152359;
+  font-weight: bold;
+}
+
+/* line 122, ../sass/_text.scss */
 .required:before {
   color: red;
   content: '*';
 }
 
-/* line 95, ../sass/_text.scss */
+/* line 127, ../sass/_text.scss */
+.error {
+  color: red;
+  margin: 5px 0;
+}
+
+/* line 132, ../sass/_text.scss */
+.disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+/* line 137, ../sass/_text.scss */
 .title__home {
   color: #152359;
   font-size: 1.6em;
@@ -1010,7 +1368,7 @@ a:hover {
   padding: 0;
 }
 
-/* line 102, ../sass/_text.scss */
+/* line 144, ../sass/_text.scss */
 .title__page {
   color: #9c3627;
   font-size: 1.6em;
@@ -1018,7 +1376,7 @@ a:hover {
   padding: 0;
 }
 
-/* line 109, ../sass/_text.scss */
+/* line 151, ../sass/_text.scss */
 .title__section {
   color: #152359;
   font-size: 1.5em;
@@ -1026,7 +1384,7 @@ a:hover {
   margin: 0 0 20px 0;
 }
 
-/* line 116, ../sass/_text.scss */
+/* line 158, ../sass/_text.scss */
 .title__login {
   background: #152359;
   color: white;
@@ -1036,108 +1394,69 @@ a:hover {
   text-align: center;
 }
 
-/* line 125, ../sass/_text.scss */
+/* line 167, ../sass/_text.scss */
 .title__promptgroup {
   background: #E1DECA;
   color: #152359;
+  float: left;
   font-size: 1.1em;
   padding: 5px;
+  width: 100%;
 }
 
-/* line 132, ../sass/_text.scss */
+/* line 176, ../sass/_text.scss */
 .block__comment {
   background: #F7F7F7;
   border: 1px solid grey;
   display: block;
+  float: left;
   margin-bottom: 15px;
   padding: 10px;
+  width: 100%;
 }
 
-/* line 140, ../sass/_text.scss */
+/* line 186, ../sass/_text.scss */
 .block__note {
   display: block;
   font-weight: bold;
   margin-bottom: 15px;
 }
 
-/* line 146, ../sass/_text.scss */
+/* line 192, ../sass/_text.scss */
 .required-field {
   color: #152359;
   font-weight: bold;
 }
 
-/* line 151, ../sass/_text.scss */
+/* line 197, ../sass/_text.scss */
 .required-field span {
   color: red;
 }
 
-/* line 155, ../sass/_text.scss */
+/* line 201, ../sass/_text.scss */
 label {
   color: #152359;
   font-weight: bold;
 }
 
-/* line 160, ../sass/_text.scss */
+/* line 206, ../sass/_text.scss */
 label span {
   font-weight: normal;
 }
 
-/* line 1, ../sass/_waitpopup.scss */
-.waitpopup {
-  display: none;
+/* line 210, ../sass/_text.scss */
+div.PopupPromptGroup {
   position: fixed;
-  z-index: 3003;
-  top: 17%;
-  left: 50%;
-  margin-left: -152px;
-  width: 304px;
-  height: 155px;
-  text-align: center;
-  background: url(../images/WaitBackground.gif);
-  background-color: transparent;
-  color: #333;
-  border: none;
-}
-
-/* line 17, ../sass/_waitpopup.scss */
-.waitpopup img {
-  margin: auto;
-  margin-top: 30px;
-}
-
-/* line 23, ../sass/_waitpopup.scss */
-.waitpopup span {
-  color: #216b93;
-  font-size: 110%;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  display: block;
-  margin: auto;
-  padding-top: 10px;
-  padding-left: 5px;
-}
-
-/* line 35, ../sass/_waitpopup.scss */
-.jqmOverlay {
-  /* z-index:100002;*/
-  opacity: .8;
-  background-color: #222222;
-}
-
-/* line 42, ../sass/_waitpopup.scss */
-* iframe.jqm {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  width: expression(this.parentNode.offsetWidth+'px');
-  height: expression(this.parentNode.offsetHeight+'px');
-}
-
-/* line 49, ../sass/_waitpopup.scss */
-* html .jqmWindow {
-  position: absolute;
-  top: expression((document.documentElement.scrollTop || document.body.scrollTop) + Math.round(17 * (document.documentElement.offsetHeight || document.body.clientHeight) / 100) + 'px');
+  top: 5%;
+  max-height: 90%;
+  width: 790px;
+  overflow: auto;
+  background-color: #f8f9fb;
+  border-width: 2px;
+  border-style: solid;
+  border-color: Gray;
+  left: 565px;
+  z-index: 3000;
 }
 
 /*doc
@@ -1280,7 +1599,7 @@ category: Form Elements
 ```html_example
 <div class="form-row">
 	<div class="col2">
-		<label for="org">Organization Type: <a href="#" class="tooltip"><img src="images/icon_info.gif" alt=""><span>Here is some title text. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim ipsum, sed repellat unde eaque maiores? Aut tenetur eligendi quia accusamus quos velit commodi nemo enim vel doloremque, illum laudantium libero.</span></a></label>
+		<label for="org">Organization Type: <a href="#" class="tooltip"><img src="images/icon_info.gif" alt=""><span>Here is some title text. <i>Here is a link. I am a link.</i> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim ipsum, sed repellat unde eaque maiores? Aut tenetur eligendi quia accusamus quos velit commodi nemo enim vel doloremque, illum laudantium libero.</span></a></label>
 	</div>
 	<div class="col2">
 		<input name="org" type="text" id="org" class="input__100">
@@ -1302,7 +1621,7 @@ category: Form Elements
 		<label for="blah" class="required">If known, what corrective actions has the responsible party taken to prevent future occurrences of this reportable food?</label>
 	</div>
 	<div class="col1">
-		<textarea name="blahblah" rows="2" cols="20" id="blah" class="textarea__100" title="If known, what corrective actions has the responsible party taken to prevent future occurrences of this reportable food?" spellcheck="true"></textarea><span class="icon__spellcheck"><a href="#"><img src="images/icon_spellcheck.png" alt="Spellcheck"></a></span><span class="icon__info"><a href="#" class="tooltip"><img src="images/icon_info.gif" alt=""><span>Here is some title text. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim ipsum, sed repellat unde eaque maiores? Aut tenetur eligendi quia accusamus quos velit commodi nemo enim vel doloremque, illum laudantium libero.</span></a></span>
+		<textarea name="blahblah" rows="2" cols="20" id="blah" class="textarea__100" title="If known, what corrective actions has the responsible party taken to prevent future occurrences of this reportable food?" spellcheck="true"></textarea><span class="icon__spellcheck"><a href="#"><img src="images/icon_spellcheck.png" alt="Spellcheck"></a></span><span class="icon__info"><a href="#" class="tooltip"><img src="images/icon_info.gif" alt=""><span>Here is some title text. Lorem ipsum dolor sit amet, consectetur adipisicing elit. <i>Here is a link. I am a link.</i> Enim ipsum, sed repellat unde eaque maiores? Aut tenetur eligendi quia accusamus quos velit commodi nemo enim vel doloremque, illum laudantium libero.</span></a></span>
 	</div>
 </div>
 ```
@@ -1531,104 +1850,113 @@ category: Form Elements
 
 */
 /* line 406, ../sass/_form-elements.scss */
+button[disabled=disabled],
+button:disabled {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIklEQVQIW2NkQAKrVq36zwjjgzhhYWGMYAEYB8RmROaABADeOQ8CXl/xfgAAAABJRU5ErkJggg==) repeat;
+  background: rgba(255, 255, 255, 0.3);
+  border: 1px solid grey;
+  color: #827F7F;
+}
+
+/* line 414, ../sass/_form-elements.scss */
 .row__form {
   float: left;
   margin: 15px 0;
   width: 100%;
 }
 
-/* line 412, ../sass/_form-elements.scss */
+/* line 420, ../sass/_form-elements.scss */
 .col2 {
   float: left;
   width: 50%;
 }
 
-/* line 417, ../sass/_form-elements.scss */
+/* line 425, ../sass/_form-elements.scss */
 .col2__label {
   float: left;
   width: 50%;
 }
 
-/* line 422, ../sass/_form-elements.scss */
+/* line 430, ../sass/_form-elements.scss */
 .col2__label-small {
   float: left;
   width: 25%;
 }
 
-/* line 427, ../sass/_form-elements.scss */
+/* line 435, ../sass/_form-elements.scss */
 .col2__input {
   float: left;
 }
 
-/* line 431, ../sass/_form-elements.scss */
+/* line 439, ../sass/_form-elements.scss */
 .col2__input-large {
   float: left;
   width: 75%;
 }
 
-/* line 436, ../sass/_form-elements.scss */
+/* line 444, ../sass/_form-elements.scss */
 .col20 {
   float: left;
   width: 20%;
 }
 
-/* line 441, ../sass/_form-elements.scss */
+/* line 449, ../sass/_form-elements.scss */
 .col80 {
   float: left;
   width: 80%;
 }
 
-/* line 446, ../sass/_form-elements.scss */
+/* line 454, ../sass/_form-elements.scss */
 .input__100 {
   width: 100%;
 }
 
-/* line 450, ../sass/_form-elements.scss */
+/* line 458, ../sass/_form-elements.scss */
 .textarea__100 {
   height: 100px;
   width: 100%;
 }
 
-/* line 455, ../sass/_form-elements.scss */
+/* line 463, ../sass/_form-elements.scss */
 .input__medium,
 .input__90 {
   width: 90%;
 }
 
-/* line 460, ../sass/_form-elements.scss */
+/* line 468, ../sass/_form-elements.scss */
 .input__80,
 .select__80 {
   width: 80%;
 }
 
-/* line 465, ../sass/_form-elements.scss */
+/* line 473, ../sass/_form-elements.scss */
 .select__95 {
   width: 95%;
 }
 
-/* line 469, ../sass/_form-elements.scss */
+/* line 477, ../sass/_form-elements.scss */
 .icon__calendar {
   content: url("../images/icon_calendar.gif");
   margin-left: 5px;
 }
 
-/* line 474, ../sass/_form-elements.scss */
+/* line 482, ../sass/_form-elements.scss */
 .icon__spellcheck {
   display: inline-block;
 }
 
-/* line 478, ../sass/_form-elements.scss */
+/* line 486, ../sass/_form-elements.scss */
 .icon__info {
   display: inline-block;
   margin-left: 5px;
 }
 
-/* line 483, ../sass/_form-elements.scss */
+/* line 491, ../sass/_form-elements.scss */
 .infobox {
   position: relative;
 }
 
-/* line 487, ../sass/_form-elements.scss */
+/* line 495, ../sass/_form-elements.scss */
 a[title]:hover:after {
   background: #e0f1ff;
   border: 1px solid #0050b1;
@@ -1643,7 +1971,7 @@ a[title]:hover:after {
   z-index: 20px;
 }
 
-/* line 501, ../sass/_form-elements.scss */
+/* line 509, ../sass/_form-elements.scss */
 .tooltip {
   color: #000000;
   outline: none;
@@ -1652,13 +1980,13 @@ a[title]:hover:after {
   position: relative;
 }
 
-/* line 509, ../sass/_form-elements.scss */
+/* line 517, ../sass/_form-elements.scss */
 .tooltip span {
   margin-left: -999em;
   position: absolute;
 }
 
-/* line 514, ../sass/_form-elements.scss */
+/* line 522, ../sass/_form-elements.scss */
 .tooltip:hover span {
   background: #e0f1ff;
   border: 1px solid #0050b1;
@@ -1674,12 +2002,18 @@ a[title]:hover:after {
   width: 300px;
 }
 
-/* line 529, ../sass/_form-elements.scss */
+/* line 537, ../sass/_form-elements.scss */
+.tooltip i {
+  color: #216b93;
+  font-style: normal;
+}
+
+/* line 542, ../sass/_form-elements.scss */
 .label__radio {
   font-weight: normal;
 }
 
-/* line 533, ../sass/_form-elements.scss */
+/* line 546, ../sass/_form-elements.scss */
 .btn__search,
 .btn__reset {
   margin-right: 5px;
@@ -1688,7 +2022,7 @@ a[title]:hover:after {
 /*doc
 ---
 title: Grids
-name: grids2
+name: grids01
 category: grids
 ---
 ```html_example
@@ -1721,46 +2055,181 @@ category: grids
 			<td>Voluntary Reportable Food Report (V2)</td>
 			<td>Voluntary Reportable Food Report (Section 1005 of Public Law 110-85) (V2)</td>
 		</tr>
-		<tfoot>
-			<td colspan="4">
-				<div class="table__buttons">
-					<button id="PromptSubmitNewReportButton" onclick="submit('event:PromptSubmitNewReportButton,type:button,id:PromptSubmitNewReportButton,rid:53')" type="button" data-title="Start New Report" data-type="button">Start New Report</button>
-					<button id="PromptEditDraftReportButton" onclick="submit('event:EditGrid,type:button,id:PromptEditDraftReportButton,rid:53')" class="announcementText btn" type="button" data-title="Edit" data-type="button" disabled="disabled">Edit</button>
-					<button id="PromptDeleteDraftReportButton" onclick="submit('event:DeleteGrid,type:button,id:PromptDeleteDraftReportButton,rid:53')" class="announcementText btn" type="button" data-title="Delete" data-type="button" disabled="disabled">Delete</button>
-					<button id="PromptViewDraftReportButton" onclick="submit('event:PromptViewDraftReportButton,type:button,id:PromptViewDraftReportButton,rid:53')" class="announcementText btn" style="" type="button" data-title="View" data-type="button" disabled="disabled">View</button>
-					<button id="PromptRefreshDraftReportButton" onclick="submit('event:PromptRefreshDraftReportButton,type:button,id:PromptRefreshDraftReportButton,rid:53')" class="announcementText btn" style="" type="button" data-title="Refresh" data-type="button">Refresh</button>
-					<button id="PromptViewDraftReportTemplateButton" onclick="submit('event:PromptViewDraftReportTemplateButton,type:button,id:PromptViewDraftReportTemplateButton,rid:53')" class="announcementText btn" style="display: none;" type="button" data-title="View Template" data-type="button">View Template</button>
-				</div>
-			</td>
-			<td colspan="1">
-				<div class="pagination">
-                	<img src="images/icon_first.png" onclick="loadGrid('PromptDraftReportsGrid,53,F')">
-                	<img src="images/icon_back.png" onclick="loadGrid('PromptDraftReportsGrid,53,P')">
-                	<span id="pagination__label">Page 1 of 1</span>
-					<img src="images/icon_next.png" onclick="loadGrid('PromptDraftReportsGrid,53,N')">
-                 	<img src="images/icon_last.png" onclick="loadGrid('PromptDraftReportsGrid,53,L')">
-               </div>
-            </td>
-		</tfoot>
+		<tr>
+			<td><input value="" name="" type="radio"></td>
+			<td>08/03/2015 03:10:20 PM</td>
+			<td>37340 (I)</td>
+			<td>Voluntary Reportable Food Report (V2)</td>
+			<td>Voluntary Reportable Food Report (Section 1005 of Public Law 110-85) (V2)</td>
+		</tr>
 	</table>
+
+	<div class="table__controls">
+		<div class="table__buttons">
+			<button id="PromptSubmitNewReportButton" onclick="submit('event:PromptSubmitNewReportButton,type:button,id:PromptSubmitNewReportButton,rid:53')" type="button" data-title="Start New Report" data-type="button">Start New Report</button>
+			<button id="PromptEditDraftReportButton" onclick="submit('event:EditGrid,type:button,id:PromptEditDraftReportButton,rid:53')" class="announcementText btn" type="button" data-title="Edit" data-type="button" disabled="disabled">Edit</button>
+			<button id="PromptDeleteDraftReportButton" onclick="submit('event:DeleteGrid,type:button,id:PromptDeleteDraftReportButton,rid:53')" class="announcementText btn" type="button" data-title="Delete" data-type="button" disabled="disabled">Delete</button>
+			<button id="PromptViewDraftReportButton" onclick="submit('event:PromptViewDraftReportButton,type:button,id:PromptViewDraftReportButton,rid:53')" class="announcementText btn" style="" type="button" data-title="View" data-type="button" disabled="disabled">View</button>
+			<button id="PromptRefreshDraftReportButton" onclick="submit('event:PromptRefreshDraftReportButton,type:button,id:PromptRefreshDraftReportButton,rid:53')" class="announcementText btn" style="" type="button" data-title="Refresh" data-type="button">Refresh</button>
+			<button id="PromptViewDraftReportTemplateButton" onclick="submit('event:PromptViewDraftReportTemplateButton,type:button,id:PromptViewDraftReportTemplateButton,rid:53')" class="announcementText btn" style="display: none;" type="button" data-title="View Template" data-type="button">View Template</button>
+		</div>
+		<div class="pagination">
+        	<img src="images/icon_first.png" onclick="loadGrid('PromptDraftReportsGrid,53,F')">
+        	<img src="images/icon_back.png" onclick="loadGrid('PromptDraftReportsGrid,53,P')">
+        	<span id="pagination__label">Page 1 of 1</span>
+			<img src="images/icon_next.png" onclick="loadGrid('PromptDraftReportsGrid,53,N')">
+         	<img src="images/icon_last.png" onclick="loadGrid('PromptDraftReportsGrid,53,L')">
+       </div>
+	</div>
+	
 </div>
 ```
 
 */
-/* line 64, ../sass/_tables.scss */
+/*doc
+---
+title: Indented Grids 1
+name: grids02
+category: grids
+---
+```html_example
+<div class="form-row">
+	<div class="indent-sm">
+		<table class="table__grid">
+			<caption>Click column header to sort the column</caption>
+			<thead>
+				<tr>
+					<th></th>
+					<th><a href="#">Date Saved (EST)</a></th>
+					<th><a href="#">Report ID</a></th>
+					<th><a href="#">Title</a></th>
+					<th><a href="#">Report Type Description</a></th>
+				</tr>
+			</thead>
+			<tr>
+				<td><input value="" name="" type="radio"></td>
+				<td>08/03/2015 03:10:20 PM</td>
+				<td>37340 (I)</td>
+				<td>Voluntary Reportable Food Report (V2)</td>
+				<td>Voluntary Reportable Food Report (Section 1005 of Public Law 110-85) (V2)</td>
+			</tr>
+			<tr>
+				<td><input value="" name="" type="radio"></td>
+				<td>08/03/2015 03:10:20 PM</td>
+				<td>37340 (I)</td>
+				<td>Voluntary Reportable Food Report (V2)</td>
+				<td>Voluntary Reportable Food Report (Section 1005 of Public Law 110-85) (V2)</td>
+			</tr>
+			<tr>
+				<td><input value="" name="" type="radio"></td>
+				<td>08/03/2015 03:10:20 PM</td>
+				<td>37340 (I)</td>
+				<td>Voluntary Reportable Food Report (V2)</td>
+				<td>Voluntary Reportable Food Report (Section 1005 of Public Law 110-85) (V2)</td>
+			</tr>
+		</table>
+
+		<div class="table__controls">
+			<div class="table__buttons">
+				<button id="PromptSubmitNewReportButton" onclick="submit('event:PromptSubmitNewReportButton,type:button,id:PromptSubmitNewReportButton,rid:53')" type="button" data-title="Start New Report" data-type="button">Start New Report</button>
+				<button id="PromptEditDraftReportButton" onclick="submit('event:EditGrid,type:button,id:PromptEditDraftReportButton,rid:53')" class="announcementText btn" type="button" data-title="Edit" data-type="button" disabled="disabled">Edit</button>
+				<button id="PromptDeleteDraftReportButton" onclick="submit('event:DeleteGrid,type:button,id:PromptDeleteDraftReportButton,rid:53')" class="announcementText btn" type="button" data-title="Delete" data-type="button" disabled="disabled">Delete</button>
+				<button id="PromptViewDraftReportButton" onclick="submit('event:PromptViewDraftReportButton,type:button,id:PromptViewDraftReportButton,rid:53')" class="announcementText btn" style="" type="button" data-title="View" data-type="button" disabled="disabled">View</button>
+				<button id="PromptRefreshDraftReportButton" onclick="submit('event:PromptRefreshDraftReportButton,type:button,id:PromptRefreshDraftReportButton,rid:53')" class="announcementText btn" style="" type="button" data-title="Refresh" data-type="button">Refresh</button>
+				<button id="PromptViewDraftReportTemplateButton" onclick="submit('event:PromptViewDraftReportTemplateButton,type:button,id:PromptViewDraftReportTemplateButton,rid:53')" class="announcementText btn" style="display: none;" type="button" data-title="View Template" data-type="button">View Template</button>
+			</div>
+			<div class="pagination">
+            	<img src="images/icon_first.png" onclick="loadGrid('PromptDraftReportsGrid,53,F')">
+            	<img src="images/icon_back.png" onclick="loadGrid('PromptDraftReportsGrid,53,P')">
+            	<span id="pagination__label">Page 1 of 1</span>
+				<img src="images/icon_next.png" onclick="loadGrid('PromptDraftReportsGrid,53,N')">
+             	<img src="images/icon_last.png" onclick="loadGrid('PromptDraftReportsGrid,53,L')">
+           </div>
+		</div>
+	</div>
+</div>
+```
+
+*/
+/*doc
+---
+title: Indented Grids 2
+name: grids03
+category: grids
+---
+```html_example
+<div class="form-row">
+	<div class="indent-lg">
+		<table class="table__grid">
+			<caption>Click column header to sort the column</caption>
+			<thead>
+				<tr>
+					<th></th>
+					<th><a href="#">Date Saved (EST)</a></th>
+					<th><a href="#">Report ID</a></th>
+					<th><a href="#">Title</a></th>
+					<th><a href="#">Report Type Description</a></th>
+				</tr>
+			</thead>
+			<tr>
+				<td><input value="" name="" type="radio"></td>
+				<td>08/03/2015 03:10:20 PM</td>
+				<td>37340 (I)</td>
+				<td>Voluntary Reportable Food Report (V2)</td>
+				<td>Voluntary Reportable Food Report (Section 1005 of Public Law 110-85) (V2)</td>
+			</tr>
+			<tr>
+				<td><input value="" name="" type="radio"></td>
+				<td>08/03/2015 03:10:20 PM</td>
+				<td>37340 (I)</td>
+				<td>Voluntary Reportable Food Report (V2)</td>
+				<td>Voluntary Reportable Food Report (Section 1005 of Public Law 110-85) (V2)</td>
+			</tr>
+			<tr>
+				<td><input value="" name="" type="radio"></td>
+				<td>08/03/2015 03:10:20 PM</td>
+				<td>37340 (I)</td>
+				<td>Voluntary Reportable Food Report (V2)</td>
+				<td>Voluntary Reportable Food Report (Section 1005 of Public Law 110-85) (V2)</td>
+			</tr>
+		</table>
+
+		<div class="table__controls">
+			<div class="table__buttons">
+				<button id="PromptSubmitNewReportButton" onclick="submit('event:PromptSubmitNewReportButton,type:button,id:PromptSubmitNewReportButton,rid:53')" type="button" data-title="Start New Report" data-type="button">Start New Report</button>
+				<button id="PromptEditDraftReportButton" onclick="submit('event:EditGrid,type:button,id:PromptEditDraftReportButton,rid:53')" class="announcementText btn" type="button" data-title="Edit" data-type="button" disabled="disabled">Edit</button>
+				<button id="PromptDeleteDraftReportButton" onclick="submit('event:DeleteGrid,type:button,id:PromptDeleteDraftReportButton,rid:53')" class="announcementText btn" type="button" data-title="Delete" data-type="button" disabled="disabled">Delete</button>
+				<button id="PromptViewDraftReportButton" onclick="submit('event:PromptViewDraftReportButton,type:button,id:PromptViewDraftReportButton,rid:53')" class="announcementText btn" style="" type="button" data-title="View" data-type="button" disabled="disabled">View</button>
+				<button id="PromptRefreshDraftReportButton" onclick="submit('event:PromptRefreshDraftReportButton,type:button,id:PromptRefreshDraftReportButton,rid:53')" class="announcementText btn" style="" type="button" data-title="Refresh" data-type="button">Refresh</button>
+				<button id="PromptViewDraftReportTemplateButton" onclick="submit('event:PromptViewDraftReportTemplateButton,type:button,id:PromptViewDraftReportTemplateButton,rid:53')" class="announcementText btn" style="display: none;" type="button" data-title="View Template" data-type="button">View Template</button>
+			</div>
+			<div class="pagination">
+            	<img src="images/icon_first.png" onclick="loadGrid('PromptDraftReportsGrid,53,F')">
+            	<img src="images/icon_back.png" onclick="loadGrid('PromptDraftReportsGrid,53,P')">
+            	<span id="pagination__label">Page 1 of 1</span>
+				<img src="images/icon_next.png" onclick="loadGrid('PromptDraftReportsGrid,53,N')">
+             	<img src="images/icon_last.png" onclick="loadGrid('PromptDraftReportsGrid,53,L')">
+           </div>
+		</div>
+	</div>
+</div>
+```
+*/
+/* line 200, ../sass/_tables.scss */
 table {
   border: 1px solid grey;
+  border-bottom: none;
   border-collapse: separate;
   display: table;
   width: 100%;
 }
 
-/* line 71, ../sass/_tables.scss */
+/* line 208, ../sass/_tables.scss */
 table input[type="radio"] {
   margin: 0;
 }
 
-/* line 75, ../sass/_tables.scss */
+/* line 212, ../sass/_tables.scss */
 th {
   background: #E1DEC9;
   color: #152359;
@@ -1768,18 +2237,18 @@ th {
   text-align: left;
 }
 
-/* line 82, ../sass/_tables.scss */
+/* line 219, ../sass/_tables.scss */
 th, td {
   padding: 5px;
 }
 
-/* line 86, ../sass/_tables.scss */
+/* line 223, ../sass/_tables.scss */
 th a {
   color: #152359;
   text-decoration: none;
 }
 
-/* line 91, ../sass/_tables.scss */
+/* line 228, ../sass/_tables.scss */
 caption {
   color: #152359;
   font-size: 1em;
@@ -1788,44 +2257,61 @@ caption {
   margin-bottom: 5px;
 }
 
-/* line 99, ../sass/_tables.scss */
+/* line 236, ../sass/_tables.scss */
 .table__grid td {
   border-top: 1px solid grey;
 }
 
-/* line 103, ../sass/_tables.scss */
+/* line 240, ../sass/_tables.scss */
 .table__grid th:nth-child(1) {
   width: 25px;
 }
 
-/* line 107, ../sass/_tables.scss */
+/* line 244, ../sass/_tables.scss */
 .table__grid th:nth-child(2) {
   width: 155px;
 }
 
-/* line 111, ../sass/_tables.scss */
+/* line 248, ../sass/_tables.scss */
 .table__grid th:nth-child(3) {
   width: 90px;
 }
 
-/* line 115, ../sass/_tables.scss */
+/* line 252, ../sass/_tables.scss */
 .table__grid th:nth-child(4) {
   width: 200px;
 }
 
-/* line 119, ../sass/_tables.scss */
+/* line 256, ../sass/_tables.scss */
 tfoot {
   background: #E1DEC9;
 }
 
-/* line 123, ../sass/_tables.scss */
+/* line 260, ../sass/_tables.scss */
 tfoot span {
   color: #216b93;
 }
 
-/* line 127, ../sass/_tables.scss */
+/* line 264, ../sass/_tables.scss */
+.table__controls {
+  background: #E1DEC9;
+  border: 1px solid grey;
+  overflow: auto;
+  padding: 5px;
+}
+
+/* line 271, ../sass/_tables.scss */
+.table__buttons {
+  float: left;
+  width: 80%;
+}
+
+/* line 276, ../sass/_tables.scss */
 .pagination {
+  color: #216b93;
+  float: left;
   text-align: right;
+  width: 20%;
 }
 
 /*doc
@@ -1960,56 +2446,69 @@ category: Sidenav
 }
 
 /* line 129, ../sass/_sidenav.scss */
+.sidenav p {
+  border-bottom: 2px solid white;
+  float: left;
+  margin: 0;
+  width: 100%;
+}
+
+/* line 136, ../sass/_sidenav.scss */
 .active {
   background-color: #9C3627;
   color: white;
 }
 
-/* line 134, ../sass/_sidenav.scss */
+/* line 141, ../sass/_sidenav.scss */
+.sidenav-report ul {
+  border-top: 2px solid white;
+}
+
+/* line 145, ../sass/_sidenav.scss */
 .sidenav li a,
 .sidenav-report li a {
   color: #152359;
 }
 
-/* line 139, ../sass/_sidenav.scss */
+/* line 150, ../sass/_sidenav.scss */
 .sidenav li a.active,
 .sidenav-report li a.active,
 .active a {
   color: white;
 }
 
-/* line 145, ../sass/_sidenav.scss */
+/* line 156, ../sass/_sidenav.scss */
 .sidenav p a {
   border-bottom: none;
   color: #152359;
 }
 
-/* line 150, ../sass/_sidenav.scss */
+/* line 161, ../sass/_sidenav.scss */
 .sidenav-report-icon {
   float: left;
   text-align: center;
   width: 5%;
 }
 
-/* line 156, ../sass/_sidenav.scss */
+/* line 167, ../sass/_sidenav.scss */
 .sidenav-report-item {
   float: right;
   width: 90%;
 }
 
-/* line 161, ../sass/_sidenav.scss */
+/* line 172, ../sass/_sidenav.scss */
 .report__info {
   border: none;
   padding: 5px;
 }
 
-/* line 166, ../sass/_sidenav.scss */
+/* line 177, ../sass/_sidenav.scss */
 .report__info td,
 .report__info th {
   vertical-align: top;
 }
 
-/* line 171, ../sass/_sidenav.scss */
+/* line 182, ../sass/_sidenav.scss */
 .report__info a {
   border-bottom: none;
   font-size: 1em;
@@ -2056,7 +2555,7 @@ category: Sidenav
 
 /* line 28, ../sass/_accordion.scss */
 .tabs.enabled .tab-heading {
-  padding: 0 0.5em 0.2em 10px;
+  padding: 10px;
   position: relative;
 }
 
@@ -2068,9 +2567,10 @@ category: Sidenav
   font-size: 1.8em;
   position: relative;
   top: 3px;
+  margin-right: 5px;
 }
 
-/* line 42, ../sass/_accordion.scss */
+/* line 43, ../sass/_accordion.scss */
 .tabs.enabled .tab-heading.active-tab-heading:before {
   content: "\f056";
 }

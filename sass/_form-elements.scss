@@ -144,7 +144,7 @@ category: Form Elements
 ```html_example
 <div class="form-row">
 	<div class="col2">
-		<label for="org">Organization Type: <a href="#" class="tooltip"><img src="images/icon_info.gif" alt=""><span>Here is some title text. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim ipsum, sed repellat unde eaque maiores? Aut tenetur eligendi quia accusamus quos velit commodi nemo enim vel doloremque, illum laudantium libero.</span></a></label>
+		<label for="org">Organization Type: <a href="#" class="tooltip"><img src="images/icon_info.gif" alt=""><span>Here is some title text. <i>Here is a link. I am a link.</i> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim ipsum, sed repellat unde eaque maiores? Aut tenetur eligendi quia accusamus quos velit commodi nemo enim vel doloremque, illum laudantium libero.</span></a></label>
 	</div>
 	<div class="col2">
 		<input name="org" type="text" id="org" class="input__100">
@@ -167,7 +167,7 @@ category: Form Elements
 		<label for="blah" class="required">If known, what corrective actions has the responsible party taken to prevent future occurrences of this reportable food?</label>
 	</div>
 	<div class="col1">
-		<textarea name="blahblah" rows="2" cols="20" id="blah" class="textarea__100" title="If known, what corrective actions has the responsible party taken to prevent future occurrences of this reportable food?" spellcheck="true"></textarea><span class="icon__spellcheck"><a href="#"><img src="images/icon_spellcheck.png" alt="Spellcheck"></a></span><span class="icon__info"><a href="#" class="tooltip"><img src="images/icon_info.gif" alt=""><span>Here is some title text. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim ipsum, sed repellat unde eaque maiores? Aut tenetur eligendi quia accusamus quos velit commodi nemo enim vel doloremque, illum laudantium libero.</span></a></span>
+		<textarea name="blahblah" rows="2" cols="20" id="blah" class="textarea__100" title="If known, what corrective actions has the responsible party taken to prevent future occurrences of this reportable food?" spellcheck="true"></textarea><span class="icon__spellcheck"><a href="#"><img src="images/icon_spellcheck.png" alt="Spellcheck"></a></span><span class="icon__info"><a href="#" class="tooltip"><img src="images/icon_info.gif" alt=""><span>Here is some title text. Lorem ipsum dolor sit amet, consectetur adipisicing elit. <i>Here is a link. I am a link.</i> Enim ipsum, sed repellat unde eaque maiores? Aut tenetur eligendi quia accusamus quos velit commodi nemo enim vel doloremque, illum laudantium libero.</span></a></span>
 	</div>
 </div>
 ```
@@ -403,6 +403,14 @@ category: Form Elements
 
 */
 
+button[disabled=disabled],
+button:disabled {
+	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIklEQVQIW2NkQAKrVq36zwjjgzhhYWGMYAEYB8RmROaABADeOQ8CXl/xfgAAAABJRU5ErkJggg==) repeat;
+	background: rgba(255, 255, 255, 0.3);
+	border: 1px solid grey;
+	color: #827F7F;
+}
+
 .row__form {
 	float: left;
 	margin: 15px 0;
@@ -524,6 +532,11 @@ a[title]:hover:after {
 	z-index: 99;
 	margin-left: 0;
 	width: 300px;
+}
+
+.tooltip i {
+	color: #216b93;
+	font-style: normal;
 }
 
 .label__radio {

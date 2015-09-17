@@ -1,0 +1,52 @@
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -2;
+  background-color: #000;
+}
+
+.modal-backdrop.in {
+  filter: alpha(opacity=50);
+  opacity: .5;
+}
+
+.waitpopup {
+    position: fixed;
+    z-index: 1;
+}
+
+.waitpopup-inside {
+    position: fixed;
+    z-index: -1;
+    top: 17%;
+    left: 50%;
+    margin-left: -152px;
+    width: 304px;
+    height: 155px;
+    text-align:center;
+    background: url(../images/WaitBackground.gif);
+    background-color: transparent;
+    color: #333;
+    border: none;
+}
+
+.waitpopup-inside img
+{
+    margin: auto;
+    margin-top: 30px;
+}
+
+.waitpopup-inside span
+{
+    color: #216b93;
+    font-size: 110%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    display: block;
+    margin: auto;
+    padding-top: 10px;
+    padding-left: 5px;
+}

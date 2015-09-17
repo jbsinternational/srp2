@@ -68,8 +68,30 @@ category: Text
 
 /*doc
 ---
-title: Block Comment
+title: Error Text
 name: title06
+category: Text
+---
+
+```html_example
+<div class="form-row">
+	<div class="col2">
+		<label for="fname">First Name</label>
+	</div>
+	<div class="col2">
+		<input name="fname" type="text" id="fname" class="input__100">
+		<p class="error">This is some error text. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, facilis, optio illum alias similique iure error iste quos blanditiis earum. Commodi ab et quis, maxime ratione. Omnis illo, placeat temporibus.</p>
+	</div>
+</div>
+```
+
+
+*/
+
+/*doc
+---
+title: Block Comment
+name: title07
 category: Text
 ---
 
@@ -87,9 +109,29 @@ a:hover {
 	text-decoration: none;
 }
 
+a[disabled] {
+	pointer-events: none;
+	color: gray;
+}
+
+.required {
+	color: #152359;
+	font-weight: bold;
+}
+
 .required:before {
 	color: red;
 	content: '*';
+}
+
+.error {
+	color: red;
+	margin: 5px 0;
+}
+
+.disabled {
+	pointer-events: none;
+	cursor: default;
 }
 
 .title__home {
@@ -125,16 +167,20 @@ a:hover {
 .title__promptgroup {
 	background: #E1DECA;
 	color: #152359;
+	float: left;
 	font-size: 1.1em;
 	padding: 5px;
+	width: 100%;
 }
 
 .block__comment {
 	background: #F7F7F7;
 	border: 1px solid grey;
 	display: block;
+	float: left;
 	margin-bottom: 15px;
 	padding: 10px;
+	width: 100%;
 }
 
 .block__note {
@@ -159,4 +205,18 @@ label {
 
 label span {
 	font-weight: normal;
+}
+
+div.PopupPromptGroup {
+	position: fixed;
+	top: 5%;
+	max-height: 90%;
+	width: 790px;
+	overflow: auto;
+	background-color: #f8f9fb;
+	border-width: 2px;
+	border-style: solid;
+	border-color: Gray;
+	left: 565px;
+	z-index: 3000;
 }

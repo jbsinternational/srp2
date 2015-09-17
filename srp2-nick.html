@@ -134,7 +134,6 @@
           <section class="col2 page__landing-login">
             <h1 class="title__login">Begin Reporting Here</h1>
             <div style=" height: 10px;width:100%;Text-align: center;" class="LoginStartHeader"></div>
-                    </br>
                     <div id="loginPlugin">
                     </div>
           </section>
@@ -258,65 +257,76 @@
         </div>
       </div>
     </div>
-    <div hidden="hidden" id="report" class="row sidebarfirst">
+
+    <div hidden="hidden" id="report" class="page page__sidenav">
 
       <!-- report Page ====================================== -->
-      <div class="large-10 push-2 columns" id="RQInfoContent">
-        <div id="reportPlugin" class="large-12 columns socket">
-        </div>
-          <div id="PromptGroupNavigate" data-type="promptgroup">
-              <button id="PromptSaveDraft" onclick="submit('event:SaveDraft,type:button,id:PromptSaveDraft')" class="btn" data-title="Save Draft" type="button">
-                  Save Draft
-              </button>
-              <button id="PromptCancel" onclick="submit('event:Cancel,type:button,id:PromptCancel')" class="btn" data-title="Exit" type="button">
-                  Exit
-              </button>
-              <button id="PromptSubmit" onclick="submit('event:Submit,type:button,id:PromptSubmit')" class="btn" data-title="Submit" type="button">
-                  Submit
-              </button>
-              <button id="PromptBack" onclick="submit('event:GotoPreviousPage,type:button,id:PromptBack')" class="btn" data-title="<Back" type="button">
-                  &lt;Back
-              </button>
-              <button id="PromptNext" onclick="submit('event:GotoNextPage,type:button,id:PromptNext')" class="btn" data-title="Next>" type="button">
-                  Next&gt;
-              </button>
-          </div>
-      </div>
-      <div class="sidebar-menu sidebarContentArea panelLeft" id="RQInfoMenu">
-        <div id="tocContent">
-            <div id="PromptReportName" class="report-summary" type="html">
-            <div class="report-summary-item">Name:</div>
-            <div class="report-summary-value">Mandatory Animal Drug Report (GL42 V2)</div>
-            <div class="report-summary-item">ID:</div>
-            <div class="report-summary-value">FPSR6212 (I)</div>
-            <div class="report-summary-item">Created:</div>
-            <div class="report-summary-value">06/16/2015</div>
-          </div>
-          <div id="RQPagesSocket" type="html">
-            <ul>
-              <li><a href="#">Introduction</a></li>
-              <li><a href="#">Contact Information</a></li>
-              <li><a href="#">Problem Summary</a></li>
-              <li><a href="#">Products</a></li>
-              <li><a href="#">Attachments</a></li>
-            </ul>
-          </div>
-          <div id="RQMyReportLink" class="report-history">
-            <p><a href="#" onclick="submit('event:myReports,rid:53')">My Report History</a></p>
-          </div>
-            <div id="OMBNumberTextPrompt" class="report-omb" type="html">
-            <div class="report-omb-row">
-              <div class="report-omb-item">OMB Approval Number:</div>
-              <div class="report-omb-value">0910-0645</div>
-            </div>
-            <div class="report-omb-row">
-              <div class="report-omb-item">OMB Expiration Date:</div>
-              <div class="report-omb-value">04/30/2016</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+      <section class="sidenav">
+        <table class="report__info" valign="top">
+          <tr>
+            <th>Name:</th>
+            <td id="RQPromptReportName">Voluntary Reportable Food Report (Section 1005 of Public Law 110-85) (V2)</td>
+          </tr>
+          <tr>
+            <th>ID:</th>
+            <td id="RQPromptReportID">FPSR33 (I)</td>
+          </tr>
+          <tr>
+            <th>Created:</th>
+            <td id="RQPromptReportDate">08/13/2015</td>
+          </tr>
+        </table>
+        <nav id="RQPagesSocket" class="sidenav-report">
+          <ul>
+            <li><a href="#" class="active"><span class="sidenav-report-icon"><img src="images/icon_complete.png" alt="Complete"></span><span class="sidenav-report-item">Introduction</span></a></li>
+            <li><a href="#"><span class="sidenav-report-icon"><img src="images/icon_partial.png" alt="Partial"></span><span class="sidenav-report-item">Contact Information</span></a></li>
+            <li><a href="#"><span class="sidenav-report-icon"><img src="images/icon_incomplete.png" alt="Incomplete"></span><span class="sidenav-report-item">Problem Summary</span></a></li>
+            <li><a href="#"><span class="sidenav-report-icon"><img src="images/icon_incomplete.png" alt="Incomplete"></span><span class="sidenav-report-item">Products</span></a></li>
+            <li><a href="#"><span class="sidenav-report-icon"><img src="images/icon_incomplete.png" alt="Incomplete"></span><span class="sidenav-report-item">Veterinarian Visits</span></a></li>
+            <li><a href="#"><span class="sidenav-report-icon"><img src="images/icon_incomplete.png" alt="Incomplete"></span><span class="sidenav-report-item">Attachments</span></a></li>
+            <li><a href="#"><span class="sidenav-report-icon"><img src="images/icon_incomplete.png" alt="Incomplete"></span><span class="sidenav-report-item">Report Submission Confirmation</span></a></li>
+          </ul>
+        </nav>
+        <p><a href="#" onclick="submit('event:RQMyReportLink,id:RQMyReportLink,rid:53')">My Report History</a></p>
+        <table class="report__info">
+          <tbody>
+            <tr>
+              <th>OMB Approval Number:</th>
+              <td id="RQOMBApprovalNumber">0910-0645</td>
+            </tr>
+            <tr>
+              <th>OMB Expiration Date:</th>
+              <td id="RQOMBExpirationDate">09/30/2012</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="2"><a href="#">OMB Burden Statement</a></td>
+            </tr>
+          </tfoot>
+        </table>
+      </section>
+
+      <section id="reportPlugin" class="page__sidenav-main">
+      </section>
+
+      <section class="page__sidenav-main form-controls" id="PromptGroupNavigate" data-type="promptgroup">
+        <button id="PromptSaveDraft" onclick="submit('event:SaveDraft,type:button,id:PromptSaveDraft')" class="btn" data-title="Save Draft" type="button">
+            Save Draft
+        </button>
+        <button id="PromptCancel" onclick="submit('event:Cancel,type:button,id:PromptCancel')" class="btn" data-title="Exit" type="button">
+            Exit
+        </button>
+        <button id="PromptSubmit" onclick="submit('event:Submit,type:button,id:PromptSubmit')" class="btn" data-title="Submit" type="button">
+            Submit
+        </button>
+        <button id="PromptBack" onclick="submit('event:GotoPreviousPage,type:button,id:PromptBack')" class="btn" data-title="<Back" type="button">
+            &lt;Back
+        </button>
+        <button id="PromptNext" onclick="submit('event:GotoNextPage,type:button,id:PromptNext')" class="btn" data-title="Next>" type="button">
+            Next&gt;
+        </button>
+      </section>
 
     </div>
 
