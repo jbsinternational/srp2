@@ -24,14 +24,41 @@
 	background-repeat: no-repeat;
 	height: 106px;
 	width: 100%;
+	margin-top: -65px
 }
 
 .home-panel-left {
 	margin-bottom: 0;
-	padding: 0 20px;
+	padding: 0 50px 0 20px;
+	line-height: normal;
 }
 
 .home-panel-right {
 	margin-bottom: 0;
 	padding: 0 20px;
+	line-height: normal;
+}
+
+.home-panel-left h1, .home-panel-right h1{
+	padding: 0;
+}
+
+#g00home_home {
+	padding: 0 20px;
+}
+
+#g0140_home {
+	min-width: 140px;
+	margin: -5px 0 0 -5px;
+}
+
+a#PromptForgotPasswordButton {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	margin-bottom: -5px;
+}
+
+section.col2.columns.home-panel-right p:last-child {
+	margin-left: 50px;
 }

@@ -136,9 +136,9 @@ a[disabled] {
 
 .title__home {
 	color: #152359;
-	font-size: 1.6em;
-	margin: 0 0 20px 0;
-	padding: 0;
+	font-size: 16px;
+	margin: 0 0 10px 0;
+	padding: 5px 0;
 }
 
 .title__page {
@@ -158,9 +158,9 @@ a[disabled] {
 .title__login {
     background: #152359;
     color: white;
-    font-size: 1.4em;
-    margin-bottom: 0.8em;
-    padding: 0.5em;
+    font-size: 21.952px;
+    margin: 0px 0 5px 0;
+    padding: 3px;
     text-align: center;
 }
 
@@ -219,4 +219,8 @@ div.PopupPromptGroup {
 	border-color: Gray;
 	left: 565px;
 	z-index: 3000;
+}
+
+p, li{
+	color: #6d6f71;
 }

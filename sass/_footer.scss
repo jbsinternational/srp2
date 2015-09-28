@@ -1,7 +1,6 @@
 .footer {
 	background: white;
 	margin: 0 auto;
-	padding-top: 20px;
 	width: 1000px;
 }
 
@@ -38,7 +37,11 @@
 }
 
 .footer-small {
-	padding-bottom: 20px;
+	padding-bottom: .1px;
+}
+
+.footer-small p {
+	font-size: 9.3px;
 }
 
 .footer-interior .footer-small {

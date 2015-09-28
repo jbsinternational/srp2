@@ -4,6 +4,7 @@
 
 .navigation {
 	background: #A8D1EF;
+	height: 24px;
 }
 
 .banner,
@@ -23,24 +24,23 @@
 
 .navigation__items {
 	float: right;
-	margin-top: 5px;
-	margin-bottom: 5px;
+	margin-top: 3px;
 	text-align: right;
 	text-transform: uppercase;
 }
 
 .navigation a:link,
-.navigation a:visited 
+.navigation a:visited
 {
 	padding-right: 20px;
 	color: #152359;
 	text-decoration: none;
-    font-weight:  bold;	
+    font-weight:  bold;
 	background-color: #A8D1EF;
 }
 
 .navigation a:active,
-.navigation a:hover 
+.navigation a:hover
 {
 	text-decoration: underline;
 }
@@ -50,19 +50,18 @@
 	padding: 0;
 	float: left;
 	list-style: none;
-    font-weight: bold;	
+    font-weight: bold;
 	color: #152359;
 	background-color: #A8D1EF;
 	display: block;
 }
 
-.navigation ul 
+.navigation ul
 {
 	margin: 0;
 	padding: 0;
 	list-style: none;
-    font-weight: bold;	
+    font-weight: bold;
 	color: #152359;
 	background-color: #A8D1EF;
 }
-

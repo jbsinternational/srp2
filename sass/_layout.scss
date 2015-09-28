@@ -30,13 +30,13 @@
 
 .form-row {
 	float: left;
-	margin: 10px 0;
+	margin: 5px 0;
 	width: 100%;
 }
 
 .section {
 	float: left;
-	margin-bottom: 40px;
+	margin:0 0 20px 10px;
 	width: 100%;
 }
 
@@ -54,9 +54,10 @@
 
 .columns {
     position: relative;
-    padding-left: 0.9375em;
-    padding-right: 0.9375em;
+    padding-right:4px;
     float: left;
+		font-size: 11.2px;
+		line-height: normal;
 }
 
 .col1 {
@@ -120,4 +121,3 @@
 	margin-left: 25%;
 	width: 75%;
 }
-
