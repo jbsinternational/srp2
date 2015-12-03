@@ -1,14 +1,14 @@
-/* line 1, ../sass/styles.scss */
+/* line 5, ../sass/styles.scss */
 html {
   box-sizing: border-box;
 }
 
-/* line 5, ../sass/styles.scss */
+/* line 9, ../sass/styles.scss */
 *, *:before, *:after {
   box-sizing: inherit;
 }
 
-/* line 9, ../sass/styles.scss */
+/* line 13, ../sass/styles.scss */
 .clearfix:after {
   visibility: hidden;
   display: block;
@@ -18,23 +18,23 @@ html {
   height: 0;
 }
 
-/* line 17, ../sass/styles.scss */
+/* line 21, ../sass/styles.scss */
 .clearfix {
   display: inline-block;
 }
 
 /* start commented backslash hack \*/
-/* line 19, ../sass/styles.scss */
+/* line 23, ../sass/styles.scss */
 * html .clearfix {
   height: 1%;
 }
 
-/* line 20, ../sass/styles.scss */
+/* line 24, ../sass/styles.scss */
 .clearfix {
   display: block;
 }
 
-/* line 22, ../sass/styles.scss */
+/* line 26, ../sass/styles.scss */
 body {
   background: #C0C0C0;
   font-family: Verdana, Arial, sans-serif;
@@ -802,14 +802,16 @@ th {
 #cboxLoadedContent {
   overflow: auto;
   -webkit-overflow-scrolling: touch;
+  margin: 0 auto;
+  padding: 10px;
 }
 
-/* line 38, ../sass/_colorbox.scss */
+/* line 40, ../sass/_colorbox.scss */
 #cboxTitle {
   margin: 0;
 }
 
-/* line 42, ../sass/_colorbox.scss */
+/* line 44, ../sass/_colorbox.scss */
 #cboxLoadingOverlay, #cboxLoadingGraphic {
   position: absolute;
   top: 0;
@@ -818,12 +820,12 @@ th {
   height: 100%;
 }
 
-/* line 50, ../sass/_colorbox.scss */
+/* line 52, ../sass/_colorbox.scss */
 #cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow {
   cursor: pointer;
 }
 
-/* line 54, ../sass/_colorbox.scss */
+/* line 56, ../sass/_colorbox.scss */
 .cboxPhoto {
   float: left;
   margin: auto;
@@ -833,7 +835,7 @@ th {
   -ms-interpolation-mode: bicubic;
 }
 
-/* line 63, ../sass/_colorbox.scss */
+/* line 65, ../sass/_colorbox.scss */
 .cboxIframe {
   width: 100%;
   height: 100%;
@@ -843,48 +845,48 @@ th {
   margin: 0;
 }
 
-/* line 72, ../sass/_colorbox.scss */
+/* line 74, ../sass/_colorbox.scss */
 #colorbox, #cboxContent, #cboxLoadedContent {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
 }
 
-/* 
+/*
     User Style:
     Change the following styles to modify the appearance of Colorbox.  They are
     ordered & tabbed in a way that represents the nesting of the generated HTML.
 */
-/* line 84, ../sass/_colorbox.scss */
+/* line 86, ../sass/_colorbox.scss */
 #cboxOverlay {
   background: url(../images/overlay.png) repeat 0 0;
   opacity: 0.9;
   filter: alpha(opacity=90);
 }
 
-/* line 90, ../sass/_colorbox.scss */
+/* line 92, ../sass/_colorbox.scss */
 #colorbox {
   outline: 0;
 }
 
-/* line 94, ../sass/_colorbox.scss */
+/* line 96, ../sass/_colorbox.scss */
 #cboxContent {
   background: #fff;
   overflow: hidden;
 }
 
-/* line 99, ../sass/_colorbox.scss */
+/* line 101, ../sass/_colorbox.scss */
 .cboxIframe {
   background: #fff;
 }
 
-/* line 103, ../sass/_colorbox.scss */
+/* line 105, ../sass/_colorbox.scss */
 #cboxError {
   padding: 50px;
   border: 1px solid #ccc;
 }
 
-/* line 108, ../sass/_colorbox.scss */
+/* line 110, ../sass/_colorbox.scss */
 #cboxTitle {
   position: absolute;
   bottom: 4px;
@@ -894,7 +896,7 @@ th {
   color: #949494;
 }
 
-/* line 117, ../sass/_colorbox.scss */
+/* line 119, ../sass/_colorbox.scss */
 #cboxCurrent {
   position: absolute;
   bottom: 4px;
@@ -907,7 +909,7 @@ th {
   when an alpha filter (opacity change) is set on the element or ancestor element.  This style is not applied to or needed in IE9.
   See: http://jacklmoore.com/notes/ie-transparency-problems/
 */
-/* line 130, ../sass/_colorbox.scss */
+/* line 132, ../sass/_colorbox.scss */
 .cboxIE #cboxTopLeft,
 .cboxIE #cboxTopCenter,
 .cboxIE #cboxTopRight,
@@ -919,12 +921,12 @@ th {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF);
 }
 
-/* line 141, ../sass/_colorbox.scss */
+/* line 143, ../sass/_colorbox.scss */
 #cboxContent {
   border: 3px solid #808080;
 }
 
-/* line 145, ../sass/_colorbox.scss */
+/* line 147, ../sass/_colorbox.scss */
 #cboxLoadedContent {
   margin: 0 auto;
   padding: 10px;
@@ -1004,7 +1006,7 @@ th {
   background-color: #A8D1EF;
 }
 
-/* line 33, ../sass/styles.scss */
+/* line 37, ../sass/styles.scss */
 .wrapper {
   max-width: 1000px;
   margin-left: auto;
@@ -1062,28 +1064,47 @@ th {
 }
 
 /* line 37, ../sass/_layout.scss */
+.buttonbar {
+  margin: 10px 10px;
+  background-color: #a5ceee;
+  padding: 5px;
+  max-width: 98%;
+}
+
+/* line 45, ../sass/_layout.scss */
+div#PromptSenderClass.col2 {
+  float: none;
+  margin-left: 5%;
+}
+
+/* line 51, ../sass/_layout.scss */
+#PromptSenderClass-label strong {
+  margin-left: 5%;
+}
+
+/* line 55, ../sass/_layout.scss */
 .section {
   float: left;
   margin: 0 0 20px 10px;
   width: 100%;
 }
 
-/* line 43, ../sass/_layout.scss */
+/* line 61, ../sass/_layout.scss */
 .small-1 {
   width: 8.33333%;
 }
 
-/* line 47, ../sass/_layout.scss */
+/* line 65, ../sass/_layout.scss */
 .small-3 {
   width: 25%;
 }
 
-/* line 51, ../sass/_layout.scss */
+/* line 69, ../sass/_layout.scss */
 .small-4 {
   width: 33.33333%;
 }
 
-/* line 55, ../sass/_layout.scss */
+/* line 73, ../sass/_layout.scss */
 .columns {
   position: relative;
   padding-right: 4px;
@@ -1092,20 +1113,20 @@ th {
   line-height: normal;
 }
 
-/* line 63, ../sass/_layout.scss */
+/* line 81, ../sass/_layout.scss */
 .col1 {
   float: left;
   margin-bottom: 5px;
   width: 100%;
 }
 
-/* line 69, ../sass/_layout.scss */
+/* line 87, ../sass/_layout.scss */
 .col2 {
   padding-right: 10px;
   width: 50%;
 }
 
-/* line 74, ../sass/_layout.scss */
+/* line 92, ../sass/_layout.scss */
 .col33,
 .col3 {
   float: left;
@@ -1113,57 +1134,115 @@ th {
   max-width: 33%;
 }
 
-/* line 81, ../sass/_layout.scss */
+/* line 99, ../sass/_layout.scss */
 .col4 {
   float: left;
   margin-right: 10px;
   max-width: 24%;
 }
 
-/* line 87, ../sass/_layout.scss */
+/* line 105, ../sass/_layout.scss */
 .col5 {
   float: left;
   margin-right: 10px;
   max-width: 19%;
 }
 
-/* line 93, ../sass/_layout.scss */
+/* line 111, ../sass/_layout.scss */
 .col40 {
   width: 40%;
 }
 
-/* line 97, ../sass/_layout.scss */
+/* line 115, ../sass/_layout.scss */
 .col60 {
   width: 60%;
 }
 
-/* line 101, ../sass/_layout.scss */
+/* line 119, ../sass/_layout.scss */
 .form-row__controls {
   background: #A7CDEC;
   padding: 10px 5px;
 }
 
-/* line 106, ../sass/_layout.scss */
+/* line 124, ../sass/_layout.scss */
 .form-row__col {
   float: left;
   text-align: left;
 }
 
-/* line 111, ../sass/_layout.scss */
+/* line 129, ../sass/_layout.scss */
 .align-right {
   text-align: right;
 }
 
-/* line 115, ../sass/_layout.scss */
+/* line 133, ../sass/_layout.scss */
 .indent-sm {
   margin-left: 10%;
   width: 90%;
 }
 
-/* line 120, ../sass/_layout.scss */
+/* line 138, ../sass/_layout.scss */
 .indent-lg {
   margin-left: 25%;
   width: 75%;
+}
+
+/* line 143, ../sass/_layout.scss */
+div#PromptGuestActionFilter.col2 {
+  float: none;
+  margin-left: 10%;
+  margin-top: 10px;
+}
+
+/* line 149, ../sass/_layout.scss */
+span.sidenav-report-icon {
+  margin-right: 5px;
+}
+
+/* line 152, ../sass/_layout.scss */
+#forgotPassword.page div.row {
+  margin-left: 10%;
+}
+
+/* line 156, ../sass/_layout.scss */
+div#PromptGroupNavigate {
+  margin: 10px 0 20px 10px;
+}
+
+/* line 160, ../sass/_layout.scss */
+#ForgotPasswordPrompt {
+  margin-left: 10px;
+}
+
+/* line 164, ../sass/_layout.scss */
+#ForgotPasswordCommentPrompt {
+  margin-top: 10px;
+}
+
+/* line 168, ../sass/_layout.scss */
+#PromptTitle-label, #PromptOtherPhoneNumber-label, #PromptFaxNumber-label, #PromptCompanyStreet2-label, #PromptIssueCategory1-label strong, #PromptPetFoodChoice-label strong, #PromptLivestockFoodChoice-label strong {
+  margin-left: 13px;
+}
+
+/* line 172, ../sass/_layout.scss */
+input {
+  margin-right: 5px;
+}
+
+/* line 176, ../sass/_layout.scss */
+#PromptAttachDocumentFile-div {
+  width: 91%;
+}
+
+/* line 180, ../sass/_layout.scss */
+#PromptAttachDocumentFile {
+  width: 90%;
+  margin-left: 33px;
+}
+
+/* line 185, ../sass/_layout.scss */
+#PromptAttachDocumentFileButton {
+  margin-top: 4px;
 }
 
 /* line 1, ../sass/_footer.scss */
@@ -1335,41 +1414,48 @@ a:hover {
   text-decoration: none;
 }
 
-/* line 112, ../sass/_text.scss */
+/* line 111, ../sass/_text.scss */
 a[disabled] {
   pointer-events: none;
   color: gray;
 }
 
-/* line 117, ../sass/_text.scss */
+/* line 115, ../sass/_text.scss */
 .required {
   color: #152359;
   font-weight: bold;
+  padding-left: 5px;
 }
 
-/* line 122, ../sass/_text.scss */
+/* line 120, ../sass/_text.scss */
 .required:before {
   color: red;
   content: '*';
 }
 
-/* line 127, ../sass/_text.scss */
+/* line 124, ../sass/_text.scss */
 .error {
   color: red;
   margin: 5px 0;
+  padding: 5px 0;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: bold;
+  display: block;
 }
 
-/* line 132, ../sass/_text.scss */
+/* line 133, ../sass/_text.scss */
 .disabled {
   pointer-events: none;
   cursor: default;
+  color: gray;
 }
 
-/* line 137, ../sass/_text.scss */
+/* line 138, ../sass/_text.scss */
 .title__home {
   color: #152359;
   font-size: 16px;
-  margin: 0 0 10px 0;
+  margin: 0 0 10px;
   padding: 5px 0;
 }
 
@@ -1377,31 +1463,31 @@ a[disabled] {
 .title__page {
   color: #9c3627;
   font-size: 1.6em;
-  margin: 0 0 20px 0;
-  padding: 0;
+  margin: 10px 20px 20px 15px;
+  padding: 5px;
 }
 
-/* line 151, ../sass/_text.scss */
+/* line 150, ../sass/_text.scss */
 .title__section {
   color: #152359;
   font-size: 1.5em;
   font-weight: bold;
-  margin: 0 0 20px 0;
+  margin: 0 0 20px;
 }
 
-/* line 158, ../sass/_text.scss */
+/* line 156, ../sass/_text.scss */
 .title__login {
   background: #152359;
   color: white;
   font-size: 21.952px;
-  margin: 0px 0 5px 0;
+  margin: 0 0 5px;
   padding: 3px;
   text-align: center;
 }
 
-/* line 167, ../sass/_text.scss */
+/* line 164, ../sass/_text.scss */
 .title__promptgroup {
-  background: #E1DECA;
+  background: #e1deca;
   color: #152359;
   float: left;
   font-size: 1.1em;
@@ -1409,18 +1495,26 @@ a[disabled] {
   width: 100%;
 }
 
-/* line 176, ../sass/_text.scss */
+/* line 172, ../sass/_text.scss */
 .block__comment {
   background: #F7F7F7;
   border: 1px solid grey;
   display: block;
   float: left;
-  margin-bottom: 15px;
-  padding: 10px;
-  width: 100%;
+  margin: 0 0 15px 10px;
+  padding: 5px;
+  width: 98%;
 }
 
-/* line 186, ../sass/_text.scss */
+/* class that positions a field to the right side of a page*/
+/* line 182, ../sass/_text.scss */
+.col__right {
+  padding-right: 10px;
+  width: 50%;
+  margin-left: 50%;
+}
+
+/* line 187, ../sass/_text.scss */
 .block__note {
   display: block;
   font-weight: bold;
@@ -1433,23 +1527,23 @@ a[disabled] {
   font-weight: bold;
 }
 
-/* line 197, ../sass/_text.scss */
+/* line 196, ../sass/_text.scss */
 .required-field span {
   color: red;
 }
 
-/* line 201, ../sass/_text.scss */
+/* line 199, ../sass/_text.scss */
 label {
   color: #152359;
   font-weight: bold;
 }
 
-/* line 206, ../sass/_text.scss */
+/* line 203, ../sass/_text.scss */
 label span {
   font-weight: normal;
 }
 
-/* line 210, ../sass/_text.scss */
+/* line 206, ../sass/_text.scss */
 div.PopupPromptGroup {
   position: fixed;
   top: 5%;
@@ -1464,12 +1558,425 @@ div.PopupPromptGroup {
   z-index: 3000;
 }
 
-/* line 224, ../sass/_text.scss */
-p, li {
+/* line 219, ../sass/_text.scss */
+p,
+li {
   color: #6d6f71;
 }
 
-/* line 1, ../sass/_form-elements.scss */
+/* line 224, ../sass/_text.scss */
+.FeedbackError {
+  background: #EEEEEE url(Content/images/message_error.png) no-repeat 2% 50%;
+  padding: 20px 10px 20px 50px;
+}
+
+/* line 229, ../sass/_text.scss */
+.Header1ReportPageTitle {
+  margin-left: 10%;
+}
+
+/* line 233, ../sass/_text.scss */
+.JbsPromptErrorList {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* line 238, ../sass/_text.scss */
+#FirstAdminDt_1361-label {
+  font-size: 11px;
+}
+
+/*doc
+---
+title: Regular Label & Text Input
+name: form01
+category: Form Elements
+---
+
+```html_example
+<div class="form-row">
+	<h2 class="title__section">Regular Label & Text Input</h2>
+	<div class="col2">
+		<label for="title" class="required">Title</label>
+	</div>
+	<div class="col2">
+		<input name="title" type="text" id="title" class="input__100">
+	</div>
+</div>
+```
+
+*/
+/*doc
+---
+title: Long Label Example
+name: form02
+category: Form Elements
+---
+
+```html_example
+<div class="form-row">
+	<div class="col2">
+		<label for="fname">First Name <span>(here is some explanatory text that is really, really, really long):</span></label>
+	</div>
+	<div class="col2">
+		<input name="fname" type="text" id="fname" class="input__100">
+	</div>
+</div>
+```
+
+*/
+/*doc
+---
+title: Two Text Fields Side By Side
+name: form03
+category: Form Elements
+---
+
+```html_example
+<div class="row__form">
+	<div class="col2">
+		<div class="col2__label"><label for="date">Submitted as of <span>(mm/dd/yyyy or mm/yyyy):</span></label></div>
+		<div class="col2__input"><input name="date" type="text" id="date" class="input__date"></div>
+	</div>
+	<div class="col2">
+		<div class="col2__label"><label for="icrs">ICSR Number <span>(please enter the number only):</span></label></div>
+		<div class="col2__input"><input name="icrs" type="text" id="icrs" class="input__sm"></div>
+	</div>
+</div>
+```
+
+*/
+/*doc
+---
+title: Regular Select List
+name: form04
+category: Form Elements
+---
+
+```html_example
+<div class="form-row">
+	<div class="col2">
+		<label for="fname">State</label>
+	</div>
+	<div class="col2">
+		<select name="state" id="state" class="select__95">
+			<option value="">Please select</option>
+			<option value="items">Items</option>
+		</select>
+	</div>
+</div>
+```
+
+*/
+/*doc
+---
+title: Text Input & Select List Side By Side
+name: form05
+category: Form Elements
+---
+
+```html_example
+<div class="form-row">
+	<div class="col2">
+		<label for="blah">2 prompts on same line, one single label</label>
+	</div>
+	<div class="col2">
+		<div class="col2">
+			<input name="fname" type="text" id="blah" class="input__100">
+		</div>
+		<div class="col2">
+			<select name="state" id="blah2" class="select__95">
+				<option value="">Please select</option>
+				<option value="items">Items</option>
+			</select>
+		</div>
+	</div>
+</div>
+```
+
+*/
+/*doc
+---
+title: Date Field
+name: form06
+category: Form Elements
+---
+
+```html_example
+<div class="form-row">
+	<div class="col2">
+		<label for="datetime" class="required">Date</label>
+	</div>
+	<div class="col2">
+		<input name="datetime" type="text" id="datetime" class="datetime"><span class="icon__calendar"></span>
+	</div>
+</div>
+```
+
+*/
+/*doc
+---
+title: Tooltip
+name: form07
+category: Form Elements
+---
+
+[See this link for working version](http://www2.jbsinternational.com/dc/demo/srp2/report.html)
+
+```html_example
+<div class="form-row">
+	<div class="col2">
+		<label for="org">Organization Type: <a href="#" class="tooltip"><img src="images/icon_info.gif" alt=""><span>Here is some title text. <i>Here is a link. I am a link.</i> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim ipsum, sed repellat unde eaque maiores? Aut tenetur eligendi quia accusamus quos velit commodi nemo enim vel doloremque, illum laudantium libero.</span></a></label>
+	</div>
+	<div class="col2">
+		<input name="org" type="text" id="org" class="input__100">
+	</div>
+</div>
+```
+
+*/
+/*doc
+---
+title: Full-width Textarea
+name: form08
+category: Form Elements
+---
+
+```html_example
+<div class="form-row">
+	<div class="col1">
+		<label for="blah" class="required">If known, what corrective actions has the responsible party taken to prevent future occurrences of this reportable food?</label>
+	</div>
+	<div class="col1">
+		<textarea name="blahblah" rows="2" cols="20" id="blah" class="textarea__100" title="If known, what corrective actions has the responsible party taken to prevent future occurrences of this reportable food?" spellcheck="true"></textarea><span class="icon__spellcheck"><a href="#"><img src="images/icon_spellcheck.png" alt="Spellcheck"></a></span><span class="icon__info"><a href="#" class="tooltip"><img src="images/icon_info.gif" alt=""><span>Here is some title text. Lorem ipsum dolor sit amet, consectetur adipisicing elit. <i>Here is a link. I am a link.</i> Enim ipsum, sed repellat unde eaque maiores? Aut tenetur eligendi quia accusamus quos velit commodi nemo enim vel doloremque, illum laudantium libero.</span></a></span>
+	</div>
+</div>
+```
+
+*/
+/*doc
+---
+title: Regular Radio Buttons
+name: form09
+category: Form Elements
+---
+
+```html_example
+<div class="form-row">
+	<div class="col20">
+		<label for="fname" class="required">Rational Questionnaire</label>
+	</div>
+	<div class="col80">
+		<div class="col1">
+			<input id="blah1" type="radio" name="blahgroup" value="7">
+			<label for="blah1" class="label__radio"><strong>Item 1 Reportable Food Registry Report(mandatory):</strong> A <strong>food facility</strong> or <strong>responsible party</strong> that manufactures, processes, packs, or holds foods who is submitting a <strong>reportable food</strong> report.</label>
+		</div>
+		<div class="col1">
+			<input id="blah2" type="radio" name="blahgroup" value="7">
+			<label for="blah2" class="label__radio"><strong>Item 2 Reportable Food Registry Report(mandatory):</strong> A <strong>food facility</strong> or <strong>responsible party</strong> that manufactures, processes, packs, or holds foods who is submitting a <strong>reportable food</strong> report.</label>
+		</div>
+		<div class="col1">
+			<input id="blah3" type="radio" name="blahgroup" value="7">
+			<label for="blah3" class="label__radio"><strong>Item 3 Reportable Food Registry Report(mandatory):</strong> A <strong>food facility</strong> or <strong>responsible party</strong> that manufactures, processes, packs, or holds foods who is submitting a <strong>reportable food</strong> report.</label>
+		</div>
+	</div>
+</div>
+```
+
+*/
+/*doc
+---
+title: Horizontal Radio Example 1
+name: form10
+category: Form Elements
+---
+
+```html_example
+<div class="form-row">
+	<div class="col2">
+		<label for="fname" class="required">Horizontal Radio Example 1</label>
+	</div>
+	<div class="col2">
+		<div class="col1">
+			<input id="blah1" type="radio" name="blahgroup" value="7">
+			<label for="blah1" class="label__radio">Yes</label>
+		</div>
+		<div class="col1">
+			<input id="blah2" type="radio" name="blahgroup" value="7">
+			<label for="blah2" class="label__radio">No</label>
+		</div>
+	</div>
+</div>
+```
+
+*/
+/*doc
+---
+title: Horizontal Radio Example 2
+name: form11
+category: Form Elements
+---
+
+```html_example
+<div class="form-row">
+	<div class="col2">
+		<label for="blahgroup" class="required">Horizontal Radio Example 2</label>
+	</div>
+	<div class="col2">
+		<div class="col33">
+			<input id="blah1" type="radio" name="blahgroup" value="7">
+			<label for="blah1" class="label__radio">Adverse Event (a symptom, reaction or disease associated with the product</label>
+		</div>
+		<div class="col33">
+			<input id="blah2" type="radio" name="blahgroup" value="7">
+			<label for="blah2" class="label__radio">Product Problem (an observed or detected product issue or defect that has the potential to cause harm</label>
+		</div>
+		<div class="col33">
+			<input id="blah3" type="radio" name="blahgroup" value="7">
+			<label for="blah3" class="label__radio">Both</label>
+		</div>
+	</div>
+</div>
+```
+
+*/
+/*doc
+---
+title: Checkbox Example 1
+name: form12
+category: Form Elements
+---
+
+```html_example
+<div class="form-row">
+	<div class="col2">
+		<label for="fname" class="required">Checkbox Example 1</label>
+	</div>
+	<div class="col2">
+		<div class="col1">
+			<input id="blah1" type="checkbox" name="blahgroup" value="7">
+			<label for="blah1" class="label__radio">Item 1</label>
+		</div>
+		<div class="col1">
+			<input id="blah2" type="checkbox" name="blahgroup" value="6">
+			<label for="blah2" class="label__radio">Item 2</label>
+		</div>
+	</div>
+</div>
+```
+
+*/
+/*doc
+---
+title: Checkbox Example 2
+name: form13
+category: Form Elements
+---
+
+```html_example
+<div class="form-row">
+	<div class="col2">
+		<label for="fname" class="required">Checkbox Example 2</label>
+	</div>
+	<div class="col2">
+		<div class="col2">
+			<div class="col1">
+				<input id="blah1" type="checkbox" name="blahgroup" value="7">
+				<label for="blah1" class="label__radio">Item 1</label>
+			</div>
+			<div class="col1">
+				<input id="blah2" type="checkbox" name="blahgroup" value="6">
+				<label for="blah2" class="label__radio">Item 2</label>
+			</div>
+			<div class="col1">
+				<input id="blah3" type="checkbox" name="blahgroup" value="7">
+				<label for="blah3" class="label__radio">Item 3</label>
+			</div>
+			<div class="col1">
+				<input id="blah4" type="checkbox" name="blahgroup" value="6">
+				<label for="blah4" class="label__radio">Item 4</label>
+			</div>
+		</div>
+		<div class="col2">
+			<div class="col1">
+				<input id="blah5" type="checkbox" name="blahgroup" value="7">
+				<label for="blah5" class="label__radio">Item 5</label>
+			</div>
+			<div class="col1">
+				<input id="blah6" type="checkbox" name="blahgroup" value="6">
+				<label for="blah6" class="label__radio">Item 6</label>
+			</div>
+			<div class="col1">
+				<input id="blah7" type="checkbox" name="blahgroup" value="7">
+				<label for="blah7" class="label__radio">Item 7</label>
+			</div>
+			<div class="col1">
+				<input id="blah8" type="checkbox" name="blahgroup" value="6">
+				<label for="blah8" class="label__radio">Item 8</label>
+			</div>
+		</div>
+	</div>
+</div>
+```
+*/
+/*doc
+---
+title: Smaller Fields (For use in Modal/Lightbox)
+name: form14
+category: Form Elements
+---
+
+```html_example
+<div class="form-row">
+	<h2 class="title__section">Smaller Fields (For use in Modal/Lightbox)</h2>
+	<div class="col2">
+		<label for="fname">First Name</label>
+	</div>
+	<div class="col2">
+		<input name="fname" type="text" id="fname" class="input__80">
+	</div>
+</div>
+
+<div class="form-row">
+	<div class="col2">
+		<label for="fname" class="required">First Name</label>
+	</div>
+	<div class="col2">
+		<select name="state" id="state" class="select__80">
+			<option value="">Please select</option>
+			<option value="items">Items</option>
+		</select>
+	</div>
+</div>
+```
+
+*/
+/*doc
+---
+title: Button Bar with Blue Background
+name: form15
+category: Form Elements
+---
+
+```html_example
+<div class="form-row">
+	<h2 class="title__section">Button Bar</h2>
+	<div class="row form-row__controls">
+		<div class="col2">
+			<input type="submit" name="" value="Save Draft" id="save" class="btn__search">
+			<input type="submit" name="" value="Exit" id="exit" class="btn__search">
+			<input type="submit" name="" value="Submit Report" id="submit" class="btn__search">
+		</div>
+		<div class="col2 align-right">
+			<input type="submit" name="" value="< Back" id="back" class="btn__search">
+			<input type="submit" name="" value="Next >" id="next" class="btn__search">
+		</div>
+	</div>
+</div>
+```
+
+*/
+/* line 406, ../sass/_form-elements.scss */
 button[disabled=disabled],
 button:disabled {
   background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIklEQVQIW2NkQAKrVq36zwjjgzhhYWGMYAEYB8RmROaABADeOQ8CXl/xfgAAAABJRU5ErkJggg==) repeat;
@@ -1478,105 +1985,106 @@ button:disabled {
   color: #827F7F;
 }
 
-/* line 9, ../sass/_form-elements.scss */
+/* line 414, ../sass/_form-elements.scss */
 .row__form {
   float: left;
   margin: 15px 0;
   width: 100%;
 }
 
-/* line 15, ../sass/_form-elements.scss */
+/* line 420, ../sass/_form-elements.scss */
 .col2 {
   float: left;
   width: 50%;
 }
 
-/* line 20, ../sass/_form-elements.scss */
+/* line 425, ../sass/_form-elements.scss */
 .col2__label {
   float: left;
   width: 50%;
 }
 
-/* line 25, ../sass/_form-elements.scss */
+/* line 430, ../sass/_form-elements.scss */
 .col2__label-small {
   float: left;
   width: 25%;
 }
 
-/* line 30, ../sass/_form-elements.scss */
+/* line 435, ../sass/_form-elements.scss */
 .col2__input {
   float: left;
 }
 
-/* line 34, ../sass/_form-elements.scss */
+/* line 439, ../sass/_form-elements.scss */
 .col2__input-large {
   float: left;
   width: 75%;
 }
 
-/* line 39, ../sass/_form-elements.scss */
+/* line 444, ../sass/_form-elements.scss */
 .col20 {
   float: left;
   width: 20%;
 }
 
-/* line 44, ../sass/_form-elements.scss */
+/* line 449, ../sass/_form-elements.scss */
 .col80 {
   float: left;
   width: 80%;
 }
 
-/* line 49, ../sass/_form-elements.scss */
+/* line 454, ../sass/_form-elements.scss */
 .input__100 {
   width: 100%;
 }
 
-/* line 53, ../sass/_form-elements.scss */
+/* line 458, ../sass/_form-elements.scss */
 .textarea__100 {
   height: 100px;
   width: 100%;
+  font-weight: normal;
 }
 
-/* line 58, ../sass/_form-elements.scss */
+/* line 464, ../sass/_form-elements.scss */
 .input__medium,
 .input__90 {
   width: 90%;
 }
 
-/* line 63, ../sass/_form-elements.scss */
+/* line 469, ../sass/_form-elements.scss */
 .input__80,
 .select__80 {
   width: 80%;
 }
 
-/* line 68, ../sass/_form-elements.scss */
+/* line 474, ../sass/_form-elements.scss */
 .select__95 {
   width: 95%;
 }
 
-/* line 72, ../sass/_form-elements.scss */
+/* line 478, ../sass/_form-elements.scss */
 .icon__calendar {
   content: url("../images/icon_calendar.gif");
   margin-left: 5px;
 }
 
-/* line 77, ../sass/_form-elements.scss */
+/* line 483, ../sass/_form-elements.scss */
 .icon__spellcheck {
   display: inline-block;
 }
 
-/* line 81, ../sass/_form-elements.scss */
+/* line 487, ../sass/_form-elements.scss */
 .icon__info {
   display: inline-block;
   margin-left: 5px;
 }
 
-/* line 86, ../sass/_form-elements.scss */
+/* line 492, ../sass/_form-elements.scss */
 .infobox {
   position: relative;
 }
 
-/* line 90, ../sass/_form-elements.scss */
+/* line 496, ../sass/_form-elements.scss */
 a[title]:hover:after {
   background: #e0f1ff;
   border: 1px solid #0050b1;
@@ -1591,7 +2099,7 @@ a[title]:hover:after {
   z-index: 20px;
 }
 
-/* line 104, ../sass/_form-elements.scss */
+/* line 510, ../sass/_form-elements.scss */
 .tooltip {
   color: #000000;
   outline: none;
@@ -1600,13 +2108,13 @@ a[title]:hover:after {
   position: relative;
 }
 
-/* line 112, ../sass/_form-elements.scss */
+/* line 518, ../sass/_form-elements.scss */
 .tooltip span {
   margin-left: -999em;
   position: absolute;
 }
 
-/* line 117, ../sass/_form-elements.scss */
+/* line 523, ../sass/_form-elements.scss */
 .tooltip:hover span {
   background: #e0f1ff;
   border: 1px solid #0050b1;
@@ -1622,54 +2130,249 @@ a[title]:hover:after {
   width: 300px;
 }
 
-/* line 132, ../sass/_form-elements.scss */
+/* line 538, ../sass/_form-elements.scss */
 .tooltip i {
   color: #216b93;
   font-style: normal;
 }
 
-/* line 137, ../sass/_form-elements.scss */
+/* line 543, ../sass/_form-elements.scss */
 .label__radio {
   font-weight: normal;
 }
 
-/* line 141, ../sass/_form-elements.scss */
+/* line 547, ../sass/_form-elements.scss */
 .btn__search,
 .btn__reset {
   margin-right: 5px;
 }
 
-/* line 146, ../sass/_form-elements.scss */
+/* line 552, ../sass/_form-elements.scss */
 .ui-datepicker .ui-datepicker-month,
 .ui-datepicker .ui-datepicker-year {
   color: #333333;
 }
 
-/* line 151, ../sass/_form-elements.scss */
+/* line 557, ../sass/_form-elements.scss */
 ul.ui-autocomplete.ui-menu {
   z-index: 10000;
 }
 
-/* line 155, ../sass/_form-elements.scss */
+/* line 561, ../sass/_form-elements.scss */
 .ui-datepicker table {
   border: none;
 }
 
-/* line 1, ../sass/_tables.scss */
+/*doc
+---
+title: Grids
+name: grids01
+category: grids
+---
+```html_example
+<div class="section section__grid">
+
+	<h2 class="title__section">Draft Reports</h2>
+
+	<table class="table__grid">
+		<caption>Click column header to sort the column</caption>
+		<thead>
+			<tr>
+				<th></th>
+				<th><a href="#">Date Saved (EST)</a></th>
+				<th><a href="#">Report ID</a></th>
+				<th><a href="#">Title</a></th>
+				<th><a href="#">Report Type Description</a></th>
+			</tr>
+		</thead>
+		<tr>
+			<td><input value="" name="" type="radio"></td>
+			<td>08/03/2015 03:10:20 PM</td>
+			<td>37340 (I)</td>
+			<td>Voluntary Reportable Food Report (V2)</td>
+			<td>Voluntary Reportable Food Report (Section 1005 of Public Law 110-85) (V2)</td>
+		</tr>
+		<tr>
+			<td><input value="" name="" type="radio"></td>
+			<td>08/03/2015 03:10:20 PM</td>
+			<td>37340 (I)</td>
+			<td>Voluntary Reportable Food Report (V2)</td>
+			<td>Voluntary Reportable Food Report (Section 1005 of Public Law 110-85) (V2)</td>
+		</tr>
+		<tr>
+			<td><input value="" name="" type="radio"></td>
+			<td>08/03/2015 03:10:20 PM</td>
+			<td>37340 (I)</td>
+			<td>Voluntary Reportable Food Report (V2)</td>
+			<td>Voluntary Reportable Food Report (Section 1005 of Public Law 110-85) (V2)</td>
+		</tr>
+	</table>
+
+	<div class="table__controls">
+		<div class="table__buttons">
+			<button id="PromptSubmitNewReportButton" onclick="submit('event:PromptSubmitNewReportButton,type:button,id:PromptSubmitNewReportButton,rid:53')" type="button" data-title="Start New Report" data-type="button">Start New Report</button>
+			<button id="PromptEditDraftReportButton" onclick="submit('event:EditGrid,type:button,id:PromptEditDraftReportButton,rid:53')" class="announcementText btn" type="button" data-title="Edit" data-type="button" disabled="disabled">Edit</button>
+			<button id="PromptDeleteDraftReportButton" onclick="submit('event:DeleteGrid,type:button,id:PromptDeleteDraftReportButton,rid:53')" class="announcementText btn" type="button" data-title="Delete" data-type="button" disabled="disabled">Delete</button>
+			<button id="PromptViewDraftReportButton" onclick="submit('event:PromptViewDraftReportButton,type:button,id:PromptViewDraftReportButton,rid:53')" class="announcementText btn" style="" type="button" data-title="View" data-type="button" disabled="disabled">View</button>
+			<button id="PromptRefreshDraftReportButton" onclick="submit('event:PromptRefreshDraftReportButton,type:button,id:PromptRefreshDraftReportButton,rid:53')" class="announcementText btn" style="" type="button" data-title="Refresh" data-type="button">Refresh</button>
+			<button id="PromptViewDraftReportTemplateButton" onclick="submit('event:PromptViewDraftReportTemplateButton,type:button,id:PromptViewDraftReportTemplateButton,rid:53')" class="announcementText btn" style="display: none;" type="button" data-title="View Template" data-type="button">View Template</button>
+		</div>
+		<div class="pagination">
+        	<img src="images/icon_first.png" onclick="loadGrid('PromptDraftReportsGrid,53,F')">
+        	<img src="images/icon_back.png" onclick="loadGrid('PromptDraftReportsGrid,53,P')">
+        	<span id="pagination__label">Page 1 of 1</span>
+			<img src="images/icon_next.png" onclick="loadGrid('PromptDraftReportsGrid,53,N')">
+         	<img src="images/icon_last.png" onclick="loadGrid('PromptDraftReportsGrid,53,L')">
+       </div>
+	</div>
+
+</div>
+```
+
+*/
+/*doc
+---
+title: Indented Grids 1
+name: grids02
+category: grids
+---
+```html_example
+<div class="form-row">
+	<div class="indent-sm">
+		<table class="table__grid">
+			<caption>Click column header to sort the column</caption>
+			<thead>
+				<tr>
+					<th></th>
+					<th><a href="#">Date Saved (EST)</a></th>
+					<th><a href="#">Report ID</a></th>
+					<th><a href="#">Title</a></th>
+					<th><a href="#">Report Type Description</a></th>
+				</tr>
+			</thead>
+			<tr>
+				<td><input value="" name="" type="radio"></td>
+				<td>08/03/2015 03:10:20 PM</td>
+				<td>37340 (I)</td>
+				<td>Voluntary Reportable Food Report (V2)</td>
+				<td>Voluntary Reportable Food Report (Section 1005 of Public Law 110-85) (V2)</td>
+			</tr>
+			<tr>
+				<td><input value="" name="" type="radio"></td>
+				<td>08/03/2015 03:10:20 PM</td>
+				<td>37340 (I)</td>
+				<td>Voluntary Reportable Food Report (V2)</td>
+				<td>Voluntary Reportable Food Report (Section 1005 of Public Law 110-85) (V2)</td>
+			</tr>
+			<tr>
+				<td><input value="" name="" type="radio"></td>
+				<td>08/03/2015 03:10:20 PM</td>
+				<td>37340 (I)</td>
+				<td>Voluntary Reportable Food Report (V2)</td>
+				<td>Voluntary Reportable Food Report (Section 1005 of Public Law 110-85) (V2)</td>
+			</tr>
+		</table>
+
+		<div class="table__controls">
+			<div class="table__buttons">
+				<button id="PromptSubmitNewReportButton" onclick="submit('event:PromptSubmitNewReportButton,type:button,id:PromptSubmitNewReportButton,rid:53')" type="button" data-title="Start New Report" data-type="button">Start New Report</button>
+				<button id="PromptEditDraftReportButton" onclick="submit('event:EditGrid,type:button,id:PromptEditDraftReportButton,rid:53')" class="announcementText btn" type="button" data-title="Edit" data-type="button" disabled="disabled">Edit</button>
+				<button id="PromptDeleteDraftReportButton" onclick="submit('event:DeleteGrid,type:button,id:PromptDeleteDraftReportButton,rid:53')" class="announcementText btn" type="button" data-title="Delete" data-type="button" disabled="disabled">Delete</button>
+				<button id="PromptViewDraftReportButton" onclick="submit('event:PromptViewDraftReportButton,type:button,id:PromptViewDraftReportButton,rid:53')" class="announcementText btn" style="" type="button" data-title="View" data-type="button" disabled="disabled">View</button>
+				<button id="PromptRefreshDraftReportButton" onclick="submit('event:PromptRefreshDraftReportButton,type:button,id:PromptRefreshDraftReportButton,rid:53')" class="announcementText btn" style="" type="button" data-title="Refresh" data-type="button">Refresh</button>
+				<button id="PromptViewDraftReportTemplateButton" onclick="submit('event:PromptViewDraftReportTemplateButton,type:button,id:PromptViewDraftReportTemplateButton,rid:53')" class="announcementText btn" style="display: none;" type="button" data-title="View Template" data-type="button">View Template</button>
+			</div>
+			<div class="pagination">
+            	<img src="images/icon_first.png" onclick="loadGrid('PromptDraftReportsGrid,53,F')">
+            	<img src="images/icon_back.png" onclick="loadGrid('PromptDraftReportsGrid,53,P')">
+            	<span id="pagination__label">Page 1 of 1</span>
+				<img src="images/icon_next.png" onclick="loadGrid('PromptDraftReportsGrid,53,N')">
+             	<img src="images/icon_last.png" onclick="loadGrid('PromptDraftReportsGrid,53,L')">
+           </div>
+		</div>
+	</div>
+</div>
+```
+
+*/
+/*doc
+---
+title: Indented Grids 2
+name: grids03
+category: grids
+---
+```html_example
+<div class="form-row">
+	<div class="indent-lg">
+		<table class="table__grid">
+			<caption>Click column header to sort the column</caption>
+			<thead>
+				<tr>
+					<th></th>
+					<th><a href="#">Date Saved (EST)</a></th>
+					<th><a href="#">Report ID</a></th>
+					<th><a href="#">Title</a></th>
+					<th><a href="#">Report Type Description</a></th>
+				</tr>
+			</thead>
+			<tr>
+				<td><input value="" name="" type="radio"></td>
+				<td>08/03/2015 03:10:20 PM</td>
+				<td>37340 (I)</td>
+				<td>Voluntary Reportable Food Report (V2)</td>
+				<td>Voluntary Reportable Food Report (Section 1005 of Public Law 110-85) (V2)</td>
+			</tr>
+			<tr>
+				<td><input value="" name="" type="radio"></td>
+				<td>08/03/2015 03:10:20 PM</td>
+				<td>37340 (I)</td>
+				<td>Voluntary Reportable Food Report (V2)</td>
+				<td>Voluntary Reportable Food Report (Section 1005 of Public Law 110-85) (V2)</td>
+			</tr>
+			<tr>
+				<td><input value="" name="" type="radio"></td>
+				<td>08/03/2015 03:10:20 PM</td>
+				<td>37340 (I)</td>
+				<td>Voluntary Reportable Food Report (V2)</td>
+				<td>Voluntary Reportable Food Report (Section 1005 of Public Law 110-85) (V2)</td>
+			</tr>
+		</table>
+
+		<div class="table__controls">
+			<div class="table__buttons">
+				<button id="PromptSubmitNewReportButton" onclick="submit('event:PromptSubmitNewReportButton,type:button,id:PromptSubmitNewReportButton,rid:53')" type="button" data-title="Start New Report" data-type="button">Start New Report</button>
+				<button id="PromptEditDraftReportButton" onclick="submit('event:EditGrid,type:button,id:PromptEditDraftReportButton,rid:53')" class="announcementText btn" type="button" data-title="Edit" data-type="button" disabled="disabled">Edit</button>
+				<button id="PromptDeleteDraftReportButton" onclick="submit('event:DeleteGrid,type:button,id:PromptDeleteDraftReportButton,rid:53')" class="announcementText btn" type="button" data-title="Delete" data-type="button" disabled="disabled">Delete</button>
+				<button id="PromptViewDraftReportButton" onclick="submit('event:PromptViewDraftReportButton,type:button,id:PromptViewDraftReportButton,rid:53')" class="announcementText btn" style="" type="button" data-title="View" data-type="button" disabled="disabled">View</button>
+				<button id="PromptRefreshDraftReportButton" onclick="submit('event:PromptRefreshDraftReportButton,type:button,id:PromptRefreshDraftReportButton,rid:53')" class="announcementText btn" style="" type="button" data-title="Refresh" data-type="button">Refresh</button>
+				<button id="PromptViewDraftReportTemplateButton" onclick="submit('event:PromptViewDraftReportTemplateButton,type:button,id:PromptViewDraftReportTemplateButton,rid:53')" class="announcementText btn" style="display: none;" type="button" data-title="View Template" data-type="button">View Template</button>
+			</div>
+			<div class="pagination">
+            	<img src="images/icon_first.png" onclick="loadGrid('PromptDraftReportsGrid,53,F')">
+            	<img src="images/icon_back.png" onclick="loadGrid('PromptDraftReportsGrid,53,P')">
+            	<span id="pagination__label">Page 1 of 1</span>
+				<img src="images/icon_next.png" onclick="loadGrid('PromptDraftReportsGrid,53,N')">
+             	<img src="images/icon_last.png" onclick="loadGrid('PromptDraftReportsGrid,53,L')">
+           </div>
+		</div>
+	</div>
+</div>
+```
+*/
+/* line 201, ../sass/_tables.scss */
 table {
-  border: 1px solid grey;
-  border-bottom: none;
+  border: none;
   border-collapse: separate;
   display: table;
   width: 100%;
 }
 
-/* line 9, ../sass/_tables.scss */
+/* line 208, ../sass/_tables.scss */
 table input[type="radio"] {
-  margin: 0;
+  margin-left: 5px;
 }
 
-/* line 13, ../sass/_tables.scss */
+/* line 212, ../sass/_tables.scss */
 th {
   background: #E1DEC9;
   color: #152359;
@@ -1677,18 +2380,18 @@ th {
   text-align: left;
 }
 
-/* line 20, ../sass/_tables.scss */
+/* line 219, ../sass/_tables.scss */
 th, td {
   padding: 5px;
 }
 
-/* line 24, ../sass/_tables.scss */
+/* line 223, ../sass/_tables.scss */
 th a {
   color: #152359;
   text-decoration: none;
 }
 
-/* line 29, ../sass/_tables.scss */
+/* line 228, ../sass/_tables.scss */
 caption {
   color: #152359;
   font-size: 1em;
@@ -1697,42 +2400,42 @@ caption {
   margin-bottom: 5px;
 }
 
-/* line 37, ../sass/_tables.scss */
+/* line 236, ../sass/_tables.scss */
 .table__grid td {
   border-top: 1px solid grey;
 }
 
-/* line 41, ../sass/_tables.scss */
+/* line 240, ../sass/_tables.scss */
 .table__grid th:nth-child(1) {
   width: 25px;
 }
 
-/* line 45, ../sass/_tables.scss */
+/* line 244, ../sass/_tables.scss */
 .table__grid th:nth-child(2) {
   width: 155px;
 }
 
-/* line 49, ../sass/_tables.scss */
+/* line 248, ../sass/_tables.scss */
 .table__grid th:nth-child(3) {
   width: 90px;
 }
 
-/* line 53, ../sass/_tables.scss */
+/* line 252, ../sass/_tables.scss */
 .table__grid th:nth-child(4) {
   width: 200px;
 }
 
-/* line 57, ../sass/_tables.scss */
+/* line 256, ../sass/_tables.scss */
 tfoot {
   background: #E1DEC9;
 }
 
-/* line 61, ../sass/_tables.scss */
+/* line 260, ../sass/_tables.scss */
 tfoot span {
   color: #216b93;
 }
 
-/* line 65, ../sass/_tables.scss */
+/* line 264, ../sass/_tables.scss */
 .table__controls {
   background: #E1DEC9;
   border: 1px solid grey;
@@ -1740,13 +2443,13 @@ tfoot span {
   padding: 5px;
 }
 
-/* line 72, ../sass/_tables.scss */
+/* line 271, ../sass/_tables.scss */
 .table__buttons {
   float: left;
   width: 80%;
 }
 
-/* line 77, ../sass/_tables.scss */
+/* line 276, ../sass/_tables.scss */
 .pagination {
   color: #216b93;
   float: left;
@@ -1754,7 +2457,7 @@ tfoot span {
   width: 20%;
 }
 
-/* line 84, ../sass/_tables.scss */
+/* line 283, ../sass/_tables.scss */
 div#faq table {
   border: 1px solid grey;
   border-collapse: separate;
@@ -2056,45 +2759,50 @@ category: Sidenav
   margin-top: -65px;
 }
 
-/* line 30, ../sass/_home.scss */
+/* line 35, ../sass/_home.scss */
 .home-panel-left {
   margin-bottom: 0;
   padding: 0 50px 0 20px;
   line-height: normal;
 }
 
-/* line 36, ../sass/_home.scss */
+/* line 41, ../sass/_home.scss */
 .home-panel-right {
   margin-bottom: 0;
   padding: 0 20px;
   line-height: normal;
 }
 
-/* line 42, ../sass/_home.scss */
+/* line 47, ../sass/_home.scss */
 .home-panel-left h1, .home-panel-right h1 {
   padding: 0;
 }
 
-/* line 46, ../sass/_home.scss */
+/* line 51, ../sass/_home.scss */
 #g00home_home {
   padding: 0 20px;
 }
 
-/* line 50, ../sass/_home.scss */
+/* line 55, ../sass/_home.scss */
 #g0140_home {
   min-width: 140px;
   margin: -5px 0 0 -5px;
 }
 
-/* line 55, ../sass/_home.scss */
+/* line 60, ../sass/_home.scss */
 a#PromptForgotPasswordButton {
   position: absolute;
   bottom: 0;
   left: 0;
-  margin-bottom: -5px;
+  margin-bottom: -10px;
 }
 
-/* line 62, ../sass/_home.scss */
+/* line 67, ../sass/_home.scss */
+#PromptGuestActionFilter-label strong {
+  padding-left: 20px;
+}
+
+/* line 72, ../sass/_home.scss */
 section.col2.columns.home-panel-right p:last-child {
   margin-left: 50px;
 }

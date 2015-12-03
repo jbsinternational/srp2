@@ -34,6 +34,24 @@
 	width: 100%;
 }
 
+.buttonbar {
+	margin: 10px 10px;
+	background-color: #a5ceee;
+	padding: 5px;
+	max-width: 98%;
+}
+
+div#PromptSenderClass{
+	&.col2{
+	float: none;
+	margin-left: 5%;
+	}
+}
+
+#PromptSenderClass-label strong{
+		margin-left: 5%;
+}
+
 .section {
 	float: left;
 	margin:0 0 20px 10px;
@@ -121,3 +139,58 @@
 	margin-left: 25%;
 	width: 75%;
 }
+
+div#PromptGuestActionFilter.col2 {
+	float: none;
+	margin-left: 10%;
+	margin-top: 10px;
+}
+
+span.sidenav-report-icon {
+    margin-right: 5px;
+}
+#forgotPassword.page div.row{
+	margin-left: 10%;
+}
+
+div#PromptGroupNavigate {
+	margin: 10px 0 20px 10px;
+}
+
+#ForgotPasswordPrompt {
+	margin-left: 10px;
+}
+
+#ForgotPasswordCommentPrompt {
+	margin-top: 10px;
+}
+
+#PromptTitle-label, #PromptOtherPhoneNumber-label, #PromptFaxNumber-label, #PromptCompanyStreet2-label, #PromptIssueCategory1-label strong, #PromptPetFoodChoice-label strong, #PromptLivestockFoodChoice-label strong,  {
+	margin-left: 13px;
+}
+
+input{
+	margin-right: 5px;
+}
+
+#PromptAttachDocumentFile-div {
+	width: 91%;
+}
+
+#PromptAttachDocumentFile {
+	width: 90%;
+	margin-left: 33px;
+}
+
+#PromptAttachDocumentFileButton {
+	margin-top: 4px;
+}
+
+// span {
+// 	float: left;
+// }
+
+////// Reserved Class if flotaing all spans left ends up being a bad idea ///////
+// .span-left{
+// 	float: left;
+// }

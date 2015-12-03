@@ -1,3 +1,408 @@
+/*doc
+---
+title: Regular Label & Text Input
+name: form01
+category: Form Elements
+---
+
+```html_example
+<div class="form-row">
+	<h2 class="title__section">Regular Label & Text Input</h2>
+	<div class="col2">
+		<label for="title" class="required">Title</label>
+	</div>
+	<div class="col2">
+		<input name="title" type="text" id="title" class="input__100">
+	</div>
+</div>
+```
+
+*/
+
+/*doc
+---
+title: Long Label Example
+name: form02
+category: Form Elements
+---
+
+```html_example
+<div class="form-row">
+	<div class="col2">
+		<label for="fname">First Name <span>(here is some explanatory text that is really, really, really long):</span></label>
+	</div>
+	<div class="col2">
+		<input name="fname" type="text" id="fname" class="input__100">
+	</div>
+</div>
+```
+
+*/
+
+/*doc
+---
+title: Two Text Fields Side By Side
+name: form03
+category: Form Elements
+---
+
+```html_example
+<div class="row__form">
+	<div class="col2">
+		<div class="col2__label"><label for="date">Submitted as of <span>(mm/dd/yyyy or mm/yyyy):</span></label></div>
+		<div class="col2__input"><input name="date" type="text" id="date" class="input__date"></div>
+	</div>
+	<div class="col2">
+		<div class="col2__label"><label for="icrs">ICSR Number <span>(please enter the number only):</span></label></div>
+		<div class="col2__input"><input name="icrs" type="text" id="icrs" class="input__sm"></div>
+	</div>
+</div>
+```
+
+*/
+
+/*doc
+---
+title: Regular Select List
+name: form04
+category: Form Elements
+---
+
+```html_example
+<div class="form-row">
+	<div class="col2">
+		<label for="fname">State</label>
+	</div>
+	<div class="col2">
+		<select name="state" id="state" class="select__95">
+			<option value="">Please select</option>
+			<option value="items">Items</option>
+		</select>
+	</div>
+</div>
+```
+
+*/
+
+/*doc
+---
+title: Text Input & Select List Side By Side
+name: form05
+category: Form Elements
+---
+
+```html_example
+<div class="form-row">
+	<div class="col2">
+		<label for="blah">2 prompts on same line, one single label</label>
+	</div>
+	<div class="col2">
+		<div class="col2">
+			<input name="fname" type="text" id="blah" class="input__100">
+		</div>
+		<div class="col2">
+			<select name="state" id="blah2" class="select__95">
+				<option value="">Please select</option>
+				<option value="items">Items</option>
+			</select>
+		</div>
+	</div>
+</div>
+```
+
+*/
+
+/*doc
+---
+title: Date Field
+name: form06
+category: Form Elements
+---
+
+```html_example
+<div class="form-row">
+	<div class="col2">
+		<label for="datetime" class="required">Date</label>
+	</div>
+	<div class="col2">
+		<input name="datetime" type="text" id="datetime" class="datetime"><span class="icon__calendar"></span>
+	</div>
+</div>
+```
+
+*/
+
+/*doc
+---
+title: Tooltip
+name: form07
+category: Form Elements
+---
+
+[See this link for working version](http://www2.jbsinternational.com/dc/demo/srp2/report.html)
+
+```html_example
+<div class="form-row">
+	<div class="col2">
+		<label for="org">Organization Type: <a href="#" class="tooltip"><img src="images/icon_info.gif" alt=""><span>Here is some title text. <i>Here is a link. I am a link.</i> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim ipsum, sed repellat unde eaque maiores? Aut tenetur eligendi quia accusamus quos velit commodi nemo enim vel doloremque, illum laudantium libero.</span></a></label>
+	</div>
+	<div class="col2">
+		<input name="org" type="text" id="org" class="input__100">
+	</div>
+</div>
+```
+
+*/
+
+/*doc
+---
+title: Full-width Textarea
+name: form08
+category: Form Elements
+---
+
+```html_example
+<div class="form-row">
+	<div class="col1">
+		<label for="blah" class="required">If known, what corrective actions has the responsible party taken to prevent future occurrences of this reportable food?</label>
+	</div>
+	<div class="col1">
+		<textarea name="blahblah" rows="2" cols="20" id="blah" class="textarea__100" title="If known, what corrective actions has the responsible party taken to prevent future occurrences of this reportable food?" spellcheck="true"></textarea><span class="icon__spellcheck"><a href="#"><img src="images/icon_spellcheck.png" alt="Spellcheck"></a></span><span class="icon__info"><a href="#" class="tooltip"><img src="images/icon_info.gif" alt=""><span>Here is some title text. Lorem ipsum dolor sit amet, consectetur adipisicing elit. <i>Here is a link. I am a link.</i> Enim ipsum, sed repellat unde eaque maiores? Aut tenetur eligendi quia accusamus quos velit commodi nemo enim vel doloremque, illum laudantium libero.</span></a></span>
+	</div>
+</div>
+```
+
+*/
+
+/*doc
+---
+title: Regular Radio Buttons
+name: form09
+category: Form Elements
+---
+
+```html_example
+<div class="form-row">
+	<div class="col20">
+		<label for="fname" class="required">Rational Questionnaire</label>
+	</div>
+	<div class="col80">
+		<div class="col1">
+			<input id="blah1" type="radio" name="blahgroup" value="7">
+			<label for="blah1" class="label__radio"><strong>Item 1 Reportable Food Registry Report(mandatory):</strong> A <strong>food facility</strong> or <strong>responsible party</strong> that manufactures, processes, packs, or holds foods who is submitting a <strong>reportable food</strong> report.</label>
+		</div>
+		<div class="col1">
+			<input id="blah2" type="radio" name="blahgroup" value="7">
+			<label for="blah2" class="label__radio"><strong>Item 2 Reportable Food Registry Report(mandatory):</strong> A <strong>food facility</strong> or <strong>responsible party</strong> that manufactures, processes, packs, or holds foods who is submitting a <strong>reportable food</strong> report.</label>
+		</div>
+		<div class="col1">
+			<input id="blah3" type="radio" name="blahgroup" value="7">
+			<label for="blah3" class="label__radio"><strong>Item 3 Reportable Food Registry Report(mandatory):</strong> A <strong>food facility</strong> or <strong>responsible party</strong> that manufactures, processes, packs, or holds foods who is submitting a <strong>reportable food</strong> report.</label>
+		</div>
+	</div>
+</div>
+```
+
+*/
+
+/*doc
+---
+title: Horizontal Radio Example 1
+name: form10
+category: Form Elements
+---
+
+```html_example
+<div class="form-row">
+	<div class="col2">
+		<label for="fname" class="required">Horizontal Radio Example 1</label>
+	</div>
+	<div class="col2">
+		<div class="col1">
+			<input id="blah1" type="radio" name="blahgroup" value="7">
+			<label for="blah1" class="label__radio">Yes</label>
+		</div>
+		<div class="col1">
+			<input id="blah2" type="radio" name="blahgroup" value="7">
+			<label for="blah2" class="label__radio">No</label>
+		</div>
+	</div>
+</div>
+```
+
+*/
+
+/*doc
+---
+title: Horizontal Radio Example 2
+name: form11
+category: Form Elements
+---
+
+```html_example
+<div class="form-row">
+	<div class="col2">
+		<label for="blahgroup" class="required">Horizontal Radio Example 2</label>
+	</div>
+	<div class="col2">
+		<div class="col33">
+			<input id="blah1" type="radio" name="blahgroup" value="7">
+			<label for="blah1" class="label__radio">Adverse Event (a symptom, reaction or disease associated with the product</label>
+		</div>
+		<div class="col33">
+			<input id="blah2" type="radio" name="blahgroup" value="7">
+			<label for="blah2" class="label__radio">Product Problem (an observed or detected product issue or defect that has the potential to cause harm</label>
+		</div>
+		<div class="col33">
+			<input id="blah3" type="radio" name="blahgroup" value="7">
+			<label for="blah3" class="label__radio">Both</label>
+		</div>
+	</div>
+</div>
+```
+
+*/
+
+/*doc
+---
+title: Checkbox Example 1
+name: form12
+category: Form Elements
+---
+
+```html_example
+<div class="form-row">
+	<div class="col2">
+		<label for="fname" class="required">Checkbox Example 1</label>
+	</div>
+	<div class="col2">
+		<div class="col1">
+			<input id="blah1" type="checkbox" name="blahgroup" value="7">
+			<label for="blah1" class="label__radio">Item 1</label>
+		</div>
+		<div class="col1">
+			<input id="blah2" type="checkbox" name="blahgroup" value="6">
+			<label for="blah2" class="label__radio">Item 2</label>
+		</div>
+	</div>
+</div>
+```
+
+*/
+
+/*doc
+---
+title: Checkbox Example 2
+name: form13
+category: Form Elements
+---
+
+```html_example
+<div class="form-row">
+	<div class="col2">
+		<label for="fname" class="required">Checkbox Example 2</label>
+	</div>
+	<div class="col2">
+		<div class="col2">
+			<div class="col1">
+				<input id="blah1" type="checkbox" name="blahgroup" value="7">
+				<label for="blah1" class="label__radio">Item 1</label>
+			</div>
+			<div class="col1">
+				<input id="blah2" type="checkbox" name="blahgroup" value="6">
+				<label for="blah2" class="label__radio">Item 2</label>
+			</div>
+			<div class="col1">
+				<input id="blah3" type="checkbox" name="blahgroup" value="7">
+				<label for="blah3" class="label__radio">Item 3</label>
+			</div>
+			<div class="col1">
+				<input id="blah4" type="checkbox" name="blahgroup" value="6">
+				<label for="blah4" class="label__radio">Item 4</label>
+			</div>
+		</div>
+		<div class="col2">
+			<div class="col1">
+				<input id="blah5" type="checkbox" name="blahgroup" value="7">
+				<label for="blah5" class="label__radio">Item 5</label>
+			</div>
+			<div class="col1">
+				<input id="blah6" type="checkbox" name="blahgroup" value="6">
+				<label for="blah6" class="label__radio">Item 6</label>
+			</div>
+			<div class="col1">
+				<input id="blah7" type="checkbox" name="blahgroup" value="7">
+				<label for="blah7" class="label__radio">Item 7</label>
+			</div>
+			<div class="col1">
+				<input id="blah8" type="checkbox" name="blahgroup" value="6">
+				<label for="blah8" class="label__radio">Item 8</label>
+			</div>
+		</div>
+	</div>
+</div>
+```
+*/
+
+/*doc
+---
+title: Smaller Fields (For use in Modal/Lightbox)
+name: form14
+category: Form Elements
+---
+
+```html_example
+<div class="form-row">
+	<h2 class="title__section">Smaller Fields (For use in Modal/Lightbox)</h2>
+	<div class="col2">
+		<label for="fname">First Name</label>
+	</div>
+	<div class="col2">
+		<input name="fname" type="text" id="fname" class="input__80">
+	</div>
+</div>
+
+<div class="form-row">
+	<div class="col2">
+		<label for="fname" class="required">First Name</label>
+	</div>
+	<div class="col2">
+		<select name="state" id="state" class="select__80">
+			<option value="">Please select</option>
+			<option value="items">Items</option>
+		</select>
+	</div>
+</div>
+```
+
+*/
+
+/*doc
+---
+title: Button Bar with Blue Background
+name: form15
+category: Form Elements
+---
+
+```html_example
+<div class="form-row">
+	<h2 class="title__section">Button Bar</h2>
+	<div class="row form-row__controls">
+		<div class="col2">
+			<input type="submit" name="" value="Save Draft" id="save" class="btn__search">
+			<input type="submit" name="" value="Exit" id="exit" class="btn__search">
+			<input type="submit" name="" value="Submit Report" id="submit" class="btn__search">
+		</div>
+		<div class="col2 align-right">
+			<input type="submit" name="" value="< Back" id="back" class="btn__search">
+			<input type="submit" name="" value="Next >" id="next" class="btn__search">
+		</div>
+	</div>
+</div>
+```
+
+*/
+
 button[disabled=disabled],
 button:disabled {
 	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIklEQVQIW2NkQAKrVq36zwjjgzhhYWGMYAEYB8RmROaABADeOQ8CXl/xfgAAAABJRU5ErkJggg==) repeat;
@@ -53,6 +458,7 @@ button:disabled {
 .textarea__100 {
 	height: 100px;
 	width: 100%;
+	font-weight: normal;
 }
 
 .input__medium,

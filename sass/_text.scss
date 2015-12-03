@@ -106,121 +106,135 @@ category: Text
 */
 
 a:hover {
-	text-decoration: none;
+  text-decoration: none;
 }
-
 a[disabled] {
-	pointer-events: none;
-	color: gray;
+  pointer-events: none;
+  color: gray;
 }
-
 .required {
-	color: #152359;
-	font-weight: bold;
+  color: #152359;
+  font-weight: bold;
+  padding-left: 5px;
 }
-
 .required:before {
-	color: red;
-	content: '*';
+  color: red;
+  content: '*';
 }
-
 .error {
-	color: red;
-	margin: 5px 0;
-}
-
-.disabled {
-	pointer-events: none;
-	cursor: default;
-}
-
-.title__home {
-	color: #152359;
-	font-size: 16px;
-	margin: 0 0 10px 0;
+  color: red;
+  margin: 5px 0;
 	padding: 5px 0;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: bold;
+  display: block;
 }
-
+.disabled {
+  pointer-events: none;
+  cursor: default;
+  color: gray;
+}
+.title__home {
+  color: #152359;
+  font-size: 16px;
+  margin: 0 0 10px;
+  padding: 5px 0;
+}
 .title__page {
-	color: #9c3627;
-	font-size: 1.6em;
-	margin: 0 0 20px 0;
-	padding: 0;
+  color: #9c3627;
+  font-size: 1.6em;
+  margin: 10px 20px 20px 15px;
+  padding: 5px;
 }
-
 .title__section {
-	color: #152359;
-	font-size: 1.5em;
-    font-weight: bold;
-    margin: 0 0 20px 0;
+  color: #152359;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 0 0 20px;
 }
-
 .title__login {
-    background: #152359;
-    color: white;
-    font-size: 21.952px;
-    margin: 0px 0 5px 0;
-    padding: 3px;
-    text-align: center;
+  background: #152359;
+  color: white;
+  font-size: 21.952px;
+  margin: 0 0 5px;
+  padding: 3px;
+  text-align: center;
 }
-
 .title__promptgroup {
-	background: #E1DECA;
-	color: #152359;
-	float: left;
-	font-size: 1.1em;
-	padding: 5px;
-	width: 100%;
+  background: #e1deca;
+  color: #152359;
+  float: left;
+  font-size: 1.1em;
+  padding: 5px;
+  width: 100%;
 }
-
 .block__comment {
-	background: #F7F7F7;
-	border: 1px solid grey;
-	display: block;
-	float: left;
-	margin-bottom: 15px;
-	padding: 10px;
-	width: 100%;
+  background: #F7F7F7;
+  border: 1px solid grey;
+  display: block;
+  float: left;
+	margin: 0 0 15px 10px;
+  padding: 5px;
+  width: 98%;
 }
-
+/* class that positions a field to the right side of a page*/
+.col__right{
+	padding-right: 10px;
+	width: 50%;
+	margin-left: 50%;
+}
 .block__note {
-	display: block;
-	font-weight: bold;
-	margin-bottom: 15px;
+  display: block;
+  font-weight: bold;
+  margin-bottom: 15px;
 }
-
 .required-field {
-	color: #152359;
-    font-weight: bold;
+  color: #152359;
+  font-weight: bold;
 }
-
 .required-field span {
-	color: red;
+  color: red;
 }
-
 label {
-	color: #152359;
-	font-weight: bold;
+  color: #152359;
+  font-weight: bold;
 }
-
 label span {
-	font-weight: normal;
+  font-weight: normal;
 }
-
 div.PopupPromptGroup {
-	position: fixed;
-	top: 5%;
-	max-height: 90%;
-	width: 790px;
-	overflow: auto;
-	background-color: #f8f9fb;
-	border-width: 2px;
-	border-style: solid;
-	border-color: Gray;
-	left: 565px;
-	z-index: 3000;
+  position: fixed;
+  top: 5%;
+  max-height: 90%;
+  width: 790px;
+  overflow: auto;
+  background-color: #f8f9fb;
+  border-width: 2px;
+  border-style: solid;
+  border-color: Gray;
+  left: 565px;
+  z-index: 3000;
+}
+p,
+li {
+  color: #6d6f71;
 }
 
-p, li{
-	color: #6d6f71;
+.FeedbackError {
+    background:#EEEEEE url(Content/images/message_error.png) no-repeat 2% 50%;
+    padding: 20px 10px 20px 50px;
+}
+
+.Header1ReportPageTitle{
+  margin-left: 10%;
+}
+
+.JbsPromptErrorList{
+  list-style-type: none;
+  padding: 0;
+}
+
+#FirstAdminDt_1361-label {
+  font-size: 11px;
 }
